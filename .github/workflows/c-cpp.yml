@@ -36,11 +36,10 @@ jobs:
         make
     - name: copy and push library
       run: |
-        mkdir -p lib/src/blobs/
         cp argon2_library/libargon2.1.dylib lib/src/blobs/libargon2-darwin.dylib
         git add -f lib/src/blobs/libargon2-darwin.dylib
         git config user.name  "Github Actions"
         git config user.email "GH-actions-ci@github.com"
         git remote add secure-origin https://${{ secrets.ACCESS_TOKEN }}@github.com/tmthecoder/argon2_dart.git
         git commit -m "create blobs for mac"
-        git push -f origin main
+        git push origin main
