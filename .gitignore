@@ -13,5 +13,5 @@ build/
 doc/api/
 
 # Blobs and Argon C src (Github Actions should make them)
-lib/src/blobs/
 argon2_library/
+updateArgonLibs.sh

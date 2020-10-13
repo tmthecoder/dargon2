@@ -107,6 +107,7 @@ class Argon2Lib {
         .lookup<NativeFunction<argon2_encodedlen>>('argon2_encodedlen')
         .asFunction<Argon2Encodedlen>();
     var encodedLen = encodedlen(2, 16, 1, "somesalt".length, 32, 2);
+    print("test");
     var hashValue = setPtr(List.filled(32, 0));
     var password = setPtr(utf8.encode("password"));
     var salt = setPtr(utf8.encode("somesalt"));

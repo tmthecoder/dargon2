@@ -1,15 +1,11 @@
 name: C/C++ CI
 
 on:
-  push:
-    tags:        
-      - '**'
+  repository-dispatch:
 
 jobs:
   linux-build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
     - name: make library
@@ -17,9 +13,6 @@ jobs:
         git clone https://github.com/P-H-C/phc-winner-argon2.git argon2_library
         cd argon2_library
         make
-    - name: Get the version
-      id: get_version
-      run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
     - name: push compiled library
       run: |
         mkdir -p lib/src/blobs/
@@ -29,10 +22,9 @@ jobs:
         git config user.email "GH-actions-ci@github.com"
         git remote add secure-origin https://${{ secrets.ACCESS_TOKEN }}@github.com/tmthecoder/argon2_dart.git
         git commit -m "create blobs for linux"
-        git push -u origin ${{ steps.get_version.outputs.VERSION }}
-        
+        git push origin main
+
   mac-build:
-    
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
@@ -41,10 +33,7 @@ jobs:
         git clone https://github.com/P-H-C/phc-winner-argon2.git argon2_library
         cd argon2_library
         make
-    - name: Get the version
-      id: get_version
-      run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
-    - name: push compiled library
+    - name: copy and push library
       run: |
         mkdir -p lib/src/blobs/
         cp argon2_library/libargon2.1.dylib lib/src/blobs/libargon2-darwin.dylib
@@ -53,4 +42,4 @@ jobs:
         git config user.email "GH-actions-ci@github.com"
         git remote add secure-origin https://${{ secrets.ACCESS_TOKEN }}@github.com/tmthecoder/argon2_dart.git
         git commit -m "create blobs for mac"
-        git push -u origin ${{ steps.get_version.outputs.VERSION }}
+        git push -u origin main
