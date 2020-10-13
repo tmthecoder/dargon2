@@ -26,6 +26,7 @@ jobs:
 
   mac-build:
     runs-on: macos-latest
+    needs: linux-build
     steps:
     - uses: actions/checkout@v2
     - name: make library
