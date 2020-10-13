@@ -1,0 +1,29 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  linux-build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      
+    - name: make library
+      run: |
+        git clone https://github.com/P-H-C/phc-winner-argon2.git argon2_library
+        cd argon2_library
+        make
+        cp libargon2.1.so ../lib/src/blobs/libargon2-linux.so
+        cd ..
+        git add lib/src/blobs/libargon2-linux.so
+        git config user.name  "Github Actions"
+        git config user.email "GH-actions-ci@github.com"
+        git remote add secure-origin https://${{ secrets.ACCESS_TOKEN }}@github.com/tmthecoder/argon2_dart.git
+        git commit -m "create blobs for linux"
+        git push -u origin main
