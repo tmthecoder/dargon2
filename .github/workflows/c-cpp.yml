@@ -22,7 +22,7 @@ jobs:
         git config user.email "GH-actions-ci@github.com"
         git remote add secure-origin https://${{ secrets.ACCESS_TOKEN }}@github.com/tmthecoder/argon2_dart.git
         git commit -m "create blobs for linux"
-        git push -f origin main
+        git push origin main
 
   mac-build:
     runs-on: macos-latest
@@ -43,4 +43,5 @@ jobs:
         git remote add secure-origin https://${{ secrets.ACCESS_TOKEN }}@github.com/tmthecoder/argon2_dart.git
         git commit -m "create blobs for mac"
         git fetch origin main
+        git pull origin main
         git push origin main
