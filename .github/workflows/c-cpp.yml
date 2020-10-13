@@ -1,7 +1,7 @@
 name: C/C++ CI
 
 on:
-  repository-dispatch:
+  repository_dispatch:
 
 jobs:
   linux-build:
