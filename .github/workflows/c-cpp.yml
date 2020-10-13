@@ -17,6 +17,9 @@ jobs:
         git clone https://github.com/P-H-C/phc-winner-argon2.git argon2_library
         cd argon2_library
         make
+    - name: Get the version
+      id: get_version
+      run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
     - name: push compiled library
       run: |
         cp argon2_library/libargon2.so.1 lib/src/blobs/libargon2-linux.so
@@ -25,7 +28,7 @@ jobs:
         git config user.email "GH-actions-ci@github.com"
         git remote add secure-origin https://${{ secrets.ACCESS_TOKEN }}@github.com/tmthecoder/argon2_dart.git
         git commit --alllow-empty -m "create blobs for linux"
-        git push -u origin main
+        git push -u origin ${{ steps.get_version.outputs.VERSION }}
         
   mac-build:
     
@@ -37,6 +40,9 @@ jobs:
         git clone https://github.com/P-H-C/phc-winner-argon2.git argon2_library
         cd argon2_library
         make
+    - name: Get the version
+      id: get_version
+      run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
     - name: push compiled library
       run: |
         cp argon2_library/libargon2.1.dylib lib/src/blobs/libargon2-darwin.dylib
@@ -45,4 +51,4 @@ jobs:
         git config user.email "GH-actions-ci@github.com"
         git remote add secure-origin https://${{ secrets.ACCESS_TOKEN }}@github.com/tmthecoder/argon2_dart.git
         git commit --alllow-empty -m "create blobs for mac"
-        git push -u origin main
+        git push -u origin ${{ steps.get_version.outputs.VERSION }}
