@@ -22,7 +22,6 @@ jobs:
       run: |
         mkdir ./lib/src/blobs/
         cp libargon2.so.1 ../lib/src/blobs/libargon2-linux.so
-        cd ..
         git add -f lib/src/blobs/libargon2-linux.so
         git config user.name  "Github Actions"
         git config user.email "GH-actions-ci@github.com"
@@ -44,7 +43,6 @@ jobs:
       run: |
         mkdir ./lib/src/blobs/
         cp libargon2.1.dylib ../lib/src/blobs/libargon2-darwin.dylib
-        cd ..
         git add -f lib/src/blobs/libargon2-darwin.dylib
         git config user.name  "Github Actions"
         git config user.email "GH-actions-ci@github.com"
