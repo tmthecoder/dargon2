@@ -13,15 +13,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: make library
+    - name: make library and push
       run: |
         git clone https://github.com/P-H-C/phc-winner-argon2.git argon2_library
         cd argon2_library
         make
-    - name: copy and push lib
-      run: |
-        rm -rf ./lib/src/blobs
-        mkdir ./lib/src/blobs/
+        cd ..
         cp libargon2.so.1 ../lib/src/blobs/libargon2-linux.so
         git add -f lib/src/blobs/libargon2-linux.so
         git config user.name  "Github Actions"
@@ -35,15 +32,12 @@ jobs:
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
-    - name: make library
+    - name: make library and push
       run: |
         git clone https://github.com/P-H-C/phc-winner-argon2.git argon2_library
         cd argon2_library
         make
-    - name: copy and push lib
-      run: |
-        rm -rf ./lib/src/blobs
-        mkdir ./lib/src/blobs/
+        cd ..
         cp libargon2.1.dylib ../lib/src/blobs/libargon2-darwin.dylib
         git add -f lib/src/blobs/libargon2-darwin.dylib
         git config user.name  "Github Actions"
