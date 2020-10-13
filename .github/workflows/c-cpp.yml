@@ -22,13 +22,13 @@ jobs:
         git config user.email "GH-actions-ci@github.com"
         git remote add secure-origin https://${{ secrets.ACCESS_TOKEN }}@github.com/tmthecoder/argon2_dart.git
         git commit -m "create blobs for linux"
-        git push origin main
+        git push -f origin main
 
   mac-build:
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
-    - name: make library and push
+    - name: make library
       run: |
         git clone https://github.com/P-H-C/phc-winner-argon2.git argon2_library
         cd argon2_library
@@ -42,4 +42,4 @@ jobs:
         git config user.email "GH-actions-ci@github.com"
         git remote add secure-origin https://${{ secrets.ACCESS_TOKEN }}@github.com/tmthecoder/argon2_dart.git
         git commit -m "create blobs for mac"
-        git push -u origin main
+        git push -f origin main
