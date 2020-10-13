@@ -20,7 +20,7 @@ jobs:
         make
     - name: copy and push lib
       run: |
-        mkdir ../lib/src/blobs/
+        mkdir ./lib/src/blobs/
         cp libargon2.so.1 ../lib/src/blobs/libargon2-linux.so
         cd ..
         git add -f lib/src/blobs/libargon2-linux.so
@@ -42,7 +42,7 @@ jobs:
         make
     - name: copy and push lib
       run: |
-        mkdir ../lib/src/blobs/
+        mkdir ./lib/src/blobs/
         cp libargon2.1.dylib ../lib/src/blobs/libargon2-darwin.dylib
         cd ..
         git add -f lib/src/blobs/libargon2-darwin.dylib
