@@ -20,7 +20,7 @@ jobs:
         make
     - name: push compiled library
       run: |
-        cp argon2_library/libargon2.so.1 ../lib/src/blobs/libargon2-linux.so
+        cp argon2_library/libargon2.so.1 lib/src/blobs/libargon2-linux.so
         git add -f lib/src/blobs/libargon2-linux.so
         git config user.name  "Github Actions"
         git config user.email "GH-actions-ci@github.com"
@@ -40,7 +40,7 @@ jobs:
         make
     - name: push compiled library
       run: |
-        cp argon2_library/libargon2.1.dylib ../lib/src/blobs/libargon2-darwin.dylib
+        cp argon2_library/libargon2.1.dylib lib/src/blobs/libargon2-darwin.dylib
         git add -f lib/src/blobs/libargon2-darwin.dylib
         git config user.name  "Github Actions"
         git config user.email "GH-actions-ci@github.com"
