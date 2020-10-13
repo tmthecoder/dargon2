@@ -21,7 +21,7 @@ jobs:
         make
         ls -ltra
         mkdir ../lib/src/blobs/
-        cp libargon2.1.so ../lib/src/blobs/libargon2-linux.so
+        cp libargon2.so.1 ../lib/src/blobs/libargon2-linux.so
         cd ..
         git add lib/src/blobs/libargon2-linux.so
         git config user.name  "Github Actions"
