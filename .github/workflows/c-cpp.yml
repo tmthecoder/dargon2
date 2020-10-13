@@ -25,7 +25,7 @@ jobs:
         git config user.name  "Github Actions"
         git config user.email "GH-actions-ci@github.com"
         git remote add secure-origin https://${{ secrets.ACCESS_TOKEN }}@github.com/tmthecoder/argon2_dart.git
-        git commit -m "create blobs for linux"
+        git commit --alllow-empty -m "create blobs for linux"
         git push -u origin main
         
   mac-build:
@@ -45,5 +45,5 @@ jobs:
         git config user.name  "Github Actions"
         git config user.email "GH-actions-ci@github.com"
         git remote add secure-origin https://${{ secrets.ACCESS_TOKEN }}@github.com/tmthecoder/argon2_dart.git
-        git commit -m "create blobs for mac"
+        git commit --alllow-empty -m "create blobs for mac"
         git push -u origin main
