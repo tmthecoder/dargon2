@@ -22,6 +22,7 @@ jobs:
       run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
     - name: push compiled library
       run: |
+        mkdir -p lib/src/blobs/
         cp argon2_library/libargon2.so.1 lib/src/blobs/libargon2-linux.so
         git add -f lib/src/blobs/libargon2-linux.so
         git config user.name  "Github Actions"
@@ -45,6 +46,7 @@ jobs:
       run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
     - name: push compiled library
       run: |
+        mkdir -p lib/src/blobs/
         cp argon2_library/libargon2.1.dylib lib/src/blobs/libargon2-darwin.dylib
         git add -f lib/src/blobs/libargon2-darwin.dylib
         git config user.name  "Github Actions"
