@@ -13,13 +13,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-      
     - name: make library
       run: |
         git clone https://github.com/P-H-C/phc-winner-argon2.git argon2_library
         cd argon2_library
         make
-        ls -ltra
+    - name: copy and push lib
+      run: |
         mkdir ../lib/src/blobs/
         cp libargon2.so.1 ../lib/src/blobs/libargon2-linux.so
         cd ..
@@ -28,4 +28,26 @@ jobs:
         git config user.email "GH-actions-ci@github.com"
         git remote add secure-origin https://${{ secrets.ACCESS_TOKEN }}@github.com/tmthecoder/argon2_dart.git
         git commit -m "create blobs for linux"
+        git push -u origin main
+        
+  mac-build:
+    
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: make library
+      run: |
+        git clone https://github.com/P-H-C/phc-winner-argon2.git argon2_library
+        cd argon2_library
+        make
+    - name: copy and push lib
+      run: |
+        mkdir ../lib/src/blobs/
+        cp libargon2.1.dylib ../lib/src/blobs/libargon2-darwin.dylib
+        cd ..
+        git add -f lib/src/blobs/libargon2-darwin.dylib
+        git config user.name  "Github Actions"
+        git config user.email "GH-actions-ci@github.com"
+        git remote add secure-origin https://${{ secrets.ACCESS_TOKEN }}@github.com/tmthecoder/argon2_dart.git
+        git commit -m "create blobs for mac"
         git push -u origin main
