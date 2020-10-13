@@ -13,13 +13,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: make library and push
+    - name: make library
       run: |
         git clone https://github.com/P-H-C/phc-winner-argon2.git argon2_library
         cd argon2_library
         make
-        cd ..
-        cp libargon2.so.1 ../lib/src/blobs/libargon2-linux.so
+    - name: push compiled library
+      run: |
+        cp argon2_library/libargon2.so.1 ../lib/src/blobs/libargon2-linux.so
         git add -f lib/src/blobs/libargon2-linux.so
         git config user.name  "Github Actions"
         git config user.email "GH-actions-ci@github.com"
@@ -37,8 +38,9 @@ jobs:
         git clone https://github.com/P-H-C/phc-winner-argon2.git argon2_library
         cd argon2_library
         make
-        cd ..
-        cp libargon2.1.dylib ../lib/src/blobs/libargon2-darwin.dylib
+    - name: push compiled library
+      run: |
+        cp argon2_library/libargon2.1.dylib ../lib/src/blobs/libargon2-darwin.dylib
         git add -f lib/src/blobs/libargon2-darwin.dylib
         git config user.name  "Github Actions"
         git config user.email "GH-actions-ci@github.com"
