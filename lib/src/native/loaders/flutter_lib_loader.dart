@@ -7,7 +7,7 @@
 import 'dart:ffi';
 import 'dart:io';
 
-import 'package:argon2_dart/src/native/loaders/lib_loader.dart';
+import 'package:dargon2/src/native/loaders/lib_loader.dart';
 
 class FlutterLibLoader implements LibLoader {
   @override

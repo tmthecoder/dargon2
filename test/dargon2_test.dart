@@ -1,8 +1,8 @@
 import 'dart:convert';
 
-import 'package:argon2_dart/argon2_dart.dart';
-import 'package:argon2_dart/src/hash_result.dart';
-import 'package:argon2_dart/src/native/native_bindings.dart';
+import 'package:dargon2/dargon2.dart';
+import 'package:dargon2/src/hash_result.dart';
+import 'package:dargon2/src/native/native_bindings.dart';
 import 'package:test/test.dart';
 
 void main() {

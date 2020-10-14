@@ -4,6 +4,4 @@
 library argon2_dart;
 
 export 'src/argon2.dart';
-
-
-// TODO: Export any libraries intended for clients of this package.
+export 'src/utils/salt.dart';

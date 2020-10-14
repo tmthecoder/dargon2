@@ -1,5 +1,5 @@
-name: argon2_dart
-description: A starting point for Dart libraries or applications.
+name: dargon2
+description: Dart bindings for Argon2
 # version: 1.0.0
 # homepage: https://www.example.com
 

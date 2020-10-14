@@ -4,7 +4,7 @@
  * File Name: salt.dart
 */
 
-import 'package:argon2_dart/src/utils/secure_random_gen.dart';
+import 'package:dargon2/src/utils/secure_random_gen.dart';
 
 class Salt {
 

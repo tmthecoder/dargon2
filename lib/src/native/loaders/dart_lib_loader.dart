@@ -6,7 +6,7 @@
 
 import 'dart:ffi';
 
-import 'package:argon2_dart/src/native/loaders/lib_loader.dart';
+import 'package:dargon2/src/native/loaders/lib_loader.dart';
 
 class DartLibLoader implements LibLoader {
   @override

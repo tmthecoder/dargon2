@@ -1,11 +1,11 @@
 import 'dart:ffi';
-import 'package:argon2_dart/src/hash_result.dart';
-import 'package:argon2_dart/src/native/local_binder.dart';
+import 'package:dargon2/src/hash_result.dart';
+import 'package:dargon2/src/native/local_binder.dart';
 import 'package:ffi/ffi.dart';
 import 'dart:typed_data';
 import 'package:meta/meta.dart';
 
-const argon2 = Argon2._();
+const argon2 = DArgon2._();
 
 enum Argon2Type {
   i,
@@ -18,9 +18,9 @@ enum Argon2Version {
   V13
 }
 
-class Argon2 {
+class DArgon2 {
 
-  const Argon2._();
+  const DArgon2._();
 
   HashResult hashPassword(List<int> password, {@required List<int> salt, int iterations = 32, int memory = 1024, int parallelism = 2, int length = 32, Argon2Type type = Argon2Type.i, Argon2Version version = Argon2Version.V13}) {
     //Create pointers to pass to the C method
