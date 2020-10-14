@@ -67,6 +67,8 @@ jobs:
       - name: copy and push library
         run: |
           CD argon2_library
+          CD vs2015
+          CD build
           Get-ChildItem
           
       
