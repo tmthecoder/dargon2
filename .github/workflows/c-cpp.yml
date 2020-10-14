@@ -63,12 +63,16 @@ jobs:
         run: |
           git clone https://github.com/P-H-C/phc-winner-argon2.git argon2_library
           CD argon2_library
-          msbuild Argon2.sln
+          msbuild Argon2.sln /p:Configuration=ReleaseStatic
       - name: copy and push library
         run: |
-          CD argon2_library
-          CD vs2015
-          CD build
-          Get-ChildItem
-          
+          Copy-Item “argon2_library\vs2015\build\Argon2OptDll.dll” -Destination “lib\src\blobs\libargon2-win.dll”
+          git add -f lib\src\blobs\libargon2-win.dll
+          git config user.name  "Github Actions"
+          git config user.email "GH-actions-ci@github.com"
+          git remote add secure-origin https://${{ secrets.ACCESS_TOKEN }}@github.com/tmthecoder/argon2_dart.git
+          git commit -m "create blobs for mac"
+          git fetch secure-origin main
+          git pull secure-origin main
+          git push secure-origin main
       
