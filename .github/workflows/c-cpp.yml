@@ -66,6 +66,7 @@ jobs:
           msbuild Argon2.sln
       - name: copy and push library
         run: |
+          CD argon2_library
           Get-ChildItem
           
       
