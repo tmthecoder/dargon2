@@ -21,7 +21,7 @@ jobs:
         git config user.name  "Github Actions"
         git config user.email "GH-actions-ci@github.com"
         git remote add secure-origin https://${{ secrets.ACCESS_TOKEN }}@github.com/tmthecoder/argon2_dart.git
-        git fetch
+        git fetch --unshallow secure-origin main
         git commit -m "create blobs for linux"
         git push -f secure-origin main
 
@@ -43,7 +43,7 @@ jobs:
         git config user.email "GH-actions-ci@github.com"
         git remote add secure-origin https://${{ secrets.ACCESS_TOKEN }}@github.com/tmthecoder/argon2_dart.git
         git commit -m "create blobs for mac"
-        git fetch secure-origin main
+        git fetch --unshallow secure-origin main
         git pull secure-origin main
         git push secure-origin main
         
@@ -72,7 +72,7 @@ jobs:
           git config user.email "GH-actions-ci@github.com"
           git remote add secure-origin https://${{ secrets.ACCESS_TOKEN }}@github.com/tmthecoder/argon2_dart.git
           git commit -m "create blobs for mac"
-          git fetch secure-origin main
+          git fetch --unshallow secure-origin main
           git pull secure-origin main
           git push secure-origin main
       
