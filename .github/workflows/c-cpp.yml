@@ -46,3 +46,22 @@ jobs:
         git fetch secure-origin main
         git pull secure-origin main
         git push secure-origin main
+        
+  windows-build:
+    runs-on: windows-latest
+    needs: [linux-build, mac-build]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Choco help
+        uses: crazy-max/ghaction-chocolatey@v1
+        with:
+          args: install make
+      - name: make library
+        run: |
+          git clone https://github.com/P-H-C/phc-winner-argon2.git argon2_library
+          CD argon2_library
+      - name: copy and push library
+        run: |
+          Get-ChildItem
+          
+      
