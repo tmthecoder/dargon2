@@ -6,4 +6,4 @@
 import 'lib_loader.dart';
 
 LibLoader getLibLoader() => throw UnsupportedError(
-    'Cannot create a keyfinder without the packages dart:html or package:shared_preferences');
+    'Cannot load a lib in a non-flutter or dart environment');

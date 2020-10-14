@@ -18,4 +18,5 @@ class FlutterLibLoader implements LibLoader {
     return DynamicLibrary.open(path);
   }
 }
+
 LibLoader getLibLoader() => FlutterLibLoader();

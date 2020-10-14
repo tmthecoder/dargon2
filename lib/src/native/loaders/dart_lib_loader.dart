@@ -14,4 +14,5 @@ class DartLibLoader implements LibLoader {
     return DynamicLibrary.open(path);
   }
 }
+
 LibLoader getLibLoader() => DartLibLoader();

@@ -5,3 +5,4 @@ library argon2_dart;
 
 export 'src/argon2.dart';
 export 'src/utils/salt.dart';
+export 'src/utils/dargon2_result.dart';

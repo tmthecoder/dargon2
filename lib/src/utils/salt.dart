@@ -7,7 +7,6 @@
 import 'package:dargon2/src/utils/secure_random_gen.dart';
 
 class Salt {
-
   final List<int> _bytes;
 
   Salt(this._bytes);
@@ -19,6 +18,4 @@ class Salt {
   List<int> get bytes {
     return _bytes;
   }
-
-
 }
