@@ -52,6 +52,8 @@ jobs:
     needs: [linux-build, mac-build]
     steps:
       - uses: actions/checkout@v2
+      - name: Add msbuild to PATH
+        uses: microsoft/setup-msbuild@v1.0.2
       - name: make library
         run: |
           git clone https://github.com/P-H-C/phc-winner-argon2.git argon2_library
