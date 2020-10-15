@@ -1,4 +1,4 @@
-name: C/C++ CI
+name: Library Builder CI
 
 on:
   repository_dispatch:
