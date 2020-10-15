@@ -1,4 +1,4 @@
-name: dargon2 Tests
+name: dargon2
 
 on:
   push:
