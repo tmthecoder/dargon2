@@ -48,7 +48,7 @@ Please file feature requests and bugs at the [issue tracker].
 - dargon2 is Licensed under the [MIT License] 
 - The C implementation of [Argon2] is licensed under a dual [Apache and CC0 License]
 
-[MIT License]: https://github.com/tmthecoder/dargon2/LICENSE
+[MIT License]: https://github.com/tmthecoder/dargon2/blob/main/LICENSE
 
 [Argon2]: https://github.com/P-H-C/phc-winner-argon2
 

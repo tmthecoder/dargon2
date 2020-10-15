@@ -6,6 +6,8 @@
       <excludeFolder url="file://$MODULE_DIR$/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/argon2_library/argon2.dSYM/Contents/Resources" />
+      <excludeFolder url="file://$MODULE_DIR$/argon2_library/genkat.dSYM/Contents/Resources" />
+      <excludeFolder url="file://$MODULE_DIR$/argon2_library/testcase.dSYM/Contents/Resources" />
       <excludeFolder url="file://$MODULE_DIR$/build" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
