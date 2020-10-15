@@ -19,7 +19,7 @@ void main() {
    var password = 'password';
    //use Salt(List<int> bytes) for a salt from an Integer list
    var s = Salt.newSalt();
-   //Hash with pre-set params (iterations: 32, memory: 1024, parallelism: 2, 
+   //Hash with pre-set params (iterations: 32, memory: 256, parallelism: 2, 
    //length: 32, type: Argon2Type.i, version: Argon2Version.V13)
    var result = argon2.hashPasswordString(password, salt: s);
    
@@ -32,7 +32,7 @@ void main() {
    var bytesEncoded = result.encodedBytes;
    var stringEncoded = result.encodedString;
    
-   //Verify password (returns true/false)
+   //Verify password (returns true/false), uses default type (Argon2Type.i)
    var verified = argon2.verifyHashString(password, stringEncoded);
 }
 ```

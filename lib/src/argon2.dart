@@ -1,25 +1,51 @@
+// Copyright 2020 Tejas Mehta <tmthecoder@gmail.com>
+// Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+// The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
 import 'dart:convert';
 import 'dart:ffi';
-import 'package:dargon2/src/utils/dargon2_result.dart';
+import 'package:dargon2/dargon2.dart';
 import 'package:dargon2/src/native/local_binder.dart';
-import 'package:dargon2/src/utils/salt.dart';
 import 'package:ffi/ffi.dart';
 import 'dart:typed_data';
 import 'package:meta/meta.dart';
 
+/// The Cannonical instance of [DArgon2].
 const argon2 = DArgon2._();
 
-enum Argon2Type { i, d, id }
+/// The enum to determine the Argon2 Type used (Argon2i, Argon2d, Argon2id).
+enum Argon2Type { d, i, id }
 
+/// The enum used to determine the Argon2 Version used (0x10 or 0x13).
 enum Argon2Version { V10, V13 }
 
+/// A class that houses all of the methods to hash and verify a password using
+/// the [Argon2] password hashing algorithm.
+///
+/// [Argon2]: https://github.com/P-H-C/phc-winner-argon2
+///
+/// This should be used via the [argon2] field.
 class DArgon2 {
+
+  /// The const constructor for the [DArgon2] class.
   const DArgon2._();
 
+  /// The method to hash a password of type String with Argon2.
+  ///
+  /// Needs a UTF-8 String [password] and a [salt] to be given with
+  /// an optional parameters to control the amount of [iterations], [memory],
+  /// [parallelism] used during the operation. Also optionally takes a [length]
+  /// parameter for the hash's return length, as well as a [type] and [version] to
+  /// pass along to the C method. This method converts the string to a byte array
+  /// and calls the [hashPasswordBytes] with the given byte array.
+  ///
+  /// Returns a [DArgon2Result] with the hashed password, encoded hash, and various
+  /// conversion options for the hash and encoded bytes.
   DArgon2Result hashPasswordString(String password,
       {@required Salt salt,
       int iterations = 32,
-      int memory = 1024,
+      int memory = 256,
       int parallelism = 2,
       int length = 32,
       Argon2Type type = Argon2Type.i,
@@ -34,24 +60,35 @@ class DArgon2 {
         version: version);
   }
 
+  /// The method to hash a byte array of type List<int> with Argon2.
+  ///
+  /// Needs a [List] of type int [password] and a [salt] to be given with
+  /// an optional parameters to control the amount of [iterations], [memory],
+  /// [parallelism] used during the operation. Also optionally takes a [length]
+  /// parameter for the hash's return length, as well as a [type] and [version] to
+  /// pass along to the C method.
+  ///
+  /// Returns a [DArgon2Result] with the hashed password, encoded hash, and various
+  /// conversion options for the hash and encoded bytes.
   DArgon2Result hashPasswordBytes(List<int> password,
       {@required Salt salt,
       int iterations = 32,
-      int memory = 1024,
+      int memory = 256,
       int parallelism = 2,
       int length = 32,
       Argon2Type type = Argon2Type.i,
       Argon2Version version = Argon2Version.V13}) {
+    assert(salt != null);
     //Create pointers to pass to the C method
-    var passPointer = setPtr(password);
-    var saltPointer = setPtr(salt.bytes);
-    var hash = setPtr(List.filled(length, 0));
+    var passPointer = _setPtr(password);
+    var saltPointer = _setPtr(salt.bytes);
+    var hash = _setPtr(List.filled(length, 0));
     //Get the length of the encoded hash and set the encoded pointer
     var encodedLength = LocalBinder.instance.getEncodedHashLength(
         iterations, memory, parallelism, salt.bytes.length, length, type.index);
-    var encoded = setPtr(List.filled(encodedLength, 0));
+    var encoded = _setPtr(List.filled(encodedLength, 0));
     var v = version == Argon2Version.V13 ? 0x13 : 0x10;
-    LocalBinder.instance.getHash(
+    var result = LocalBinder.instance.getHash(
         iterations,
         memory,
         parallelism,
@@ -69,36 +106,67 @@ class DArgon2 {
     var hashBytes = List<int>.from(hash.asTypedList(length).cast());
     var encodedBytes =
         List<int>.from(encoded.asTypedList(encodedLength).cast());
+    if (encodedBytes.last == 0) {
+      encodedBytes.removeLast();
+    }
     //Free all pointers
-    free(hash.cast());
-    free(encoded.cast());
-    free(saltPointer.cast());
-    free(passPointer.cast());
+    free(hash);
+    free(encoded);
+    free(saltPointer);
+    free(passPointer);
+    if (DArgon2ErrorCode.values[result.abs()] != DArgon2ErrorCode.ARGON2_OK) {
+      throw DArgon2Exception(Utf8.fromUtf8(LocalBinder.instance.getErrorMessage(result)), DArgon2ErrorCode.values[result.abs()]);
+    }
     return DArgon2Result(hashBytes, encodedBytes);
   }
 
+  /// The method to verify a String password and a String encodedHash.
+  ///
+  /// Needs a UTF-8 String [password], a UTF-8 String [encodedHash], as well as an
+  /// Argon2Type [type] used for the actual hash. This method gets the byte arrays of
+  /// both Strings and calls [verifyHashBytes] with that info.
+  ///
+  /// Returns a [bool] with a true for a success and false for a failed verification.
   bool verifyHashString(String password, String encodedHash, {
     Argon2Type type = Argon2Type.i
   }) {
     return verifyHashBytes(utf8.encode(password), utf8.encode(encodedHash), type: type);
   }
 
+  /// The method to verify a List<int> password and a List<int> encodedHash.
+  ///
+  /// Needs a [List] of type int [password], a [List] of type int [encodedHash], as well as an
+  /// Argon2Type [type] used for the actual hash.
+  ///
+  /// Returns a [bool] with a true for a success and false for a failed verification.
   bool verifyHashBytes(List<int> password, List<int> encodedHash, {
     Argon2Type type = Argon2Type.i
   }) {
     //Create pointers to pass to the C method
-    var passPointer = setPtr(password);
-    var hashPointer = setPtr(encodedHash);
+    var passPointer = _setPtr(password);
+    var hashPointer = Utf8.toUtf8(utf8.decode(encodedHash));
+    // var hashPointer = _setPtr(encodedHash);
     //Get the result
     var result = LocalBinder.instance
         .verifyHash(hashPointer, passPointer, password.length, type.index);
     //Free the pointers
-    free(passPointer.cast());
-    free(hashPointer.cast());
+    free(passPointer);
+    free(hashPointer);
+    if (DArgon2ErrorCode.values[result.abs()] != DArgon2ErrorCode.ARGON2_OK) {
+      throw DArgon2Exception(Utf8.fromUtf8(LocalBinder.instance.getErrorMessage(result)), DArgon2ErrorCode.values[result.abs()]);
+    }
     return result == 0;
   }
 
-  Pointer<Uint8> setPtr(Iterable<int> iterable) {
+  /// The method used internally to allocate memory for the sent pointers
+  /// via the Foreign Function Interface (dart:ffi) for Argon2 Computations.
+  ///
+  /// Needs an [Iterable] of type int to be given in order to allocate the memory
+  /// using the length of the list, and setting each value of the iterable
+  /// in the pointer's memory.
+  ///
+  /// Returns a [Pointer] of type [Uint8] to be used for Argon2 computations.
+  Pointer<Uint8> _setPtr(Iterable<int> iterable) {
     //Allocate a pointer in memory and set the values from the given list
     var p = allocate<Uint8>(count: Uint8List.fromList(iterable).length);
     p.asTypedList(iterable.length).setAll(0, iterable);

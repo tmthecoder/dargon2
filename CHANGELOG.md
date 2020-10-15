@@ -1,4 +1,4 @@
 ## 1.0.0
-## 1.0.0
 
-- Initial version, created by Stagehand
+- First public release!
+- Contains hashing and verification with argon2
