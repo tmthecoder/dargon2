@@ -3,7 +3,6 @@
 // The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-
 import 'dart:ffi';
 import 'dart:io';
 
@@ -130,10 +129,13 @@ class LocalBinder {
 
   /// Callable method of type [_Argon2Hash] that binds to [_argon2_hash].
   _Argon2Hash getHash;
+
   /// Callable method of type [_Argon2Verify] that binds to [_argon2_verify].
   _Argon2Verify verifyHash;
+
   /// Callable method of type [_Argon2Encodedlen] that binds to [_argon2_encodedlen].
   _Argon2Encodedlen getEncodedHashLength;
+
   /// Callable method of type [_Argon2ErrorMessage] that binds to [_argon2_error_message].
   _Argon2ErrorMessage getErrorMessage;
 
@@ -162,8 +164,8 @@ class LocalBinder {
         .lookup<NativeFunction<_argon2_encodedlen>>('argon2_encodedlen')
         .asFunction<_Argon2Encodedlen>();
     getErrorMessage = argon2lib
-      .lookup<NativeFunction<_argon2_error_message>>('argon2_error_message')
-      .asFunction<_Argon2ErrorMessage>();
+        .lookup<NativeFunction<_argon2_error_message>>('argon2_error_message')
+        .asFunction<_Argon2ErrorMessage>();
   }
 
   /// The private getPath method, set to handle paths from all 3 Desktop platforms as well as

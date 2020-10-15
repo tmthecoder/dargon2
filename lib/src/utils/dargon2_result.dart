@@ -9,7 +9,6 @@ import 'package:convert/convert.dart';
 /// A class that stores the results from an Argon2 Hashing operation.
 /// Allows for a user to get various values from the List<int> [_bytes] and [_encodedBytes].
 class DArgon2Result {
-
   /// Private fields to store the raw bytes and encoded bytes from the hash operation.
   final List<int> _bytes;
   final List<int> _encodedBytes;
@@ -34,5 +33,4 @@ class DArgon2Result {
 
   /// A getter to return a UTF-8 String from the encoded bytes ([_encodedBytes])
   String get encodedString => utf8.decode(_encodedBytes);
-
 }

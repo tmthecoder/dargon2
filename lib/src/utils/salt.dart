@@ -9,7 +9,6 @@ import 'package:dargon2/src/utils/secure_random_gen.dart';
 /// Allows for a user to create a salt with given bytes (List<int>)
 /// or create a new salt with secure random bytes.
 class Salt {
-
   /// Internal List of salt bytes
   final List<int> _bytes;
 

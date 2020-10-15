@@ -16,7 +16,6 @@ import 'package:dargon2/src/exceptions/DArgon2ErrorCodes.dart';
 /// }
 /// ```
 class DArgon2Exception implements Exception {
-
   /// The constructor for the Exception, which simplifies a thrown error in the Argon2
   /// hashing or verification process.
   ///

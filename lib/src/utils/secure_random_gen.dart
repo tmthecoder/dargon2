@@ -9,7 +9,6 @@ import 'dart:math';
 /// Currently only has a single static method to get random bytes
 /// with a given length.
 class SecureRandomGen {
-
   /// The method to get a List of random secure bytes with given length.
   ///
   /// Optionally accepts a [length] parameter of type int for a user-determined

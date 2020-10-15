@@ -11,7 +11,6 @@ import 'package:dargon2/src/native/loaders/lib_loader.dart';
 /// The Dylib Loader for any Flutter apps. Loads the dylib from
 /// the given path, based off a conditional import on dart:ui
 class FlutterLibLoader implements LibLoader {
-
   /// General library loader method, overridden from the abstract superclass [LibLoader]
   ///
   /// Takes a given String [path], which is the Library's location and passes it to

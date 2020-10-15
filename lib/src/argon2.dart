@@ -27,7 +27,6 @@ enum Argon2Version { V10, V13 }
 ///
 /// This should be used via the [argon2] field.
 class DArgon2 {
-
   /// The const constructor for the [DArgon2] class.
   const DArgon2._();
 
@@ -115,7 +114,9 @@ class DArgon2 {
     free(saltPointer);
     free(passPointer);
     if (DArgon2ErrorCode.values[result.abs()] != DArgon2ErrorCode.ARGON2_OK) {
-      throw DArgon2Exception(Utf8.fromUtf8(LocalBinder.instance.getErrorMessage(result)), DArgon2ErrorCode.values[result.abs()]);
+      throw DArgon2Exception(
+          Utf8.fromUtf8(LocalBinder.instance.getErrorMessage(result)),
+          DArgon2ErrorCode.values[result.abs()]);
     }
     return DArgon2Result(hashBytes, encodedBytes);
   }
@@ -127,10 +128,10 @@ class DArgon2 {
   /// both Strings and calls [verifyHashBytes] with that info.
   ///
   /// Returns a [bool] with a true for a success and false for a failed verification.
-  bool verifyHashString(String password, String encodedHash, {
-    Argon2Type type = Argon2Type.i
-  }) {
-    return verifyHashBytes(utf8.encode(password), utf8.encode(encodedHash), type: type);
+  bool verifyHashString(String password, String encodedHash,
+      {Argon2Type type = Argon2Type.i}) {
+    return verifyHashBytes(utf8.encode(password), utf8.encode(encodedHash),
+        type: type);
   }
 
   /// The method to verify a List<int> password and a List<int> encodedHash.
@@ -139,9 +140,8 @@ class DArgon2 {
   /// Argon2Type [type] used for the actual hash.
   ///
   /// Returns a [bool] with a true for a success and false for a failed verification.
-  bool verifyHashBytes(List<int> password, List<int> encodedHash, {
-    Argon2Type type = Argon2Type.i
-  }) {
+  bool verifyHashBytes(List<int> password, List<int> encodedHash,
+      {Argon2Type type = Argon2Type.i}) {
     //Create pointers to pass to the C method
     var passPointer = _setPtr(password);
     var hashPointer = Utf8.toUtf8(utf8.decode(encodedHash));
@@ -153,7 +153,9 @@ class DArgon2 {
     free(passPointer);
     free(hashPointer);
     if (DArgon2ErrorCode.values[result.abs()] != DArgon2ErrorCode.ARGON2_OK) {
-      throw DArgon2Exception(Utf8.fromUtf8(LocalBinder.instance.getErrorMessage(result)), DArgon2ErrorCode.values[result.abs()]);
+      throw DArgon2Exception(
+          Utf8.fromUtf8(LocalBinder.instance.getErrorMessage(result)),
+          DArgon2ErrorCode.values[result.abs()]);
     }
     return result == 0;
   }
