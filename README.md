@@ -1,5 +1,5 @@
 ## dargon2
-![dargon2](https://github.com/tmthecoder/dargon2/workflows/dargon2%20Tests/badge.svg?branch=main)
+![dargon2](https://github.com/tmthecoder/dargon2/workflows/dargon2/badge.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Dart bindings for the reference C implementation of [Argon2], the winner of the [Password Hash Competition].
