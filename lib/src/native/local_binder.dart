@@ -5,6 +5,8 @@
 
 import 'dart:ffi';
 import 'dart:io';
+import 'dart:cli';
+import 'dart:isolate';
 
 import 'package:dargon2/src/native/loaders/lib_loader.dart';
 import 'package:ffi/ffi.dart';
@@ -172,10 +174,18 @@ class LocalBinder {
   /// for Flutter apps. Returns the relative library location for desktops, or the necessary
   /// NDK set library as according to Flutter's guide on ffi
   String _getPath() {
-    var relativePath = './lib/src/blobs';
-    if (Platform.isMacOS) return '$relativePath/libargon2-darwin.dylib';
-    if (Platform.isLinux) return '$relativePath/libargon2-linux.so';
-    if (Platform.isWindows) return r'lib\src\blobs\libargon2-win.dll';
+    String rootPath;
+    if (Platform.script.path.endsWith('.snapshot')) {
+      rootPath = File.fromUri(Platform.script).parent.path;
+    } else {
+      final rootLibrary = 'package:dargon2/dargon2.dart';
+      rootPath = waitFor(Isolate.resolvePackageUri(Uri.parse(rootLibrary)))
+          .resolve('src/blobs/')
+          .toFilePath(windows: Platform.isWindows);
+    }
+    if (Platform.isMacOS) return '${rootPath}libargon2-darwin.dylib';
+    if (Platform.isLinux) return '${rootPath}libargon2-linux.so';
+    if (Platform.isWindows) return '${rootPath}libargon2-win.dll';
     return 'libargon2-arm.so';
   }
 }

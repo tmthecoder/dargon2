@@ -1,3 +1,7 @@
+## 1.0.3
+- Fix the error that didn't load the dynamic library on mac correctly
+- Resolve the dynamic library's path via a URI
+
 ## 1.0.2
 - Sign the dylib for mac
 - Fix formatting errors
