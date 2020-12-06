@@ -4,8 +4,11 @@
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 import 'dart:ffi';
+import 'dart:io';
+import 'dart:isolate';
 
 import 'package:dargon2/src/native/loaders/lib_loader.dart';
+import 'dart:cli';
 
 /// The Dylib Loader for any Dart native apps, regardless of platform. Loads the dylib
 /// from the given path, based off a conditional import on dart:ui
@@ -16,8 +19,28 @@ class DartLibLoader implements LibLoader {
   ///
   /// Returns a [DynamicLibrary], which is the Argon2 Library
   @override
-  DynamicLibrary loadLib(String path) {
-    return DynamicLibrary.open(path);
+  DynamicLibrary loadLib() {
+    return DynamicLibrary.open(getPath());
+  }
+
+  /// The private getPath method, set to handle paths from all 3 Desktop platforms.
+  /// Returns the relative library location for desktops based on the plugin's location
+  /// and the binary's relative path
+  @override
+  String getPath() {
+    String rootPath;
+    if (Platform.script.path.endsWith('.snapshot')) {
+      rootPath = File.fromUri(Platform.script).parent.path;
+    } else {
+      final rootLibrary = 'package:dargon2/dargon2.dart';
+      rootPath = waitFor(Isolate.resolvePackageUri(Uri.parse(rootLibrary)))
+          .resolve('src/blobs/')
+          .toFilePath(windows: Platform.isWindows);
+    }
+    if (Platform.isMacOS) return '${rootPath}libargon2-darwin.dylib';
+    if (Platform.isLinux) return '${rootPath}libargon2-linux.so';
+    if (Platform.isWindows) return '${rootPath}libargon2-win.dll';
+    return 'libargon2-arm.so';
   }
 }
 

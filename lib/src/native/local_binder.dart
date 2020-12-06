@@ -4,9 +4,6 @@
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 import 'dart:ffi';
-import 'dart:io';
-import 'dart:cli';
-import 'dart:isolate';
 
 import 'package:dargon2/src/native/loaders/lib_loader.dart';
 import 'package:ffi/ffi.dart';
@@ -151,11 +148,9 @@ class LocalBinder {
   /// The class constructor, which handles loading the dylib and mapping each method to their
   /// respective C equivalents
   ///
-  /// Takes an optional String [path] in case any user needs to override the path of the dylib,
-  /// or need to privide their own.
-  LocalBinder({String path}) {
-    path ??= _getPath();
-    var argon2lib = LibLoader().loadLib(path);
+  /// Opens the C library using dart's ffi and maps all of the main methods
+  LocalBinder() {
+    var argon2lib = LibLoader().loadLib();
     getHash = argon2lib
         .lookup<NativeFunction<_argon2_hash>>('argon2_hash')
         .asFunction<_Argon2Hash>();
@@ -168,24 +163,5 @@ class LocalBinder {
     getErrorMessage = argon2lib
         .lookup<NativeFunction<_argon2_error_message>>('argon2_error_message')
         .asFunction<_Argon2ErrorMessage>();
-  }
-
-  /// The private getPath method, set to handle paths from all 3 Desktop platforms as well as
-  /// for Flutter apps. Returns the relative library location for desktops, or the necessary
-  /// NDK set library as according to Flutter's guide on ffi
-  String _getPath() {
-    String rootPath;
-    if (Platform.script.path.endsWith('.snapshot')) {
-      rootPath = File.fromUri(Platform.script).parent.path;
-    } else {
-      final rootLibrary = 'package:dargon2/dargon2.dart';
-      rootPath = waitFor(Isolate.resolvePackageUri(Uri.parse(rootLibrary)))
-          .resolve('src/blobs/')
-          .toFilePath(windows: Platform.isWindows);
-    }
-    if (Platform.isMacOS) return '${rootPath}libargon2-darwin.dylib';
-    if (Platform.isLinux) return '${rootPath}libargon2-linux.so';
-    if (Platform.isWindows) return '${rootPath}libargon2-win.dll';
-    return 'libargon2-arm.so';
   }
 }

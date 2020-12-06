@@ -1,3 +1,6 @@
+## 1.0.4
+- Fix the slight bug brought by having the waitFor in the generic binder instead of the conditional loader
+
 ## 1.0.3
 - Fix the error that didn't load the dynamic library on mac correctly
 - Resolve the dynamic library's path via a URI

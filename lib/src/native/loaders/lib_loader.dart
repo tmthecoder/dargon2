@@ -14,7 +14,12 @@ import 'lib_loader_stub.dart'
 abstract class LibLoader {
   /// The abstract library loader method, which is overridden in
   /// subclasses when implementing
-  DynamicLibrary loadLib(String path);
+  DynamicLibrary loadLib();
+
+  /// The private getPath method, set to handle paths from all 3 Desktop platforms as well as
+  /// for Flutter apps. Returns the relative library location for desktops, or the necessary
+  /// NDK set library as according to Flutter's guide on ffia
+  String getPath();
 
   /// Factory Loader constructor to return either the Dart native or
   /// Flutter class based on the program's context

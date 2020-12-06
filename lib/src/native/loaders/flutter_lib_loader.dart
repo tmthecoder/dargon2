@@ -19,11 +19,18 @@ class FlutterLibLoader implements LibLoader {
   ///
   /// Returns a [DynamicLibrary], which is the Argon2 Library
   @override
-  DynamicLibrary loadLib(String path) {
+  DynamicLibrary loadLib() {
     if (Platform.isIOS || Platform.isMacOS) {
       return DynamicLibrary.process();
     }
-    return DynamicLibrary.open(path);
+    return DynamicLibrary.open(getPath());
+  }
+
+  /// The private getPath method, set to handle paths from just the Android part
+  /// of a Flutter plugin as iOS is already handled with the .process()
+  @override
+  String getPath() {
+    return 'libargon2-arm.so';
   }
 }
 
