@@ -23,6 +23,7 @@ jobs:
     - name: Push Documentation
       run: |
         cd doc/api
+        echo "docs.tmthecoder.dev" > CNAME
         git init
         git config user.name  "Docbot"
         git config user.email "docbot@github.com"
