@@ -20,13 +20,14 @@ jobs:
      run: dartdoc
    - name: Push Documentation
      run: |
-       cd doc/api
+       mkdir doc-src && cd doc-src
        echo "docs.tmthecoder.dev" > CNAME
-       git init
+       git pull https://github.com/tmthecoder/docs
        git config user.name  "Docbot"
        git config user.email "docbot@github.com"
-       git remote add secure-origin https://${{ secrets.ACCESS_TOKEN }}@github.com/tmthecoder/dargon2
-       git checkout -b gh-pages
+       if [ -d dargon2/ ]; then rm -Rf dargon2/; fi
+       cp -R ../doc/api dargon2/
+       git remote add secure-origin https://${{ secrets.ACCESS_TOKEN }}@github.com/tmthecoder/docs
        git add .
-       git commit -m "Updated documentation with code from master"
-       git push --force secure-origin gh-pages
+       git commit -m "Updated documentation for dargon2"
+       git push secure-origin main
