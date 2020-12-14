@@ -3,22 +3,28 @@ name: docbot
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
 
 jobs:
   test:
 
     runs-on: ubuntu-latest
 
-    container:
-      image:  google/dart:latest
-
     steps:
     - uses: actions/checkout@v2
     - name: Install dependencies
       run: pub get
-    - name: Generate Documentation
+    - uses: actions/setup-java@v1
+      with:
+        java-version: '12.x'
+    - uses: subosito/flutter-action@v1
+      with:
+        flutter-version: '1.20.x' # you can use 1.12
+        channel: 'beta' # Currently you have to use beta channel for Flutter web.
+    - name: Upgrades flutter
+      run: flutter upgrade
+    - name: Install dependencies
+      run: flutter packages get
+    - name: Generate documentation
       run: dartdoc
     - name: Push Documentation
       run: |
@@ -27,7 +33,7 @@ jobs:
         git init
         git config user.name  "Docbot"
         git config user.email "docbot@github.com"
-        git remote add secure-origin https://${{ secrets.ACCESS_TOKEN }}@github.com/tmthecoder/dargon2
+        git remote add secure-origin https://${{ secrets.ACCESS_TOKEN }}@github.com/tmthecoder/dargon2_flutter
         git checkout -b gh-pages
         git add .
         git commit -m "Updated documentation with code from master"
