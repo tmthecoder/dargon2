@@ -20,9 +20,9 @@ jobs:
      run: dartdoc
    - name: Push Documentation
      run: |
-       mkdir doc-src && cd doc-src
+       mkdir doc-src && git clone https://github.com/tmthecoder/docs doc-src
+       cd doc-src
        echo "docs.tmthecoder.dev" > CNAME
-       git pull https://github.com/tmthecoder/docs --allow-unrelated--histories
        git config user.name  "Docbot"
        git config user.email "docbot@github.com"
        if [ -d dargon2/ ]; then rm -Rf dargon2/; fi
