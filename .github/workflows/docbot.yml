@@ -30,4 +30,4 @@ jobs:
        git remote add secure-origin https://${{ secrets.ACCESS_TOKEN }}@github.com/tmthecoder/docs
        git add .
        git commit -m "Updated documentation for dargon2"
-       git push secure-origin main
+       git push --force secure-origin main
