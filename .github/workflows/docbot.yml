@@ -27,7 +27,7 @@ jobs:
        git config user.email "docbot@github.com"
        if [ -d dargon2/ ]; then rm -Rf dargon2/; fi
        mkdir dargon2
-       cp -R ../doc/api dargon2/
+       cp -R ../doc/api/ dargon2/
        git remote add secure-origin https://${{ secrets.ACCESS_TOKEN }}@github.com/tmthecoder/docs
        git add .
        git commit -m "Updated documentation for dargon2" --allow-empty
