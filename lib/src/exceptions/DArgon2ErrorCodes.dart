@@ -7,63 +7,114 @@
 /// Reference Library of Argon2. The codes are sent into the Exception object as well
 /// as used to retrieve the error message from the C library.
 enum DArgon2ErrorCode {
-  ARGON2_OK, // No error
+  /// No error
+  ARGON2_OK,
 
-  ARGON2_OUTPUT_PTR_NULL, // Outpointer null
+  /// Outpointer null
+  ARGON2_OUTPUT_PTR_NULL,
 
-  ARGON2_OUTPUT_TOO_SHORT, // Output pointer too short
-  ARGON2_OUTPUT_TOO_LONG, // Output pointer too long
+  /// Output pointer too short
+  ARGON2_OUTPUT_TOO_SHORT,
 
-  ARGON2_PWD_TOO_SHORT, // Password too short
-  ARGON2_PWD_TOO_LONG, // Password too long
+  /// Output pointer too long
+  ARGON2_OUTPUT_TOO_LONG,
 
-  ARGON2_SALT_TOO_SHORT, // Salt too short
-  ARGON2_SALT_TOO_LONG, // Salt too long
+  /// Password too short
+  ARGON2_PWD_TOO_SHORT,
 
-  ARGON2_AD_TOO_SHORT, // Associated Data too short
-  ARGON2_AD_TOO_LONG, // Associated Data too long
+  /// Password too long
+  ARGON2_PWD_TOO_LONG,
 
-  ARGON2_SECRET_TOO_SHORT, // Secret too short
-  ARGON2_SECRET_TOO_LONG, // Secret too long
+  /// Salt too short
+  ARGON2_SALT_TOO_SHORT,
 
-  ARGON2_TIME_TOO_SMALL, // Time too short
-  ARGON2_TIME_TOO_LARGE, // Time too long
+  /// Salt too long
+  ARGON2_SALT_TOO_LONG,
 
-  ARGON2_MEMORY_TOO_LITTLE, // Memory too small
-  ARGON2_MEMORY_TOO_MUCH, // Memory too large
+  /// Associated Data too short
+  ARGON2_AD_TOO_SHORT,
 
-  ARGON2_LANES_TOO_FEW, // Too few lanes
-  ARGON2_LANES_TOO_MANY, // Too many lanes
+  /// Associated Data too long
+  ARGON2_AD_TOO_LONG,
 
-  ARGON2_PWD_PTR_MISMATCH, // Null password pointer with a given nonzero length
-  ARGON2_SALT_PTR_MISMATCH, // Null salt pointer with a given nonzero length
-  ARGON2_SECRET_PTR_MISMATCH, // Null secret pointer with a given nonzero length
-  ARGON2_AD_PTR_MISMATCH, // Null associated data pointer with a given nonzero length
+  /// Secret too short
+  ARGON2_SECRET_TOO_SHORT,
 
-  ARGON2_MEMORY_ALLOCATION_ERROR, // Memory alloc error
+  /// Secret too long
+  ARGON2_SECRET_TOO_LONG,
 
-  ARGON2_FREE_MEMORY_CBK_NULL, // Null free memory call back
-  ARGON2_ALLOCATE_MEMORY_CBK_NULL, // Null allocation callback
+  /// Time too short
+  ARGON2_TIME_TOO_SMALL,
 
-  ARGON2_INCORRECT_PARAMETER, // Context is null
-  ARGON2_INCORRECT_TYPE, // No such type of Argon2
+  /// Time too long
+  ARGON2_TIME_TOO_LARGE,
 
-  ARGON2_OUT_PTR_MISMATCH, // Output pointer mismatch
+  /// Memory too small
+  ARGON2_MEMORY_TOO_LITTLE,
 
-  ARGON2_THREADS_TOO_FEW, // Too few threads
-  ARGON2_THREADS_TOO_MANY, // Too many threads
+  /// Memory too large
+  ARGON2_MEMORY_TOO_MUCH,
 
-  ARGON2_MISSING_ARGS, // Missing arguments
+  /// Too few lanes
+  ARGON2_LANES_TOO_FEW,
 
-  ARGON2_ENCODING_FAIL, // Encoding failed
+  /// Too many lanes
+  ARGON2_LANES_TOO_MANY,
 
-  ARGON2_DECODING_FAIL, // Decoding failed
+  /// Null password pointer with a given nonzero length
+  ARGON2_PWD_PTR_MISMATCH,
 
-  ARGON2_THREAD_FAIL, // Threading failed
+  /// Null salt pointer with a given nonzero length
+  ARGON2_SALT_PTR_MISMATCH,
 
-  ARGON2_DECODING_LENGTH_FAIL, // Some parameters are too short/long
+  /// Null secret pointer with a given nonzero length
+  ARGON2_SECRET_PTR_MISMATCH,
 
-  ARGON2_VERIFY_MISMATCH, //Verification mismatch
+  /// Null associated data pointer with a given nonzero length
+  ARGON2_AD_PTR_MISMATCH,
 
-  ARGON2_UNKNOWN_ERROR // Unknown error
+  /// Memory alloc error
+  ARGON2_MEMORY_ALLOCATION_ERROR,
+
+  /// Null free memory call back
+  ARGON2_FREE_MEMORY_CBK_NULL,
+
+  /// Null allocation callback
+  ARGON2_ALLOCATE_MEMORY_CBK_NULL,
+
+  /// Context is null
+  ARGON2_INCORRECT_PARAMETER,
+
+  /// No such type of Argon2
+  ARGON2_INCORRECT_TYPE,
+
+  /// Output pointer mismatch
+  ARGON2_OUT_PTR_MISMATCH,
+
+  /// Too few threads
+  ARGON2_THREADS_TOO_FEW,
+
+  /// Too many threads
+  ARGON2_THREADS_TOO_MANY,
+
+  /// Missing arguments
+  ARGON2_MISSING_ARGS,
+
+  /// Encoding failed
+  ARGON2_ENCODING_FAIL,
+
+  /// Decoding failed
+  ARGON2_DECODING_FAIL,
+
+  /// Threading failed
+  ARGON2_THREAD_FAIL,
+
+  /// Some parameters are too short/long
+  ARGON2_DECODING_LENGTH_FAIL,
+
+  /// Verification mismatch
+  ARGON2_VERIFY_MISMATCH,
+
+  /// Unknown error
+  ARGON2_UNKNOWN_ERROR
 }

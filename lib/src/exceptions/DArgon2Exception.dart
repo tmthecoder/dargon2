@@ -35,6 +35,8 @@ class DArgon2Exception implements Exception {
   /// and the use of an enum allows users to compare the errors easily
   final DArgon2ErrorCode errorCode;
 
+  /// The toString method that returns a String containing both the [errorCode]
+  /// and the [message]
   @override
   String toString() {
     return '[$errorCode] $message';

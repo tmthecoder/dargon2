@@ -12,12 +12,12 @@ void main() {
   hashWithBytes();
 }
 
-void hashString() {
+void hashString() async {
   var password = 'password';
   //use Salt(List<int> bytes) for a salt from an Integer list
   var s = Salt.newSalt();
   //Hash with pre-set params (iterations: 32, memory: 256, parallelism: 2, length: 32, type: Argon2Type.i, version: Argon2Version.V13)
-  var result = argon2.hashPasswordString(password, salt: s); //type: DArgon2Result
+  var result = await argon2.hashPasswordString(password, salt: s); //type: DArgon2Result
 
   //Raw hash values available as int list, base 64 string, and hex string
   var bytesRaw = result.rawBytes; // type: List<int>
@@ -34,16 +34,16 @@ void hashString() {
   print('Encoded UTF-8 String: $stringEncoded');
 
   //Verify password (returns true/false), uses default type (Argon2Type.i)
-  var verified = argon2.verifyHashString(password, stringEncoded); // type: bool
+  var verified = await argon2.verifyHashString(password, stringEncoded); // type: bool
   print('password is verified: $verified');
 }
 
-void hashWithBytes() {
+void hashWithBytes() async {
   var password = utf8.encode('password');
   //use Salt(List<int> bytes) for a salt from an Integer list
   var s = Salt.newSalt();
   //Hash with custom params
-  var result = argon2.hashPasswordBytes(password,
+  var result = await argon2.hashPasswordBytes(password,
       salt: s,
       iterations: 20,
       memory: 512,
@@ -67,6 +67,6 @@ void hashWithBytes() {
   print('Encoded UTF-8 String: $stringEncoded');
 
   //Verify password (returns true/false)
-  var verified = argon2.verifyHashBytes(password, bytesEncoded, type: Argon2Type.id); // type: bool
+  var verified = await argon2.verifyHashBytes(password, bytesEncoded, type: Argon2Type.id); // type: bool
   print('password is verified: $verified');
 }

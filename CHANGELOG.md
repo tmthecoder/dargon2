@@ -1,3 +1,8 @@
+## 1.1.0
+- **Potentially Breaking**: Make the `hashPasswordString`, `hashPasswordBytes`, `verifyPasswordString` and `verifyPasswordBytes` methods all asynchronous
+- Note: Synchronous versions are available by appending `Sync` to the method names above
+- Update some documentation
+
 ## 1.0.4
 - Fix the slight bug brought by having the waitFor in the generic binder instead of the conditional loader
 

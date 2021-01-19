@@ -100,13 +100,13 @@ DArgon2ErrorCode hashTest(Argon2Version version, int iterations, int memory, int
   DArgon2Result resultBytes;
   // get hashed results
   try {
-    resultString = argon2.hashPasswordString(password, salt: s,
+    resultString = argon2.hashPasswordStringSync(password, salt: s,
         iterations: iterations,
         memory: memory,
         parallelism: parallelism,
         version: version,
         type: type);
-    resultBytes = argon2.hashPasswordBytes(utf8.encode(password), salt: s,
+    resultBytes = argon2.hashPasswordBytesSync(utf8.encode(password), salt: s,
         iterations: iterations,
         memory: memory,
         parallelism: parallelism,
@@ -124,11 +124,11 @@ DArgon2ErrorCode hashTest(Argon2Version version, int iterations, int memory, int
     return DArgon2ErrorCode.ARGON2_UNKNOWN_ERROR;
   }
   // Check if both are verified
-  if (!argon2.verifyHashString(password, encodedHash, type: type) || !argon2.verifyHashBytes(utf8.encode(password), utf8.encode(encodedHash), type: type)) {
+  if (!argon2.verifyHashStringSync(password, encodedHash, type: type) || !argon2.verifyHashBytesSync(utf8.encode(password), utf8.encode(encodedHash), type: type)) {
     return DArgon2ErrorCode.ARGON2_UNKNOWN_ERROR;
   }
   // Check if both are verified against each other
-  if (!argon2.verifyHashString(password, resultBytes.encodedString, type: type) || !argon2.verifyHashString(password, resultString.encodedString, type: type)) {
+  if (!argon2.verifyHashStringSync(password, resultBytes.encodedString, type: type) || !argon2.verifyHashStringSync(password, resultString.encodedString, type: type)) {
     return DArgon2ErrorCode.ARGON2_UNKNOWN_ERROR;
   }
   return DArgon2ErrorCode.ARGON2_OK;
