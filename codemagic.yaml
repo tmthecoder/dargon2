@@ -2,9 +2,9 @@
 
 workflows:
     flutter-package:
-        name: Flutter or Dart Package
+        name: dargon2 Tests
         environment:
-            flutter: dev
+            dart: beta
         scripts:
-            - flutter packages pub get
-            - flutter test
+            - pub get
+            - dart test
