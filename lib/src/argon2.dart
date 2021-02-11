@@ -181,13 +181,13 @@ class DArgon2 {
       encodedBytes.removeLast();
     }
     //Free all pointers
-    free(hash);
-    free(encoded);
-    free(saltPointer);
-    free(passPointer);
+    malloc.free(hash);
+    malloc.free(encoded);
+    malloc.free(saltPointer);
+    malloc.free(passPointer);
     if (DArgon2ErrorCode.values[result.abs()] != DArgon2ErrorCode.ARGON2_OK) {
       throw DArgon2Exception(
-          Utf8.fromUtf8(LocalBinder.instance.getErrorMessage(result)),
+          LocalBinder.instance.getErrorMessage(result).toDartString(),
           DArgon2ErrorCode.values[result.abs()]);
     }
     return DArgon2Result(hashBytes, encodedBytes);
@@ -239,17 +239,17 @@ class DArgon2 {
       {Argon2Type type = Argon2Type.i}) {
     //Create pointers to pass to the C method
     var passPointer = _setPtr(password);
-    var hashPointer = Utf8.toUtf8(utf8.decode(encodedHash));
+    var hashPointer = utf8.decode(encodedHash).toNativeUtf8();
     // var hashPointer = _setPtr(encodedHash);
     //Get the result
     var result = LocalBinder.instance
         .verifyHash(hashPointer, passPointer, password.length, type.index);
     //Free the pointers
-    free(passPointer);
-    free(hashPointer);
+    malloc.free(passPointer);
+    malloc.free(hashPointer);
     if (DArgon2ErrorCode.values[result.abs()] != DArgon2ErrorCode.ARGON2_OK) {
       throw DArgon2Exception(
-          Utf8.fromUtf8(LocalBinder.instance.getErrorMessage(result)),
+          LocalBinder.instance.getErrorMessage(result).toDartString(),
           DArgon2ErrorCode.values[result.abs()]);
     }
     return result == 0;
@@ -265,7 +265,7 @@ class DArgon2 {
   /// Returns a [Pointer] of type [Uint8] to be used for Argon2 computations.
   Pointer<Uint8> _setPtr(Iterable<int> iterable) {
     //Allocate a pointer in memory and set the values from the given list
-    var p = allocate<Uint8>(count: Uint8List.fromList(iterable).length);
+    var p = malloc<Uint8>(Uint8List.fromList(iterable).length);
     p.asTypedList(iterable.length).setAll(0, iterable);
     return p;
   }
