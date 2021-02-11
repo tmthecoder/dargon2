@@ -57,7 +57,7 @@ class DArgon2 {
   /// Returns a [Future] containing a [DArgon2Result] with the hashed password,
   /// encoded hash, and various conversion options for the hash and encoded bytes.
   Future<DArgon2Result> hashPasswordString(String password,
-      {@required Salt salt,
+      {required Salt salt,
       int iterations = 32,
       int memory = 256,
       int parallelism = 2,
@@ -85,7 +85,7 @@ class DArgon2 {
   /// Returns a [Future] containing a [DArgon2Result] with the hashed password,
   /// encoded hash, and various conversion options for the hash and encoded bytes.
   Future<DArgon2Result> hashPasswordBytes(List<int> password,
-      {@required Salt salt,
+      {required Salt salt,
       int iterations = 32,
       int memory = 256,
       int parallelism = 2,
@@ -114,7 +114,7 @@ class DArgon2 {
   /// Returns a [DArgon2Result] with the hashed password, encoded hash, and various
   /// conversion options for the hash and encoded bytes.
   DArgon2Result hashPasswordStringSync(String password,
-      {@required Salt salt,
+      {required Salt salt,
       int iterations = 32,
       int memory = 256,
       int parallelism = 2,
@@ -142,14 +142,13 @@ class DArgon2 {
   /// Returns a [DArgon2Result] with the hashed password, encoded hash, and various
   /// conversion options for the hash and encoded bytes.
   DArgon2Result hashPasswordBytesSync(List<int> password,
-      {@required Salt salt,
+      {required Salt salt,
       int iterations = 32,
       int memory = 256,
       int parallelism = 2,
       int length = 32,
       Argon2Type type = Argon2Type.i,
       Argon2Version version = Argon2Version.V13}) {
-    assert(salt != null);
     //Create pointers to pass to the C method
     var passPointer = _setPtr(password);
     var saltPointer = _setPtr(salt.bytes);
@@ -265,7 +264,7 @@ class DArgon2 {
   /// Returns a [Pointer] of type [Uint8] to be used for Argon2 computations.
   Pointer<Uint8> _setPtr(Iterable<int> iterable) {
     //Allocate a pointer in memory and set the values from the given list
-    var p = malloc<Uint8>(Uint8List.fromList(iterable).length);
+    var p = malloc<Uint8>(Uint8List.fromList(iterable.toList()).length);
     p.asTypedList(iterable.length).setAll(0, iterable);
     return p;
   }

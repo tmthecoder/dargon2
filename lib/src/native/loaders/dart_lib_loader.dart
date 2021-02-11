@@ -33,7 +33,7 @@ class DartLibLoader implements LibLoader {
       rootPath = File.fromUri(Platform.script).parent.path;
     } else {
       final rootLibrary = 'package:dargon2/dargon2.dart';
-      rootPath = waitFor(Isolate.resolvePackageUri(Uri.parse(rootLibrary)))
+      rootPath = waitFor(Isolate.resolvePackageUri(Uri.parse(rootLibrary)))!
           .resolve('src/blobs/')
           .toFilePath(windows: Platform.isWindows);
     }

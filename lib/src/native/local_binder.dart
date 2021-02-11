@@ -124,24 +124,23 @@ typedef _Argon2ErrorMessage = Pointer<Utf8> Function(int error_code);
 /// there should be no reason to change this.
 class LocalBinder {
   /// Create an instanced class in order to allow the dylib to stay loaded through the session.
-  static LocalBinder _privateInstance;
+  static final LocalBinder _privateInstance = LocalBinder._();
 
   /// Callable method of type [_Argon2Hash] that binds to [_argon2_hash].
-  _Argon2Hash getHash;
+  late _Argon2Hash getHash;
 
   /// Callable method of type [_Argon2Verify] that binds to [_argon2_verify].
-  _Argon2Verify verifyHash;
+  late _Argon2Verify verifyHash;
 
   /// Callable method of type [_Argon2Encodedlen] that binds to [_argon2_encodedlen].
-  _Argon2Encodedlen getEncodedHashLength;
+  late _Argon2Encodedlen getEncodedHashLength;
 
   /// Callable method of type [_Argon2ErrorMessage] that binds to [_argon2_error_message].
-  _Argon2ErrorMessage getErrorMessage;
+  late _Argon2ErrorMessage getErrorMessage;
 
   /// The getter for the main instance, which returns the private instance if set correctly.
   /// If not, a new Instance is created and set as the private instance, then returned.
   static LocalBinder get instance {
-    _privateInstance ??= LocalBinder();
     return _privateInstance;
   }
 
@@ -149,7 +148,7 @@ class LocalBinder {
   /// respective C equivalents
   ///
   /// Opens the C library using dart's ffi and maps all of the main methods
-  LocalBinder() {
+  LocalBinder._() {
     var argon2lib = LibLoader().loadLib();
     getHash = argon2lib
         .lookup<NativeFunction<_argon2_hash>>('argon2_hash')
