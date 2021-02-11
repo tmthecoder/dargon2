@@ -1,3 +1,6 @@
+## 1.1.1
+- Updated underlying dependencies to latest stable versions
+
 ## 1.1.0
 - **Potentially Breaking**: Make the `hashPasswordString`, `hashPasswordBytes`, `verifyPasswordString` and `verifyPasswordBytes` methods all asynchronous
 - Note: Synchronous versions are available by appending `Sync` to the method names above
