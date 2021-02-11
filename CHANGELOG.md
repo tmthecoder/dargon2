@@ -1,3 +1,6 @@
+## 1.1.3
+- Changed all dependencies' syntax to allow versions major above
+
 ## 1.1.2
 - Fixed version solving errors
 - On that note, please DO NOT use 1.1.1
