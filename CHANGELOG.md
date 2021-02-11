@@ -1,5 +1,6 @@
 ## 1.1.3
 - Changed all dependencies' syntax to allow versions major above
+- Added null-safety to the plugin
 
 ## 1.1.2
 - Fixed version solving errors
