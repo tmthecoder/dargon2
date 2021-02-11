@@ -1,4 +1,4 @@
-# 1.1.2
+## 1.1.2
 - Fixed version solving errors
 - On that note, please DO NOT use 1.1.1
 
