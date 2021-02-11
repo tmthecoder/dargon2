@@ -9,7 +9,6 @@ import 'package:dargon2/dargon2.dart';
 import 'package:dargon2/src/native/local_binder.dart';
 import 'package:ffi/ffi.dart';
 import 'dart:typed_data';
-import 'package:meta/meta.dart';
 
 /// The Cannonical instance of [DArgon2].
 const argon2 = DArgon2._();
