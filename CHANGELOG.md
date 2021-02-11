@@ -1,4 +1,4 @@
-## 1.1.3
+## 2.0.0
 - Changed all dependencies' syntax to allow versions major above
 - Added null-safety to the plugin
 
