@@ -1,3 +1,6 @@
+## 2.0.1
+- Updated unused imports & slight fixes
+
 ## 2.0.0
 - Changed all dependencies' syntax to allow versions major above
 - Added null-safety to the plugin
