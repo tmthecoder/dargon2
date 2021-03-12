@@ -8,7 +8,7 @@ import 'dart:io';
 import 'dart:isolate';
 
 import 'package:dargon2/src/native/loaders/lib_loader.dart';
-import 'dart:cli' if (dart.library.io) '';
+import 'dart:cli' if (dart.library.ui) '';
 
 /// The Dylib Loader for any Dart native apps, regardless of platform. Loads the dylib
 /// from the given path, based off a conditional import on dart:ui
