@@ -1,4 +1,7 @@
 ## 2.0.1
+- Add a conditional on `dart:cli` in order to work with `dargon2_flutter`s null safety throwing a fit
+
+## 2.0.1
 - Updated unused imports & slight fixes
 
 ## 2.0.0
