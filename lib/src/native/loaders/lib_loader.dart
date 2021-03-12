@@ -18,7 +18,7 @@ abstract class LibLoader {
 
   /// The private getPath method, set to handle paths from all 3 Desktop platforms as well as
   /// for Flutter apps. Returns the relative library location for desktops, or the necessary
-  /// NDK set library as according to Flutter's guide on ffia
+  /// NDK set library as according to Flutter's guide on ffi
   String getPath();
 
   /// Factory Loader constructor to return either the Dart native or
