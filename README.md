@@ -4,6 +4,10 @@
 
 Dart bindings for the reference C implementation of [Argon2], the winner of the [Password Hash Competition].
 
+This plugin is ONLY for native dart implementations. For Flutter, please use [dargon2_flutter]
+
+[dargon2_flutter]: https://pub.dev/packages/dargon2_flutter
+
 [Argon2]: https://github.com/P-H-C/phc-winner-argon2
 
 [Password Hash Competition]: https://password-hashing.net
