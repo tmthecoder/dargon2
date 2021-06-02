@@ -1,7 +1,8 @@
 name: dargon2
 description: Provides bindings for hashing and verifying with Argon2, the winner of the Password Hashing Competition.
-version: 2.0.1
+version: 2.1.0
 homepage: https://github.com/tmthecoder/dargon2
+repository: https://github.com/tmthecoder/dargon2
 
 environment:
   sdk: '>=2.12.0 <3.0.0'
