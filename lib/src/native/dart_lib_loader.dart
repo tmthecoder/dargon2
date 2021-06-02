@@ -7,7 +7,7 @@ import 'dart:ffi';
 import 'dart:io';
 import 'dart:isolate';
 
-import 'package:dargon2/src/native/loaders/lib_loader.dart';
+import 'package:dargon2_core/dargon2_core.dart';
 import 'dart:cli';
 
 /// The Dylib Loader for any Dart native apps, regardless of platform. Loads the dylib
@@ -43,6 +43,3 @@ class DartLibLoader implements LibLoader {
     return 'libargon2-arm.so';
   }
 }
-
-/// Override stub method to allow this class to be used in any Dart native apps
-LibLoader getLibLoader() => DartLibLoader();

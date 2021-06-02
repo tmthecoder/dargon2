@@ -12,8 +12,5 @@
 /// For detailed usage please look at the example
 library argon2_dart;
 
+export 'package:dargon2_core/dargon2_core.dart' hide LibLoader;
 export 'src/argon2.dart';
-export 'src/utils/salt.dart';
-export 'src/utils/dargon2_result.dart';
-export 'src/exceptions/DArgon2ErrorCodes.dart';
-export 'src/exceptions/DArgon2Exception.dart';
