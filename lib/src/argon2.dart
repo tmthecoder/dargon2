@@ -8,4 +8,4 @@ import 'package:dargon2_core/dargon2_core.dart';
 
 /// The globally accessible instance of [DArgon2] with Dart
 /// native library loading
-final argon2 = DArgon2(DartLibLoader());
+final argon2 = DArgon2Native(DartLibLoader());

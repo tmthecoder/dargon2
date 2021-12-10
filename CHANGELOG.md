@@ -1,3 +1,7 @@
+## 3.0.0
+- BREAKING: `sync` methods are no longer supported to allow web integration
+- Migrated to the `dargon2_interface` under the core
+
 ## 2.1.0
 - Migrated to use a shared dargon2_core plugin
 - More modular and allows for custom Library Loader definitions
