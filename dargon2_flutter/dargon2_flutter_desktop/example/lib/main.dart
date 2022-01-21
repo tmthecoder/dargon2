@@ -19,6 +19,7 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
+    DArgon2Desktop().argon2.hashPasswordString("password", salt: Salt.newSalt()).then((value) => print(value.base64String));
   }
 
   @override
