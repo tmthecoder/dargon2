@@ -32,9 +32,9 @@ jobs:
        git add .
        git commit -m "Updated documentation for dargon2" --allow-empty
        git push secure-origin main
-
- # Job to update the documentation on docs.tmthecoder.dev for dargon2_core
- update-docs-dargon2_core:
+  
+  # Job to update the documentation on docs.tmthecoder.dev for dargon2_core 
+  update-docs-dargon2_core:
    needs: [ update-docs-dargon2 ]
    defaults:
      run:
@@ -61,9 +61,9 @@ jobs:
          git add .
          git commit -m "Updated documentation for dargon2_core" --allow-empty
          git push secure-origin main
-
- # Job to update the documentation on docs.tmthecoder.dev for dargon2_interface
- update-docs-dargon2_interface:
+         
+  # Job to update the documentation on docs.tmthecoder.dev for dargon2_interface       
+  update-docs-dargon2_interface:
    needs: [update-docs-dargon2_core]
    defaults:
      run:
@@ -90,9 +90,9 @@ jobs:
          git add .
          git commit -m "Updated documentation for dargon2_interface" --allow-empty
          git push secure-origin main
-
- # Job to update the documentation on docs.tmthecoder.dev for dargon2_flutter
- update-docs-dargon2_flutter:
+         
+  # Job to update the documentation on docs.tmthecoder.dev for dargon2_flutter
+  update-docs-dargon2_flutter:
    needs: [update-docs-dargon2_interface]
    defaults:
      run:
