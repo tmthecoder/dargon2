@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0026b61f-f5bf-4e7d-b604-216f369bb775" name="Changes" comment="" />
+    <list default="true" id="0026b61f-f5bf-4e7d-b604-216f369bb775" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/dart-build.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/docbot.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/library-builder.yml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,7 +81,7 @@
       <workItem from="1642743833604" duration="20000" />
       <workItem from="1642743860453" duration="31000" />
       <workItem from="1642743898430" duration="50000" />
-      <workItem from="1642743954727" duration="430000" />
+      <workItem from="1642743954727" duration="741000" />
     </task>
     <task id="LOCAL-00001" summary="add all config files to easily open in idea (modules for each project!)">
       <created>1642744101460</created>
@@ -107,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642744381755</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="use working dir instead of manual cd">
+      <created>1642744662338</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1642744662338</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,7 +129,8 @@
     <MESSAGE value="update the build workflow to work on the restructured repo" />
     <MESSAGE value="add a list" />
     <MESSAGE value="tweak workflow slightly" />
-    <option name="LAST_COMMIT_MESSAGE" value="tweak workflow slightly" />
+    <MESSAGE value="use working dir instead of manual cd" />
+    <option name="LAST_COMMIT_MESSAGE" value="use working dir instead of manual cd" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
