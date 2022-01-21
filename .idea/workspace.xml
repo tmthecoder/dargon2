@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0026b61f-f5bf-4e7d-b604-216f369bb775" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dargon2/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dargon2_core/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_core/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_mobile/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_mobile/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_platform_interface/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_platform_interface/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_web/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_web/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dargon2_interface/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_interface/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/dargon2_docbot.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/dargon2_docbot.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +89,7 @@
       <workItem from="1642743898430" duration="50000" />
       <workItem from="1642743954727" duration="931000" />
       <workItem from="1642744893590" duration="2892000" />
+      <workItem from="1642789027506" duration="373000" />
     </task>
     <task id="LOCAL-00001" summary="add all config files to easily open in idea (modules for each project!)">
       <created>1642744101460</created>
