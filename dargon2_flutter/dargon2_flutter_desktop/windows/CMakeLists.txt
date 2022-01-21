@@ -19,6 +19,8 @@ target_link_libraries(${PLUGIN_NAME} PRIVATE flutter flutter_wrapper_plugin)
 
 # List of absolute paths to libraries that should be bundled with the plugin
 set(dargon2_flutter_desktop_bundled_libraries
-  ""
+  "$<TARGET_FILE:argon2>"
   PARENT_SCOPE
 )
+
+add_subdirectory(../native)

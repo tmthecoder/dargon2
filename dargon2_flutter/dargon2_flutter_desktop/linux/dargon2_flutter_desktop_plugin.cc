@@ -10,6 +10,18 @@
   (G_TYPE_CHECK_INSTANCE_CAST((obj), dargon2_flutter_desktop_plugin_get_type(), \
                               Dargon2FlutterDesktopPlugin))
 
+static gchar* get_executable_dir() {
+  g_autoptr(GError) error = nullptr;
+  g_autofree gchar* exe_path = g_file_read_link("/proc/self/exe", &error);
+  if (exe_path == nullptr) {
+    g_critical("Failed to determine location of executable: %s",
+               error->message);
+    return nullptr;
+  }
+
+  return g_path_get_dirname(exe_path);
+}
+
 struct _Dargon2FlutterDesktopPlugin {
   GObject parent_instance;
 };
@@ -56,6 +68,11 @@ static void method_call_cb(FlMethodChannel* channel, FlMethodCall* method_call,
 void dargon2_flutter_desktop_plugin_register_with_registrar(FlPluginRegistrar* registrar) {
   Dargon2FlutterDesktopPlugin* plugin = DARGON2_FLUTTER_DESKTOP_PLUGIN(
       g_object_new(dargon2_flutter_desktop_plugin_get_type(), nullptr));
+
+  g_autofree gchar* executable_dir = get_executable_dir();
+  g_autofree gchar* libfoo_path =
+      g_build_filename(self_exe, "lib", "libfoo.so", nullptr);
+  setenv("LIBFOO_PATH", libfoo_path, 0);
 
   g_autoptr(FlStandardMethodCodec) codec = fl_standard_method_codec_new();
   g_autoptr(FlMethodChannel) channel =
