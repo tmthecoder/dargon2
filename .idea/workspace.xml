@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0026b61f-f5bf-4e7d-b604-216f369bb775" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/dargon2/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dargon2_core/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_core/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_mobile/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_mobile/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_platform_interface/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_platform_interface/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_web/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_web/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dargon2_interface/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_interface/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +14,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -86,7 +88,7 @@
       <workItem from="1642743860453" duration="31000" />
       <workItem from="1642743898430" duration="50000" />
       <workItem from="1642743954727" duration="931000" />
-      <workItem from="1642744893590" duration="868000" />
+      <workItem from="1642744893590" duration="1891000" />
     </task>
     <task id="LOCAL-00001" summary="add all config files to easily open in idea (modules for each project!)">
       <created>1642744101460</created>
@@ -137,7 +139,21 @@
       <option name="project" value="LOCAL" />
       <updated>1642745095086</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add in the new readme">
+      <created>1642745790289</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1642745790289</updated>
+    </task>
+    <task id="LOCAL-00009" summary="update the last readme">
+      <created>1642745915079</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1642745915079</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,7 +167,9 @@
     <MESSAGE value="use working dir instead of manual cd" />
     <MESSAGE value="rename all workflow files" />
     <MESSAGE value="set working dir for dargon2_flutter and dargon2_core docbots" />
-    <option name="LAST_COMMIT_MESSAGE" value="set working dir for dargon2_flutter and dargon2_core docbots" />
+    <MESSAGE value="add in the new readme" />
+    <MESSAGE value="update the last readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="update the last readme" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
