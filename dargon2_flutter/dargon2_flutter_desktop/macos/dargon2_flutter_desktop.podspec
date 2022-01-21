@@ -5,7 +5,7 @@
 Pod::Spec.new do |s|
   s.name             = 'dargon2_flutter_desktop'
   s.version          = '0.0.1'
-  s.summary          = 'dargon2_flutter's desktop implementation'
+  s.summary          = 'dargon2_flutter\'s desktop implementation'
   s.description      = <<-DESC
 dargon2_flutter's desktop implementation
                        DESC
