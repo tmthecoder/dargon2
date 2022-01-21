@@ -7,12 +7,12 @@
 
 This repository hosts all the dargon2 plugins:
 
-| Plugin            | Pub                                                                                                              |
-|-------------------|------------------------------------------------------------------------------------------------------------------|
-| dargon2           | [![pub package](https://img.shields.io/pub/v/dargon2.svg)](https://pub.dev/packages/dargon2)                     |
-| dargon2_flutter   | [![pub package](https://img.shields.io/pub/v/dargon2_flutter.svg)](https://pub.dev/packages/dargon2_flutter)     |
-| dargon2_core      | [![pub package](https://img.shields.io/pub/v/dargon2_core.svg)](https://pub.dev/packages/dargon2_core)           |
-| dargon2_interface | [![pub package](https://img.shields.io/pub/v/dargon2_interface.svg)](https://pub.dev/packages/dargon2_interface) |
+| Plugin              | Pub                                                                                                              |
+|---------------------|------------------------------------------------------------------------------------------------------------------|
+| [dargon2]           | [![pub package](https://img.shields.io/pub/v/dargon2.svg)](https://pub.dev/packages/dargon2)                     |
+| [dargon2_flutter]   | [![pub package](https://img.shields.io/pub/v/dargon2_flutter.svg)](https://pub.dev/packages/dargon2_flutter)     |
+| [dargon2_core]      | [![pub package](https://img.shields.io/pub/v/dargon2_core.svg)](https://pub.dev/packages/dargon2_core)           |
+| [dargon2_interface] | [![pub package](https://img.shields.io/pub/v/dargon2_interface.svg)](https://pub.dev/packages/dargon2_interface) |
 
 As well as [dargon2_flutter]'s federated-plugin dependencies:
 - [dargon2_flutter_platform_interface]
