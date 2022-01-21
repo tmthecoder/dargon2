@@ -1,0 +1,31 @@
+name: docbot
+
+on:
+ push:
+   branches: [ main ]
+
+jobs:
+ update-docs:
+
+   runs-on: ubuntu-latest
+   container:
+     image:  google/dart:latest
+   steps:
+   - uses: actions/checkout@v2
+   - name: Install dependencies
+     run: pub get
+   - name: Generate Documentation
+     run: dartdoc
+   - name: Push Documentation
+     run: |
+       mkdir doc-src && git clone https://github.com/tmthecoder/docs doc-src
+       cd doc-src
+       echo "docs.tmthecoder.dev" > CNAME
+       git config user.name  "Docbot"
+       git config user.email "docbot@github.com"
+       if [ -d dargon2_core/ ]; then rm -Rf dargon2_core/; fi
+       cp -R ../doc/api dargon2_core/
+       git remote add secure-origin https://${{ secrets.ACCESS_TOKEN }}@github.com/tmthecoder/docs
+       git add .
+       git commit -m "Updated documentation for dargon2_core" --allow-empty
+       git push secure-origin main
