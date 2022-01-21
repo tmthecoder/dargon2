@@ -11,9 +11,8 @@ jobs:
       image:  google/dart:latest
     steps:
     - uses: actions/checkout@v2
-    - name: move to dargon2 main lib
-      run: cd dargon2 && ls
-    - name: Install dependencies
-      run: ls && pub get
     - name: Run tests
-      run: pub run test
+      run: |
+        cd dargon2
+        pub get
+        pub run test
