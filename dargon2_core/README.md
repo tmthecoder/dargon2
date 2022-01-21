@@ -39,14 +39,16 @@ class TestLibLoader implements LibLoader {
 
 Please file feature requests and bugs at the [issue tracker].
 
-[issue tracker]: https://github.com/tmthecoder/dargon2_core/issues
+Please mark all dargon2_core issues with `[dargon2_core]` prepended to the issue title
+
+[issue tracker]: https://github.com/tmthecoder/dargon2/issues
 
 ## Licensing
 
 - dargon2_core is Licensed under the [MIT License]
 - The C implementation of [Argon2] is licensed under a dual [Apache and CC0 License]
 
-[MIT License]: https://github.com/tmthecoder/dargon2_core/blob/main/LICENSE
+[MIT License]: https://github.com/tmthecoder/dargon2/blob/main/dargon2_core/LICENSE
 
 [Argon2]: https://github.com/P-H-C/phc-winner-argon2
 

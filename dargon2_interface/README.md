@@ -37,14 +37,16 @@ class TestDArgon2 extends DArgon2 {
 
 Please file feature requests and bugs at the [issue tracker].
 
-[issue tracker]: https://github.com/tmthecoder/dargon2_interface/issues
+Please mark all dargon2_interface issues with `[dargon2]` prepended to the issue title
+
+[issue tracker]: https://github.com/tmthecoder/dargon2/issues
 
 ## Licensing
 
 - dargon2_core is Licensed under the [MIT License]
 - The C implementation of [Argon2] is licensed under a dual [Apache and CC0 License]
 
-[MIT License]: https://github.com/tmthecoder/dargon2_interface/blob/main/LICENSE
+[MIT License]: https://github.com/tmthecoder/dargon2/blob/main/dargon2_interface/LICENSE
 
 [Argon2]: https://github.com/P-H-C/phc-winner-argon2
 

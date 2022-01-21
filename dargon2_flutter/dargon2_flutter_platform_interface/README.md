@@ -8,6 +8,6 @@ A plugin that defines the common interface for [dargon2_flutter] platform implem
 ## Licensing
 
 - dargon2_flutter_platform_interface is Licensed under the [MIT License]
-- dargon2_interface is Licensed under the [MIT License](https://github.com/tmthecoder/dargon2_interface/blob/main/LICENSE)
+- dargon2_interface is Licensed under the [MIT License](https://github.com/tmthecoder/dargon2/blob/main/dargon2_interface/LICENSE)
 
-[MIT License]: https://github.com/tmthecoder/dargon2_flutter/blob/main/LICENSE
+[MIT License]: https://github.com/tmthecoder/dargon2/blob/main/dargon2_flutter/LICENSE

@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0026b61f-f5bf-4e7d-b604-216f369bb775" name="Changes" comment="" />
+    <list default="true" id="0026b61f-f5bf-4e7d-b604-216f369bb775" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/dargon2/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_core/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_core/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_mobile/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_mobile/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_platform_interface/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_platform_interface/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_web/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_web/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_interface/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_interface/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -78,6 +86,7 @@
       <workItem from="1642743860453" duration="31000" />
       <workItem from="1642743898430" duration="50000" />
       <workItem from="1642743954727" duration="931000" />
+      <workItem from="1642744893590" duration="868000" />
     </task>
     <task id="LOCAL-00001" summary="add all config files to easily open in idea (modules for each project!)">
       <created>1642744101460</created>
@@ -121,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642744717451</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="set working dir for dargon2_flutter and dargon2_core docbots">
+      <created>1642745095086</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1642745095086</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,7 +150,8 @@
     <MESSAGE value="tweak workflow slightly" />
     <MESSAGE value="use working dir instead of manual cd" />
     <MESSAGE value="rename all workflow files" />
-    <option name="LAST_COMMIT_MESSAGE" value="rename all workflow files" />
+    <MESSAGE value="set working dir for dargon2_flutter and dargon2_core docbots" />
+    <option name="LAST_COMMIT_MESSAGE" value="set working dir for dargon2_flutter and dargon2_core docbots" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

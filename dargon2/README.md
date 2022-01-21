@@ -45,6 +45,8 @@ void main() async {
 
 Please file feature requests and bugs at the [issue tracker].
 
+Please mark all dargon2 issues with `[dargon2]` prepended to the issue title
+
 [issue tracker]: https://github.com/tmthecoder/dargon2/issues
 
 ## Licensing

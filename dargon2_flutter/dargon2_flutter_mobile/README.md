@@ -16,7 +16,7 @@ This is ONLY the mobile-specific platform interface. Please use the federated [d
 - dargon2_core is Licensed under the [MIT License](https://github.com/tmthecoder/dargon2_core/blob/main/LICENSE)
 - The C implementation of [Argon2] is licensed under a dual [Apache and CC0 License]
 
-[MIT License]: https://github.com/tmthecoder/dargon2_flutter/blob/main/LICENSE
+[MIT License]: https://github.com/tmthecoder/dargon2/blob/main/dargon2_flutter/LICENSE
 
 [Argon2]: https://github.com/P-H-C/phc-winner-argon2
 

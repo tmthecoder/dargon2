@@ -14,5 +14,5 @@ This is ONLY the web-specific platform interface. Please use the federated [darg
 - dargon2_flutter_web is Licensed under the [MIT License]
 - [hash-wasm] is Licensed under the [MIT License](https://github.com/Daninet/hash-wasm/blob/master/LICENSE)
 
-[MIT License]: https://github.com/tmthecoder/dargon2_flutter/blob/main/LICENSE
+[MIT License]: https://github.com/tmthecoder/dargon2/blob/main/dargon2_flutter/LICENSE
 [hash-wasm]: https://github.com/Daninet/hash-wasm
