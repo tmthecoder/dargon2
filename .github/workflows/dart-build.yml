@@ -4,6 +4,10 @@ on:
   push:
   pull_request:
 
+defaults:
+  run:
+    working-directory: dargon2
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -11,8 +15,7 @@ jobs:
       image:  google/dart:latest
     steps:
     - uses: actions/checkout@v2
+    - name: Install dependencies
+      run: pub get
     - name: Run tests
-      run: |
-        cd dargon2
-        pub get
-        pub run test
+      run: pub run test

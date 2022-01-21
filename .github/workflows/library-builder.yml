@@ -2,6 +2,11 @@ name: Library Builder CI
 
 on:
   repository_dispatch:
+  workflow_dispatch: 
+
+defaults:
+  run:
+    working-directory: dargon2
 
 jobs:
   linux-build:

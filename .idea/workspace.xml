@@ -1,31 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0026b61f-f5bf-4e7d-b604-216f369bb775" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dargon2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/gradle_wrapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_mobile/dargon2_flutter_mobile.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_platform_interface/dargon2_flutter_platform_interface.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config_subset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/pub/bin/test/test.dart-2.15.0.snapshot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/pub/incremental/test/test.dart.incremental.dill" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/version" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dargon2/dargon2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2/dargon2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dargon2_core/dargon2_core.iml" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_core/dargon2_core.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dargon2_core/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_core/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/dargon2_flutter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/dargon2_flutter.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dargon2_interface/dargon2_interface.iml" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_interface/dargon2_interface.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dargon2_interface/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_interface/pubspec.lock" afterDir="false" />
-    </list>
+    <list default="true" id="0026b61f-f5bf-4e7d-b604-216f369bb775" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -101,12 +77,48 @@
       <workItem from="1642743833604" duration="20000" />
       <workItem from="1642743860453" duration="31000" />
       <workItem from="1642743898430" duration="50000" />
-      <workItem from="1642743954727" duration="121000" />
+      <workItem from="1642743954727" duration="430000" />
     </task>
+    <task id="LOCAL-00001" summary="add all config files to easily open in idea (modules for each project!)">
+      <created>1642744101460</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1642744101460</updated>
+    </task>
+    <task id="LOCAL-00002" summary="update the build workflow to work on the restructured repo">
+      <created>1642744234318</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1642744234318</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add a list">
+      <created>1642744297826</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1642744297826</updated>
+    </task>
+    <task id="LOCAL-00004" summary="tweak workflow slightly">
+      <created>1642744381755</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1642744381755</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add all config files to easily open in idea (modules for each project!)" />
+    <MESSAGE value="update the build workflow to work on the restructured repo" />
+    <MESSAGE value="add a list" />
+    <MESSAGE value="tweak workflow slightly" />
+    <option name="LAST_COMMIT_MESSAGE" value="tweak workflow slightly" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
