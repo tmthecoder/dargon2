@@ -1,4 +1,4 @@
-name: docbot
+name: docbot (dargon2_core)
 
 on:
  push:

@@ -1,9 +1,7 @@
-name: docbot
+name: docbot (dargon2_flutter)
 
 on:
   push:
-    branches: [ main ]
-  pull_request:
     branches: [ main ]
 
 defaults:

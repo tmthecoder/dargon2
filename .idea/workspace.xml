@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0026b61f-f5bf-4e7d-b604-216f369bb775" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/dargon2_core_docbot.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/dargon2_core_docbot.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/dargon2_docbot.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/dargon2_docbot.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/dargon2_flutter_docbot.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/dargon2_flutter_docbot.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +90,7 @@
       <workItem from="1642743860453" duration="31000" />
       <workItem from="1642743898430" duration="50000" />
       <workItem from="1642743954727" duration="931000" />
-      <workItem from="1642744893590" duration="1891000" />
+      <workItem from="1642744893590" duration="2187000" />
     </task>
     <task id="LOCAL-00001" summary="add all config files to easily open in idea (modules for each project!)">
       <created>1642744101460</created>
@@ -153,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642745915079</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary=" add the top-level readme">
+      <created>1642746814281</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1642746814281</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,7 +178,8 @@
     <MESSAGE value="set working dir for dargon2_flutter and dargon2_core docbots" />
     <MESSAGE value="add in the new readme" />
     <MESSAGE value="update the last readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="update the last readme" />
+    <MESSAGE value=" add the top-level readme" />
+    <option name="LAST_COMMIT_MESSAGE" value=" add the top-level readme" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
