@@ -31,6 +31,6 @@ class DesktopLibLoader implements LibLoader {
   @override
   String getPath() =>
     Platform.isLinux ? Platform.environment['LIBFOO_PATH'] ?? "libargon2.so"
-        : "libargon2.dll";
+        : "argon2.dll";
 
 }
