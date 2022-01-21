@@ -1,14 +1,23 @@
 # dargon2 plugins
 
+![dargon2](https://github.com/tmthecoder/dargon2/workflows/dargon2/badge.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+---
+
 This repository hosts all the dargon2 plugins:
-- [dargon2]
-- [dargon2_flutter]
-  - Along with its dependencies:
-    - [dargon2_flutter_platform_interface]
-    - [dargon2_flutter_mobile]
-    - [dargon2_flutter_web]
-- [dargon2_core]
-- [dargon2_interface]
+
+| Plugin            | Pub                                                                                                              |
+|-------------------|------------------------------------------------------------------------------------------------------------------|
+| dargon2           | [![pub package](https://img.shields.io/pub/v/dargon2.svg)](https://pub.dev/packages/dargon2)                     |
+| dargon2_flutter   | [![pub package](https://img.shields.io/pub/v/dargon2_flutter.svg)](https://pub.dev/packages/dargon2_flutter)     |
+| dargon2_core      | [![pub package](https://img.shields.io/pub/v/dargon2_core.svg)](https://pub.dev/packages/dargon2_core)           |
+| dargon2_interface | [![pub package](https://img.shields.io/pub/v/dargon2_interface.svg)](https://pub.dev/packages/dargon2_interface) |
+
+As well as [dargon2_flutter]'s federated-plugin dependencies:
+- [dargon2_flutter_platform_interface]
+- [dargon2_flutter_mobile]
+- [dargon2_flutter_web]
 
 Each plugin has its own functionality, but at their core, they provide some functionality necessary to implement argon2 password hashing in Dart or Flutter applications.
 
@@ -34,12 +43,12 @@ If possible, please mark issues with the specific plugin it relates to by prepen
 
 All dargon2 projects are licensed under the [MIT License], found on either within each plugin's directory or here.
 
-[dargon2]: https://github.com/tmthecoder/dargon2/blob/main/dargon2
-[dargon2_flutter]: https://github.com/tmthecoder/dargon2/blob/main/dargon2_flutter/dargon2_flutter
-[dargon2_flutter_platform_interface]: https://github.com/tmthecoder/dargon2/blob/main/dargon2_flutter/dargon2_flutter_platform_interface
-[dargon2_flutter_mobile]: https://github.com/tmthecoder/dargon2/blob/main/dargon2_flutter/dargon2_flutter_mobile
-[dargon2_flutter_web]: https://github.com/tmthecoder/dargon2/blob/main/dargon2_flutter/dargon2_flutter_web
-[dargon2_core]: https://github.com/tmthecoder/dargon2/blob/main/dargon2_core
-[dargon2_interface]: https://github.com/tmthecoder/dargon2/blob/main/dargon2_interface
+[dargon2]: ./dargon2 
+[dargon2_flutter]: ./dargon2_flutter/dargon2_flutter 
+[dargon2_flutter_platform_interface]: ./dargon2_flutter/dargon2_flutter_platform_interface 
+[dargon2_flutter_mobile]: ./dargon2_flutter/dargon2_flutter_mobile
+[dargon2_flutter_web]: ./dargon2_flutter/dargon2_flutter_web
+[dargon2_core]: ./dargon2_core
+[dargon2_interface]: ./dargon2_interface
 
-[MIT License]: https://github.com/tmthecoder/dargon2/blob/main/LICENSE
+[MIT License]: ./LICENSE

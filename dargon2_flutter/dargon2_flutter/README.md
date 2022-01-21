@@ -85,7 +85,7 @@ Please mark all dargon2_flutter issues with `[dargon2_flutter]` prepended to the
 - The C implementation of [Argon2] is licensed under a dual [Apache and CC0 License]
 - [hash-wasm] is licensed under the [MIT License](https://github.com/Daninet/hash-wasm/blob/master/LICENSE)
 
-[MIT License]: https://github.com/tmthecoder/dargon2_flutter/blob/main/LICENSE
+[MIT License]: ../LICENSE
 
 [Argon2]: https://github.com/P-H-C/phc-winner-argon2
 

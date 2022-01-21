@@ -46,7 +46,7 @@ Please mark all dargon2_interface issues with `[dargon2]` prepended to the issue
 - dargon2_core is Licensed under the [MIT License]
 - The C implementation of [Argon2] is licensed under a dual [Apache and CC0 License]
 
-[MIT License]: https://github.com/tmthecoder/dargon2/blob/main/dargon2_interface/LICENSE
+[MIT License]: ./LICENSE
 
 [Argon2]: https://github.com/P-H-C/phc-winner-argon2
 
