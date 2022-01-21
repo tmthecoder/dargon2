@@ -23,4 +23,4 @@ set(dargon2_flutter_desktop_bundled_libraries
   PARENT_SCOPE
 )
 
-add_subdirectory(../native)
+add_subdirectory(native)
