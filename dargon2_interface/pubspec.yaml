@@ -1,0 +1,15 @@
+name: dargon2_interface
+description: An interface for all dargon2 hashing functions. Provides the base outline for all implementations.
+version: 1.0.1
+homepage: https://github.com/tmthecoder/dargon2_interface
+repository: https://github.com/tmthecoder/dargon2_interface
+
+environment:
+  sdk: '>=2.14.0 <3.0.0'
+
+dependencies:
+  convert: ^3.0.1
+
+dev_dependencies:
+  lints: ^1.0.0
+  test: ^1.16.0

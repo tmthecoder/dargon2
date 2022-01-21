@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/dargon2.iml" filepath="$PROJECT_DIR$/dargon2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dargon2/dargon2.iml" filepath="$PROJECT_DIR$/dargon2/dargon2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dargon2_core/dargon2_core.iml" filepath="$PROJECT_DIR$/dargon2_core/dargon2_core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/dargon2_flutter.iml" filepath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/dargon2_flutter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_mobile/dargon2_flutter_mobile.iml" filepath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_mobile/dargon2_flutter_mobile.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_platform_interface/dargon2_flutter_platform_interface.iml" filepath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_platform_interface/dargon2_flutter_platform_interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_web/dargon2_flutter_web.iml" filepath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_web/dargon2_flutter_web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dargon2_interface/dargon2_interface.iml" filepath="$PROJECT_DIR$/dargon2_interface/dargon2_interface.iml" />
     </modules>
   </component>
 </project>

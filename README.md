@@ -1,59 +1,54 @@
-## dargon2
+# dargon2 plugins
+
 ![dargon2](https://github.com/tmthecoder/dargon2/workflows/dargon2/badge.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Dart bindings for the reference C implementation of [Argon2], the winner of the [Password Hash Competition].
+---
 
-This plugin is ONLY for native dart implementations. For Flutter, please use [dargon2_flutter]
+This repository hosts all the dargon2 plugins:
 
-[dargon2_flutter]: https://pub.dev/packages/dargon2_flutter
+| Plugin              | Pub                                                                                                              |
+|---------------------|------------------------------------------------------------------------------------------------------------------|
+| [dargon2]           | [![pub package](https://img.shields.io/pub/v/dargon2.svg)](https://pub.dev/packages/dargon2)                     |
+| [dargon2_flutter]   | [![pub package](https://img.shields.io/pub/v/dargon2_flutter.svg)](https://pub.dev/packages/dargon2_flutter)     |
+| [dargon2_core]      | [![pub package](https://img.shields.io/pub/v/dargon2_core.svg)](https://pub.dev/packages/dargon2_core)           |
+| [dargon2_interface] | [![pub package](https://img.shields.io/pub/v/dargon2_interface.svg)](https://pub.dev/packages/dargon2_interface) |
 
-[Argon2]: https://github.com/P-H-C/phc-winner-argon2
+As well as [dargon2_flutter]'s federated-plugin dependencies:
+- [dargon2_flutter_platform_interface]
+- [dargon2_flutter_mobile]
+- [dargon2_flutter_web]
 
-[Password Hash Competition]: https://password-hashing.net
+Each plugin has its own functionality, but at their core, they provide some functionality necessary to implement argon2 password hashing in Dart or Flutter applications.
 
-## Usage
+## Single Repo
 
-High-level hashing and verification (for direct hashing & verification of byte arrays, check the example)
+If you've used any of these plugins before, you may have noticed many of these plugins spread across GitHub Repositories
 
-```dart
-import 'package:dargon2/dargon2.dart';
+I decided it's best to migrate to this single repository structure since each plugin is often developed while referencing another. As such, I figure its best to store the plugins in the same manner I'm often working on them and reduce inter-repository navigation
 
-void main() async {
-   var password = 'password';
-   //use Salt(List<int> bytes) for a salt from an Integer list
-   var s = Salt.newSalt();
-   //Hash with pre-set params (iterations: 32, memory: 256, parallelism: 2, 
-   //length: 32, type: Argon2Type.i, version: Argon2Version.V13)
-   var result = await argon2.hashPasswordString(password, salt: s);
-   
-   //Raw hash values available as int list, base 64 string, and hex string
-   var bytesRaw = result.rawBytes;
-   var base64Hash = result.base64String;
-   var hexHash = result.hexString;
-   
-   //Encoded hash values available as int list and encoded string
-   var bytesEncoded = result.encodedBytes;
-   var stringEncoded = result.encodedString;
-   
-   //Verify password (returns true/false), uses default type (Argon2Type.i)
-   var verified = await argon2.verifyHashString(password, stringEncoded);
-}
-```
+Also, in the case of issue tracking and pull-requests, I can easily view individual changes to a single plugin in context of the whole structure, which is especially important when changes come to `dargon2_flutter_platform_interface`, `dargon2_core`, or `dargon2_interface` as those plugins can carry a cascading affect
 
-## Features and bugs
+This single repository migration brings NO breaking changes or plugin functionality changes. While future functionality changes may be announced as they are ready, this repository change comes with ZERO changes.
+
+## Features and Bugs
 
 Please file feature requests and bugs at the [issue tracker].
+
+If possible, please mark issues with the specific plugin it relates to by prepending `[plugin_name]` to the issue title 
 
 [issue tracker]: https://github.com/tmthecoder/dargon2/issues
 
 ## Licensing
 
-- dargon2 is Licensed under the [MIT License] 
-- The C implementation of [Argon2] is licensed under a dual [Apache and CC0 License]
+All dargon2 projects are licensed under the [MIT License], found on either within each plugin's directory or here.
 
-[MIT License]: https://github.com/tmthecoder/dargon2/blob/main/LICENSE
+[dargon2]: ./dargon2 
+[dargon2_flutter]: ./dargon2_flutter/dargon2_flutter 
+[dargon2_flutter_platform_interface]: ./dargon2_flutter/dargon2_flutter_platform_interface 
+[dargon2_flutter_mobile]: ./dargon2_flutter/dargon2_flutter_mobile
+[dargon2_flutter_web]: ./dargon2_flutter/dargon2_flutter_web
+[dargon2_core]: ./dargon2_core
+[dargon2_interface]: ./dargon2_interface
 
-[Argon2]: https://github.com/P-H-C/phc-winner-argon2
-
-[Apache and CC0 License]: https://github.com/P-H-C/phc-winner-argon2/blob/master/LICENSE
+[MIT License]: ./LICENSE
