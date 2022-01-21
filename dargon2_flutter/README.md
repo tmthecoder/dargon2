@@ -5,7 +5,6 @@ A plugin to handle dart:ffi integrations for iOS and Android for argon2 password
 Uses the reference C implementation of [Argon2], winner of the [Password Hash Competition] in mobile implementations while using [hash-wasm]'s WebAssembly argon2 implementation on web.
 
 [Password Hash Competition]: https://password-hashing.net
-[dargon2]: https://github.com/tmthecoder/dargon2
 
 ## Flutter version under 2.8
 If you're building with a Flutter version under 2.8 (or you get an `UnimplementedError` on use), add this line into your application entrypoint (usually `main()` in `main.dart`):
@@ -75,16 +74,18 @@ Future<void> hashWithArgon2Isolate(Map map) async {
 
 Please file feature requests and bugs at the [issue tracker].
 
-[issue tracker]: https://github.com/tmthecoder/dargon2_flutter/issues
+Please mark all dargon2_flutter issues with `[dargon2_flutter]` prepended to the issue title
+
+[issue tracker]: https://github.com/tmthecoder/dargon2/issues
 
 ## Licensing
 
 - dargon2_flutter and all platform implementations are Licensed under the [MIT License]
-- dargon2_core is Licensed under the [MIT License](https://github.com/tmthecoder/dargon2_core/blob/main/LICENSE)
+- dargon2_core is Licensed under the [MIT License](https://github.com/tmthecoder/dargon2/blob/main/dargon2_core/LICENSE)
 - The C implementation of [Argon2] is licensed under a dual [Apache and CC0 License]
 - [hash-wasm] is licensed under the [MIT License](https://github.com/Daninet/hash-wasm/blob/master/LICENSE)
 
-[MIT License]: https://github.com/tmthecoder/dargon2_flutter/blob/main/LICENSE
+[MIT License]: https://github.com/tmthecoder/dargon2/blob/main/dargon2_flutter/LICENSE
 
 [Argon2]: https://github.com/P-H-C/phc-winner-argon2
 
