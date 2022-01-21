@@ -21,4 +21,4 @@ file(GLOB argon2_SOURCES
 
 add_library(argon2 SHARED ${argon2_SOURCES})
 target_compile_options(argon2 PRIVATE)
-target_include_directories(argon2 PUBLIC ./Argon2/include/)
+target_include_directories(argon2 PUBLIC ./argon2/include/)
