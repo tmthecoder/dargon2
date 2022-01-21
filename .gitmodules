@@ -1,3 +1,6 @@
 [submodule "dargon2_flutter/dargon2_flutter_mobile/android/Argon2"]
 	path = dargon2_flutter/dargon2_flutter_mobile/android/Argon2
 	url = https://github.com/P-H-C/phc-winner-argon2.git
+[submodule "dargon2_flutter/dargon2_flutter_desktop/argon2_native"]
+	path = dargon2_flutter/dargon2_flutter_desktop/argon2_native
+	url = https://github.com/P-H-C/phc-winner-argon2.git

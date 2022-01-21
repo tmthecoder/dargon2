@@ -6,6 +6,7 @@
       <root url="file://$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_web" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/dargon2_flutter_mobile-3.0.3" />
       <root url="file://$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_mobile" />
+      <root url="file://$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

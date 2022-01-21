@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/dargon2/dargon2.iml" filepath="$PROJECT_DIR$/dargon2/dargon2.iml" />
       <module fileurl="file://$PROJECT_DIR$/dargon2_core/dargon2_core.iml" filepath="$PROJECT_DIR$/dargon2_core/dargon2_core.iml" />
       <module fileurl="file://$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/dargon2_flutter.iml" filepath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/dargon2_flutter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/dargon2_flutter_desktop.iml" filepath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/dargon2_flutter_desktop.iml" />
       <module fileurl="file://$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_mobile/dargon2_flutter_mobile.iml" filepath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_mobile/dargon2_flutter_mobile.iml" />
       <module fileurl="file://$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_platform_interface/dargon2_flutter_platform_interface.iml" filepath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_platform_interface/dargon2_flutter_platform_interface.iml" />
       <module fileurl="file://$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_web/dargon2_flutter_web.iml" filepath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_web/dargon2_flutter_web.iml" />
