@@ -1,15 +1,24 @@
 # dargon2_flutter_desktop
 
-dargon2_flutter's desktop implementation
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Getting Started
+A plugin to handle macOS, Windows, and Linux Dart FFI integrations for argon2 password hashing in Flutter Applications.
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+Uses the reference C implementation of [Argon2], winner of the [Password Hash Competition]
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+This is ONLY the desktop-specific platform interface. Please use the federated [dargon2_flutter] plugin for hashing functionality, which provides mobile, desktop & web support (all flutter-supported platforms).
 
+[Password Hash Competition]: https://password-hashing.net
+[dargon2_flutter]: https://pub.dev/documentation/dargon2_flutter/latest
+
+## Licensing
+
+- dargon2_flutter_desktop is Licensed under the [MIT License]
+- dargon2_core is Licensed under the [MIT License](../../dargon2_core/LICENSE)
+- The C implementation of [Argon2] is licensed under a dual [Apache and CC0 License]
+
+[MIT License]: ../LICENSE
+
+[Argon2]: https://github.com/P-H-C/phc-winner-argon2
+
+[Apache and CC0 License]: https://github.com/P-H-C/phc-winner-argon2/blob/master/LICENSE
