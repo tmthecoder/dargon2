@@ -24,6 +24,12 @@ If you're using Objective-C for the iOS portion of your application (created wit
 - (**This is the Important Step**) Select `Create Bridging Header` when the prompt comes up
 - You don't have to add anything to that swift file or the bridging header, but it needs to be there along with the bridging header in order for the plugin to compile correctly for iOS
 
+## Desktop (Linux)
+When building on Linux utilizng `dargon2_flutter`, the C standard library must be installed.
+I recommend ensuring it's installed by running `sudo apt install build-essential` or your distro's equivalent
+
+Otherwise, the underlying C implementation will not build successfully, causing a cascading build failure.
+
 ## Usage
 
 High-level hashing and verification (for direct hashing & verification of byte arrays, check the example on [dargon2])
