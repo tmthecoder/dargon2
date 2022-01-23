@@ -1,3 +1,7 @@
+## 3.1.0
+- Fix repository & homepage links to point to newly structured repo
+- Match versioning for dargon2_flutter's desktop support addition
+
 ## 3.0.0
 - BREAKING: `sync` methods are no longer supported to allow web integration
 - Migrated to the `dargon2_interface` under the core
