@@ -3,7 +3,7 @@
 - Match versioning for dargon2_flutter's desktop support addition
 
 ## 2.0.2
-- Bump Dart version doqn to 2.14 so dargon2_flutter can use this w/ Flutter 2.5
+- Bump Dart version down to 2.14 so dargon2_flutter can use this w/ Flutter 2.5
 
 ## 2.0.1
 - Slight bug fix on a verification that missed the type 
