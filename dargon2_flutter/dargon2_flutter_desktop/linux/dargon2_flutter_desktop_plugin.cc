@@ -5,6 +5,8 @@
 #include <sys/utsname.h>
 
 #include <cstring>
+#include <glib.h>
+
 
 #define DARGON2_FLUTTER_DESKTOP_PLUGIN(obj) \
   (G_TYPE_CHECK_INSTANCE_CAST((obj), dargon2_flutter_desktop_plugin_get_type(), \
