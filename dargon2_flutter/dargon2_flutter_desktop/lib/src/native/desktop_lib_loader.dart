@@ -30,7 +30,7 @@ class DesktopLibLoader implements LibLoader {
   /// of a Flutter plugin as macOS is already handled with the .process()
   @override
   String getPath() =>
-    Platform.isLinux ? Platform.environment['LIBFOO_PATH'] ?? "libargon2.so"
-        : "argon2.dll";
+    Platform.isLinux ? "${File(Platform.resolvedExecutable).parent.path}"
+        "/lib/shared_library/libargon2.so" : "argon2.dll";
 
 }
