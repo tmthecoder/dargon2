@@ -1,3 +1,7 @@
+## 2.1.0
+- Fix repository & homepage links to point to newly structured repo
+- Match versioning for dargon2_flutter's desktop support addition
+
 ## 2.0.2
 - Bump Dart version doqn to 2.14 so dargon2_flutter can use this w/ Flutter 2.5
 
