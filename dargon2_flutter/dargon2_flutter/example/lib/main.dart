@@ -3,6 +3,8 @@
 // The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+import 'dart:convert';
+
 import 'package:dargon2_flutter/dargon2_flutter.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -20,6 +22,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   /// Declare main controller and hash strings
   TextEditingController _passController = TextEditingController();
+  TextEditingController _saltController = TextEditingController();
   String _base64Hash = "";
   String _hexHash = "";
   String _encodedString = "";
@@ -43,6 +46,17 @@ class _MyAppState extends State<MyApp> {
                   controller: _passController,
                   decoration:
                       InputDecoration(hintText: "Enter a value to hash"),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(5),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 30.0, right: 30.0),
+                child: TextField(
+                  controller: _saltController,
+                  decoration:
+                  InputDecoration(hintText: "Enter a salt (optional)"),
                 ),
               ),
               Padding(
@@ -89,9 +103,11 @@ class _MyAppState extends State<MyApp> {
   /// It takes the text from the controller and passes it through to the dargon2 plugin,
   /// returning the hashed result.
   void _hash() async {
+    Salt salt = _saltController.text.isEmpty ? Salt.newSalt()
+        : Salt(utf8.encode(_saltController.text));
     //Hash the given text and show the results
     DArgon2Result result =
-        await argon2.hashPasswordString(_passController.text, salt: Salt.newSalt());
+        await argon2.hashPasswordString(_passController.text, salt: salt);
     _base64Hash = result.base64String;
     _hexHash = result.hexString;
     _encodedString = result.encodedString;

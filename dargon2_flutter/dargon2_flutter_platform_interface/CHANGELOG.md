@@ -1,3 +1,7 @@
+## 3.1.0
+- Fix repository & homepage links to point to newly structured repo
+- Match versioning for dargon2_flutter's desktop support addition
+
 ## 3.0.3
 - Make `argon2` a getter instead of a variable
 
