@@ -43,6 +43,7 @@ class _MyAppState extends State<MyApp> {
               Padding(
                 padding: const EdgeInsets.only(left: 30.0, right: 30.0),
                 child: TextField(
+                  key: Key("hashEntry"),
                   controller: _passController,
                   decoration:
                       InputDecoration(hintText: "Enter a value to hash"),
@@ -54,6 +55,7 @@ class _MyAppState extends State<MyApp> {
               Padding(
                 padding: const EdgeInsets.only(left: 30.0, right: 30.0),
                 child: TextField(
+                  key: Key("saltEntry"),
                   controller: _saltController,
                   decoration:
                   InputDecoration(hintText: "Enter a salt (optional)"),
@@ -63,6 +65,7 @@ class _MyAppState extends State<MyApp> {
                 padding: const EdgeInsets.all(10),
               ),
               ElevatedButton(
+                key: Key("hash"),
                 child: Text("Hash With Argon2"),
                 onPressed: _hash,
               ),
@@ -92,6 +95,7 @@ class _MyAppState extends State<MyApp> {
               ),
               Text(
                 "Encoded String\n$_encodedString",
+                key: Key("hashText"),
                 textAlign: TextAlign.center,
               ),
             ],
