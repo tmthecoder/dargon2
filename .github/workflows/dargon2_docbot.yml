@@ -107,7 +107,7 @@ jobs:
          key: ${{ runner.OS }}-flutter-install-cache-${{ env.flutter_version }}
      - uses: subosito/flutter-action@v1.5.1
        with:
-         channel: 'stable' # Currently you have to use beta channel for Flutter web.
+         channel: 'stable' 
      - name: Upgrade flutter
        run: flutter upgrade
      - name: Install dependencies
