@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0026b61f-f5bf-4e7d-b604-216f369bb775" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/dargon2_flutter_tests.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/dargon2_flutter_tests.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +132,7 @@
       <workItem from="1642789027506" duration="860000" />
       <workItem from="1642790034258" duration="5801000" />
       <workItem from="1642872744195" duration="10245000" />
-      <workItem from="1642995419166" duration="1379000" />
+      <workItem from="1642995419166" duration="1734000" />
     </task>
     <task id="LOCAL-00001" summary="add all config files to easily open in idea (modules for each project!)">
       <created>1642744101460</created>
@@ -274,7 +274,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642996528620</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="add the target">
+      <created>1642996847707</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1642996847707</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -301,7 +308,8 @@
     <MESSAGE value="add a custom salt field to the example &amp; add in all platform support for the example" />
     <MESSAGE value="add in an integration test to ensure ffi works on the tested device" />
     <MESSAGE value=" add an android integration tester" />
-    <option name="LAST_COMMIT_MESSAGE" value=" add an android integration tester" />
+    <MESSAGE value="add the target" />
+    <option name="LAST_COMMIT_MESSAGE" value="add the target" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

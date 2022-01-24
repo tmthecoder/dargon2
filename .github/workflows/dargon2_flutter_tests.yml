@@ -6,7 +6,7 @@ on:
 
 defaults:
   run:
-    working-directory: dargon2_flutter/dargon2_flutter
+    working-directory: dargon2_flutter/dargon2_flutter/example
 
 jobs:
   test_android:
@@ -14,7 +14,6 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
-
       - name: Gradle cache
         uses: actions/cache@v2
         with:
@@ -22,7 +21,6 @@ jobs:
             ~/.gradle/caches
             ~/.gradle/wrapper
           key: gradle-${{ runner.os }}-${{ hashFiles('**/*.gradle*') }}-${{ hashFiles('**/gradle/wrapper/gradle-wrapper.properties') }}-${{ hashFiles('**/buildSrc/**/*.kt') }}
-
       - name: AVD cache
         uses: actions/cache@v2
         id: avd-cache
@@ -31,22 +29,14 @@ jobs:
             ~/.android/avd/*
             ~/.android/adb*
           key: avd-30
-
-      - name: Cache Flutter dependencies
-        uses: actions/cache@v2
-        with:
-          path: /opt/hostedtoolcache/flutter
-          key: ${{ runner.OS }}-flutter-install-cache-${{ env.flutter_version }}
-
       - name: Download Flutter
         uses: subosito/flutter-action@v1.5.1
         with:
           channel: 'stable'
-
+          cache: true
       - name: Upgrade flutter
         run: flutter upgrade
-
-      - name: run tests
+      - name: Run Integration Tests
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 30
@@ -54,3 +44,11 @@ jobs:
           avd-name: android_tester
           force-avd-creation: false
           script: flutter test -d android_tester integration_test/
+#
+#  test_ios:
+#    runs-on: macos-latest
+#    steps:
+#      - name: checkout
+#        uses: actions/checkout@v2
+#      - name: List Simulators
+#        run: xcrun instruments -s
