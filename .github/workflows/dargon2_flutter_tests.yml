@@ -48,7 +48,7 @@ jobs:
             ls
             flutter test -d android_tester integration_test/
 
-  test_ios:
+#  test_ios:
 #    runs-on: macos-latest
 #    steps:
 #      - name: checkout
