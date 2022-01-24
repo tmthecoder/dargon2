@@ -101,7 +101,7 @@ jobs:
           flutter config --enable-linux-desktop
           flutter config --enable-macos-desktop
           flutter config --enable-windows-desktop
-      - if: matrix.os == ubuntu-latest
+      - if: matrix.os == 'ubuntu-latest'
         name: Install build-essential (Ubuntu Only)
         run: sudo apt install build-essential
       - name: Run Integration Tests
