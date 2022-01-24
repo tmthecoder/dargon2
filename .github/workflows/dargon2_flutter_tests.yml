@@ -41,51 +41,50 @@ jobs:
         with:
           api-level: 30
           target: google_apis
-          avd-name: android_tester
           force-avd-creation: false
           working-directory: dargon2_flutter/dargon2_flutter/example
-          script: |
-            pwd
-            ls
-            flutter test -d android_tester integration_test/
+          script: flutter test integration_test/
 
-#  test_ios:
-#    runs-on: macos-latest
-#    steps:
-#      - name: checkout
-#        uses: actions/checkout@v2
-#      - name: Download Flutter
-#        uses: subosito/flutter-action@v2
-#        with:
-#          channel: 'stable'
-#          cache: true
-#      - name: Upgrade flutter
-#        run: flutter upgrade
-#      - name: List Simulators
-#        run: xcrun instruments -s
-#      - name: "Start Simulator"
-#        run: |
-#          UDID=$(
-#            xcrun instruments -s |
-#            awk \
-#              -F ' *[][]' \
-#              -v 'device=${{ matrix.device }}' \
-#              '$1 == device { print $2 }'
-#          )
-#          xcrun simctl boot "${UDID:?No Simulator with this name found}"
-#      - name: Run Integration Tests
-#        run: flutter test integration_test/
-#
-#  test_macos:
-#    runs-on: macos-latest
-#    steps:
-#      - name: checkout
-#        uses: actions/checkout@v2
-#      - name: Download Flutter
-#        uses: subosito/flutter-action@v2
-#        with:
-#          channel: 'stable'
-#          cache: true
-#      - name: Run Integration Tests
-#        run: flutter test integration_test/
+  test_ios:
+    runs-on: macos-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: Download Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          cache: true
+      - name: Upgrade flutter
+        run: flutter upgrade
+      - name: List Simulators
+        run: xcrun instruments -s
+      - name: "Start Simulator"
+        run: |
+          UDID=$(
+            xcrun instruments -s |
+            awk \
+              -F ' *[][]' \
+              -v 'device="iPhone 11 Pro Max (13.1)"' \
+              '$1 == device { print $2 }'
+          )
+          xcrun simctl boot "${UDID:?No Simulator with this name found}"
+      - name: Run Integration Tests
+        run: flutter test integration_test/
+
+  test_desktop:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ ubuntu-latest, windows-latest, macos-latest ]
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: Download Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          cache: true
+      - name: Run Integration Tests
+        run: flutter test integration_test/
 
