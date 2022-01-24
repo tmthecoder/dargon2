@@ -3,6 +3,7 @@
 #
 
 list(APPEND FLUTTER_PLUGIN_LIST
+  dargon2_flutter_desktop
 )
 
 set(PLUGIN_BUNDLED_LIBRARIES)

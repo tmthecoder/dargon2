@@ -39,7 +39,7 @@ jobs:
       - name: Upgrade flutter
         run: flutter upgrade
       - name: Run Integration Tests
-        uses: reactivecircus/android-emulator-runner@v2
+        uses: reactivecircus/android-emulator-runner@v2.22.0
         with:
           api-level: 29
           ndk: 20.1.5948944

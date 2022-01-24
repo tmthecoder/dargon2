@@ -51,7 +51,7 @@ Future<String> getEncodedHash(WidgetTester tester, String password, String salt)
   await tester.enterText(saltEntryField, salt);
   await tester.tap(hashButton);
 
-  await tester.pump();
+  await tester.pumpAndSettle();
 
   return (tester.widget(hashText) as Text).data!
       .replaceAll("Encoded String\n", "");

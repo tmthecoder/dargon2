@@ -6,8 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="0026b61f-f5bf-4e7d-b604-216f369bb775" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/linux/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/linux/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/example/integration_test/argon2_ffi_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/example/integration_test/argon2_ffi_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/example/linux/flutter/generated_plugin_registrant.cc" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/example/linux/flutter/generated_plugin_registrant.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/example/linux/flutter/generated_plugins.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/example/linux/flutter/generated_plugins.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/example/macos/Flutter/GeneratedPluginRegistrant.swift" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/example/macos/Flutter/GeneratedPluginRegistrant.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/example/windows/flutter/generated_plugin_registrant.cc" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/example/windows/flutter/generated_plugin_registrant.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/example/windows/flutter/generated_plugins.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/example/windows/flutter/generated_plugins.cmake" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +138,7 @@
       <workItem from="1642789027506" duration="860000" />
       <workItem from="1642790034258" duration="5801000" />
       <workItem from="1642872744195" duration="10245000" />
-      <workItem from="1642995419166" duration="10993000" />
+      <workItem from="1642995419166" duration="11819000" />
     </task>
     <task id="LOCAL-00001" summary="add all config files to easily open in idea (modules for each project!)">
       <created>1642744101460</created>
@@ -381,14 +385,20 @@
       <option name="project" value="LOCAL" />
       <updated>1643006197255</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="fix the windows/linux break by reverting the `dartPluginClass` assignment to `pluginClass`">
+      <created>1643011387842</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1643011387842</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change the docbot titles" />
     <MESSAGE value="add theoretical support for the desktop platforms" />
     <MESSAGE value="macos works! remove some example code" />
     <MESSAGE value="fix the wrong include dir on win/lin" />
@@ -413,7 +423,8 @@
     <MESSAGE value="update the android runner &amp; matrix" />
     <MESSAGE value="change ndk version &amp; add desktop initializers" />
     <MESSAGE value="try a linux fix?" />
-    <option name="LAST_COMMIT_MESSAGE" value="try a linux fix?" />
+    <MESSAGE value="fix the windows/linux break by reverting the `dartPluginClass` assignment to `pluginClass`" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix the windows/linux break by reverting the `dartPluginClass` assignment to `pluginClass`" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
