@@ -30,7 +30,7 @@ jobs:
           path: |
             ~/.android/avd/*
             ~/.android/adb*
-          key: avd-29
+          key: avd-30
       - name: Download Flutter
         uses: subosito/flutter-action@v2
         with:
