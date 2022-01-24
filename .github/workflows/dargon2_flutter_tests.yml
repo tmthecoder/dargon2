@@ -42,6 +42,7 @@ jobs:
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 29
+          ndk: 20.1.5948944
           target: google_apis
           working-directory: dargon2_flutter/dargon2_flutter/example
           script: flutter test integration_test/
