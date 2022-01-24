@@ -33,11 +33,11 @@ flutter:
     implements: dargon2_flutter
     platforms:
       linux:
-        dartPluginClass: DArgon2Desktop
+        pluginClass: Dargon2FlutterDesktopPlugin
       macos:
-        dartPluginClass: DArgon2Desktop
+        pluginClass: Dargon2FlutterDesktopPlugin
       windows:
-        dartPluginClass: DArgon2Desktop
+        pluginClass: Dargon2FlutterDesktopPlugin
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:
