@@ -42,6 +42,7 @@ jobs:
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 30
+          ndk: 23.1.7779620
           target: google_apis
           force-avd-creation: false
           working-directory: dargon2_flutter/dargon2_flutter/example
@@ -77,6 +78,13 @@ jobs:
     strategy:
       matrix:
         os: [ ubuntu-latest, windows-latest, macos-latest ]
+        include:
+          - os: macos-latest
+            FLUTTER_DEVICE: macos
+          - os: ubuntu-latest
+            FLUTTER_DEVICE: linux
+          - os: windows-latest
+            FLUTTER_DEVICE: windows
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -93,5 +101,5 @@ jobs:
           flutter config --enable-macos-desktop
           flutter config --enable-windows-desktop
       - name: Run Integration Tests
-        run: flutter test integration_test/
+        run: flutter test -d ${{ matrix.FLUTTER_DEVICE }} integration_test/
 

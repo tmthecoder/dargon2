@@ -36,69 +36,71 @@ class _MyAppState extends State<MyApp> {
           appBar: AppBar(
             title: const Text('dargon2_flutter example'),
           ),
-          body: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 30.0, right: 30.0),
-                child: TextField(
-                  key: Key("hashEntry"),
-                  controller: _passController,
-                  decoration:
-                      InputDecoration(hintText: "Enter a value to hash"),
+          body: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 30.0, right: 30.0),
+                  child: TextField(
+                    key: Key("hashEntry"),
+                    controller: _passController,
+                    decoration:
+                        InputDecoration(hintText: "Enter a value to hash"),
+                  ),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(5),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 30.0, right: 30.0),
-                child: TextField(
-                  key: Key("saltEntry"),
-                  controller: _saltController,
-                  decoration:
-                  InputDecoration(hintText: "Enter a salt (optional)"),
+                Padding(
+                  padding: const EdgeInsets.all(5),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(10),
-              ),
-              ElevatedButton(
-                key: Key("hash"),
-                child: Text("Hash With Argon2"),
-                onPressed: _hash,
-              ),
-              Padding(
-                padding: const EdgeInsets.all(10),
-              ),
-              Text(
-                "Hash Values",
-                style: Theme.of(context).textTheme.headline6,
-              ),
-              Padding(
-                padding: const EdgeInsets.all(10),
-              ),
-              Text(
-                "Base64 Hash\n$_base64Hash",
-                textAlign: TextAlign.center,
-              ),
-              Padding(
-                padding: const EdgeInsets.all(10),
-              ),
-              Text(
-                "Hex Hash\n$_hexHash",
-                textAlign: TextAlign.center,
-              ),
-              Padding(
-                padding: const EdgeInsets.all(10),
-              ),
-              Text(
-                "Encoded String\n$_encodedString",
-                key: Key("hashText"),
-                textAlign: TextAlign.center,
-              ),
-            ],
+                Padding(
+                  padding: const EdgeInsets.only(left: 30.0, right: 30.0),
+                  child: TextField(
+                    key: Key("saltEntry"),
+                    controller: _saltController,
+                    decoration:
+                    InputDecoration(hintText: "Enter a salt (optional)"),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(10),
+                ),
+                ElevatedButton(
+                  key: Key("hash"),
+                  child: Text("Hash With Argon2"),
+                  onPressed: _hash,
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(10),
+                ),
+                Text(
+                  "Hash Values",
+                  style: Theme.of(context).textTheme.headline6,
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(10),
+                ),
+                Text(
+                  "Base64 Hash\n$_base64Hash",
+                  textAlign: TextAlign.center,
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(10),
+                ),
+                Text(
+                  "Hex Hash\n$_hexHash",
+                  textAlign: TextAlign.center,
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(10),
+                ),
+                Text(
+                  "Encoded String\n$_encodedString",
+                  key: Key("hashText"),
+                  textAlign: TextAlign.center,
+                ),
+              ],
+            ),
           )),
     );
   }
