@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0026b61f-f5bf-4e7d-b604-216f369bb775" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.github/workflows/dargon2_flutter_tests.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/dargon2_flutter_tests.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +133,7 @@
       <workItem from="1642789027506" duration="860000" />
       <workItem from="1642790034258" duration="5801000" />
       <workItem from="1642872744195" duration="10245000" />
-      <workItem from="1642995419166" duration="3739000" />
+      <workItem from="1642995419166" duration="4746000" />
     </task>
     <task id="LOCAL-00001" summary="add all config files to easily open in idea (modules for each project!)">
       <created>1642744101460</created>
@@ -316,14 +317,20 @@
       <option name="project" value="LOCAL" />
       <updated>1642999059959</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="fix up ios test">
+      <created>1642999422774</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1642999422774</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update the build workflow to work on the restructured repo" />
     <MESSAGE value="add a list" />
     <MESSAGE value="tweak workflow slightly" />
     <MESSAGE value="use working dir instead of manual cd" />
@@ -348,7 +355,8 @@
     <MESSAGE value="fix comment" />
     <MESSAGE value="add the working directory" />
     <MESSAGE value="add other integration tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="add other integration tests" />
+    <MESSAGE value="fix up ios test" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix up ios test" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

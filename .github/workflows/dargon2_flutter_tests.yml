@@ -12,8 +12,10 @@ jobs:
   test_android:
     runs-on: macos-latest
     steps:
-      - name: checkout
+      - name: Checkout
         uses: actions/checkout@v2
+        with:
+          submodules: recursive
       - name: Gradle cache
         uses: actions/cache@v2
         with:
@@ -48,8 +50,10 @@ jobs:
   test_ios:
     runs-on: macos-latest
     steps:
-      - name: checkout
+      - name: Checkout
         uses: actions/checkout@v2
+        with:
+          submodules: recursive
       - name: Download Flutter
         uses: subosito/flutter-action@v2
         with:
@@ -62,11 +66,7 @@ jobs:
       - name: Start Simulator
         run: |
           UDID=$(
-            xcrun instruments -s |
-            awk \
-              -F ' *[][]' \
-              -v 'device="iPhone 11 Pro Max (13.1)"' \
-              '$1 == device { print $2 }'
+          xcrun simctl list devices | grep "iPhone 13 (" | awk -F"[()]" '{print $2}' | awk 'NR==1{print $1}'
           )
           xcrun simctl boot "${UDID:?No Simulator with this name found}"
       - name: Run Integration Tests
@@ -78,8 +78,10 @@ jobs:
       matrix:
         os: [ ubuntu-latest, windows-latest, macos-latest ]
     steps:
-      - name: checkout
+      - name: Checkout
         uses: actions/checkout@v2
+        with:
+          submodules: recursive
       - name: Download Flutter
         uses: subosito/flutter-action@v2
         with:
