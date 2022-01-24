@@ -30,7 +30,7 @@ jobs:
             ~/.android/adb*
           key: avd-30
       - name: Download Flutter
-        uses: subosito/flutter-action@v1.5.1
+        uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
           cache: true
@@ -43,12 +43,48 @@ jobs:
           target: google_apis
           avd-name: android_tester
           force-avd-creation: false
-          script: flutter test -d android_tester integration_test/
-#
-#  test_ios:
+          script: |
+            pwd
+            ls
+            flutter test -d android_tester integration_test/
+
+  test_ios:
 #    runs-on: macos-latest
 #    steps:
 #      - name: checkout
 #        uses: actions/checkout@v2
+#      - name: Download Flutter
+#        uses: subosito/flutter-action@v2
+#        with:
+#          channel: 'stable'
+#          cache: true
+#      - name: Upgrade flutter
+#        run: flutter upgrade
 #      - name: List Simulators
 #        run: xcrun instruments -s
+#      - name: "Start Simulator"
+#        run: |
+#          UDID=$(
+#            xcrun instruments -s |
+#            awk \
+#              -F ' *[][]' \
+#              -v 'device=${{ matrix.device }}' \
+#              '$1 == device { print $2 }'
+#          )
+#          xcrun simctl boot "${UDID:?No Simulator with this name found}"
+#      - name: Run Integration Tests
+#        run: flutter test integration_test/
+#
+#  test_macos:
+#    runs-on: macos-latest
+#    steps:
+#      - name: checkout
+#        uses: actions/checkout@v2
+#      - name: Download Flutter
+#        uses: subosito/flutter-action@v2
+#        with:
+#          channel: 'stable'
+#          cache: true
+#      - name: Run Integration Tests
+#        run: flutter test integration_test/
+
