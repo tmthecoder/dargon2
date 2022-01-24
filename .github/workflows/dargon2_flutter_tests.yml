@@ -30,7 +30,7 @@ jobs:
           path: |
             ~/.android/avd/*
             ~/.android/adb*
-          key: avd-30
+          key: avd-29
       - name: Download Flutter
         uses: subosito/flutter-action@v2
         with:
@@ -41,11 +41,8 @@ jobs:
       - name: Run Integration Tests
         uses: reactivecircus/android-emulator-runner@v2
         with:
-          api-level: 30
-          ndk: 21.3.6528147
-          cmake: 3.18.1
+          api-level: 29
           target: google_apis
-          force-avd-creation: false
           working-directory: dargon2_flutter/dargon2_flutter/example
           script: flutter test integration_test/
 
@@ -77,6 +74,7 @@ jobs:
   test_desktop:
     runs-on: ${{ matrix.os }}
     strategy:
+      fail-fast: false
       matrix:
         os: [ ubuntu-latest, windows-latest, macos-latest ]
         include:
