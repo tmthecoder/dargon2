@@ -42,7 +42,8 @@ jobs:
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 30
-          ndk: 23.1.7779620
+          ndk: 21.3.6528147
+          cmake: 3.18.1
           target: google_apis
           force-avd-creation: false
           working-directory: dargon2_flutter/dargon2_flutter/example
@@ -100,6 +101,9 @@ jobs:
           flutter config --enable-linux-desktop
           flutter config --enable-macos-desktop
           flutter config --enable-windows-desktop
+      - if: matrix.os == ubuntu-latest
+        name: Install build-essential (Ubuntu Only)
+        run: sudo apt install build-essential
       - name: Run Integration Tests
         run: flutter test -d ${{ matrix.FLUTTER_DEVICE }} integration_test/
 
