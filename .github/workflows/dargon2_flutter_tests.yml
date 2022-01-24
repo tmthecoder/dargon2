@@ -58,8 +58,8 @@ jobs:
       - name: Upgrade flutter
         run: flutter upgrade
       - name: List Simulators
-        run: xcrun instruments -s
-      - name: "Start Simulator"
+        run: xcrun simctl list devices
+      - name: Start Simulator
         run: |
           UDID=$(
             xcrun instruments -s |
@@ -85,6 +85,11 @@ jobs:
         with:
           channel: 'stable'
           cache: true
+      - name: Enable Flutter Desktop
+        run: |
+          flutter config --enable-linux-desktop
+          flutter config --enable-macos-desktop
+          flutter config --enable-windows-desktop
       - name: Run Integration Tests
         run: flutter test integration_test/
 
