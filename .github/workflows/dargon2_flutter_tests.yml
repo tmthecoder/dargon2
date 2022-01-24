@@ -43,6 +43,7 @@ jobs:
           target: google_apis
           avd-name: android_tester
           force-avd-creation: false
+          working-directory: dargon2_flutter/dargon2_flutter/example
           script: |
             pwd
             ls
