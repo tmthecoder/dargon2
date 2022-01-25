@@ -19,6 +19,7 @@ As well as [dargon2_flutter]'s federated-plugin dependencies:
 - [dargon2_flutter_platform_interface]
 - [dargon2_flutter_mobile]
 - [dargon2_flutter_web]
+- [dargon2_flutter_desktop]
 
 Each plugin has its own functionality, but at their core, they provide some functionality necessary to implement argon2 password hashing in Dart or Flutter applications.
 
@@ -49,6 +50,7 @@ All dargon2 projects are licensed under the [MIT License], found on either withi
 [dargon2_flutter_platform_interface]: ./dargon2_flutter/dargon2_flutter_platform_interface 
 [dargon2_flutter_mobile]: ./dargon2_flutter/dargon2_flutter_mobile
 [dargon2_flutter_web]: ./dargon2_flutter/dargon2_flutter_web
+[dargon2_flutter_desktop]: ./dargon2_flutter/dargon2_flutter_desktop
 [dargon2_core]: ./dargon2_core
 [dargon2_interface]: ./dargon2_interface
 
