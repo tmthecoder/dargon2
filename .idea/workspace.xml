@@ -131,7 +131,7 @@
       <workItem from="1642790034258" duration="5801000" />
       <workItem from="1642872744195" duration="10245000" />
       <workItem from="1642995419166" duration="11819000" />
-      <workItem from="1643013408404" duration="945000" />
+      <workItem from="1643013408404" duration="1508000" />
     </task>
     <task id="LOCAL-00001" summary="add all config files to easily open in idea (modules for each project!)">
       <created>1642744101460</created>
@@ -399,14 +399,20 @@
       <option name="project" value="LOCAL" />
       <updated>1643013753024</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="remove ubuntu from integration tests as ubuntu-ser">
+      <created>1643072164711</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1643072164711</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix the wrong include dir on win/lin" />
     <MESSAGE value="change dll path" />
     <MESSAGE value="fix the path based off of the linux given one" />
     <MESSAGE value="add the changelog entry for dargon2 3.1.0" />
@@ -431,7 +437,8 @@
     <MESSAGE value="fix the windows/linux break by reverting the `dartPluginClass` assignment to `pluginClass`" />
     <MESSAGE value="fix the ndk issue" />
     <MESSAGE value="fix the ndk issue and jump to sdk 30" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix the ndk issue and jump to sdk 30" />
+    <MESSAGE value="remove ubuntu from integration tests as ubuntu-ser" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove ubuntu from integration tests as ubuntu-ser" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
