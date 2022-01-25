@@ -5,7 +5,89 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0026b61f-f5bf-4e7d-b604-216f369bb775" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/dargon2_flutter_tests.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/dargon2_flutter_tests.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/Argon2.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/Package.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/appveyor.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/argon2-specs.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/export.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/include/argon2.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/kats/argon2d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/kats/argon2d.shasum" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/kats/argon2d_v16" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/kats/argon2d_v16.shasum" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/kats/argon2i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/kats/argon2i.shasum" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/kats/argon2i_v16" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/kats/argon2i_v16.shasum" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/kats/argon2id" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/kats/argon2id.shasum" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/kats/argon2id_v16" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/kats/argon2id_v16.shasum" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/kats/check-sums.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/kats/check-sums.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/kats/test.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/kats/test.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/latex/IEEEtran.cls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/latex/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/latex/argon2-specs.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/latex/pics/argon2-par.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/latex/pics/compression.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/latex/pics/generic.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/latex/pics/power-distribution.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/latex/tradeoff.bib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/libargon2.pc.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/man/argon2.1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/src/argon2.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/src/bench.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/src/blake2/blake2-impl.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/src/blake2/blake2.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/src/blake2/blake2b.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/src/blake2/blamka-round-opt.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/src/blake2/blamka-round-ref.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/src/core.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/src/core.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/src/encoding.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/src/encoding.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/src/genkat.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/src/genkat.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/src/opt.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/src/ref.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/src/run.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/src/test.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/src/thread.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/src/thread.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/vs2015/Argon2Opt/Argon2Opt.vcxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/vs2015/Argon2Opt/Argon2Opt.vcxproj.filters" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/vs2015/Argon2OptBench/Argon2OptBench.vcxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/vs2015/Argon2OptBench/Argon2OptBench.vcxproj.filters" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/vs2015/Argon2OptDll/Argon2OptDll.vcxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/vs2015/Argon2OptDll/Argon2OptDll.vcxproj.filters" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/vs2015/Argon2OptGenKAT/Argon2OptGenKAT.vcxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/vs2015/Argon2OptGenKAT/Argon2OptGenKAT.vcxproj.filters" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/vs2015/Argon2OptTestCI/Argon2OptTestCI.vcxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/vs2015/Argon2OptTestCI/Argon2OptTestCI.vcxproj.filters" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/vs2015/Argon2Ref/Argon2Ref.vcxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/vs2015/Argon2Ref/Argon2Ref.vcxproj.filters" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/vs2015/Argon2RefBench/Argon2RefBench.vcxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/vs2015/Argon2RefBench/Argon2RefBench.vcxproj.filters" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/vs2015/Argon2RefDll/Argon2RefDll.vcxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/vs2015/Argon2RefDll/Argon2RefDll.vcxproj.filters" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/vs2015/Argon2RefGenKAT/Argon2RefGenKAT.vcxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/vs2015/Argon2RefGenKAT/Argon2RefGenKAT.vcxproj.filters" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/vs2015/Argon2RefTestCI/Argon2RefTestCI.vcxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native/argon2/vs2015/Argon2RefTestCI/Argon2RefTestCI.vcxproj.filters" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +133,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -63,6 +146,9 @@
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/lib/src/native" />
     </key>
@@ -133,7 +219,7 @@
       <workItem from="1642790034258" duration="5801000" />
       <workItem from="1642872744195" duration="10245000" />
       <workItem from="1642995419166" duration="11819000" />
-      <workItem from="1643013408404" duration="2040000" />
+      <workItem from="1643013408404" duration="3815000" />
     </task>
     <task id="LOCAL-00001" summary="add all config files to easily open in idea (modules for each project!)">
       <created>1642744101460</created>
@@ -415,14 +501,20 @@
       <option name="project" value="LOCAL" />
       <updated>1643072247346</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="create a web integration test">
+      <created>1643073396939</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1643073396939</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change dll path" />
     <MESSAGE value="fix the path based off of the linux given one" />
     <MESSAGE value="add the changelog entry for dargon2 3.1.0" />
     <MESSAGE value="add a custom salt field to the example &amp; add in all platform support for the example" />
@@ -447,7 +539,8 @@
     <MESSAGE value="fix the ndk issue" />
     <MESSAGE value="fix the ndk issue and jump to sdk 30" />
     <MESSAGE value="remove ubuntu from integration tests as ubuntu-ser" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove ubuntu from integration tests as ubuntu-ser" />
+    <MESSAGE value="create a web integration test" />
+    <option name="LAST_COMMIT_MESSAGE" value="create a web integration test" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

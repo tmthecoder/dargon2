@@ -2,9 +2,9 @@
   <library name="Flutter Plugins" type="FlutterPluginsLibraryType">
     <CLASSES>
       <root url="file://$PROJECT_DIR$/dargon2_flutter/dargon2_flutter" />
-      <root url="file://$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_web" />
       <root url="file://$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_mobile" />
       <root url="file://$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/dargon2_flutter_web-3.1.0" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
