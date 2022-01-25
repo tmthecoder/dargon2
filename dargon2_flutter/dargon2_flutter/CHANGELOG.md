@@ -1,3 +1,7 @@
+## 3.1.0
+- Desktop Support! All flutter platforms are now officially supported by `dargon2_flutter`
+- Updated links in documentation & readme to use new repo structure
+
 ## 3.0.3
 - Updated to align with platform interface and implementations
 - Versioning mismatch changes
