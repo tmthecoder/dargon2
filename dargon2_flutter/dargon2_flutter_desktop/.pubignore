@@ -1,0 +1,9 @@
+./linux/native/argon2/vs2015
+./linux/native/argon2/kats
+./linux/native/argon2/latex
+./linux/native/argon2/man
+
+./windows/native/argon2/vs2015
+./windows/native/argon2/kats
+./windows/native/argon2/latex
+./windows/native/argon2/man

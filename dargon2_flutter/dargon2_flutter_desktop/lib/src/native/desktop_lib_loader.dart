@@ -11,7 +11,6 @@ import 'package:dargon2_core/dargon2_core.dart';
 /// The Dylib Loader for any Flutter desktop apps. Loads the dylib from
 /// the given path
 class DesktopLibLoader implements LibLoader {
-
   /// General library loader method, overridden from the abstract superclass [LibLoader]
   ///
   /// If using iOS or macOS, only `process()` needs to be called,
@@ -29,8 +28,8 @@ class DesktopLibLoader implements LibLoader {
   /// The getPath method, set to handle paths from just the Linux or Windows part
   /// of a Flutter plugin as macOS is already handled with the .process()
   @override
-  String getPath() =>
-    Platform.isLinux ? "${File(Platform.resolvedExecutable).parent.path}"
-        "/lib/libargon2.so" : "argon2.dll";
-
+  String getPath() => Platform.isLinux
+      ? "${File(Platform.resolvedExecutable).parent.path}"
+          "/lib/libargon2.so"
+      : "argon2.dll";
 }

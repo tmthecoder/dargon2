@@ -24,13 +24,13 @@ class DArgon2Desktop extends DArgon2Platform {
 
   @override
   Future<DArgon2Result> hashPasswordBytes(List<int> password,
-      {required Salt salt,
-        int iterations = 32,
-        int memory = 256,
-        int parallelism = 2,
-        int length = 32,
-        Argon2Type type = Argon2Type.i,
-        Argon2Version version = Argon2Version.V13}) =>
+          {required Salt salt,
+          int iterations = 32,
+          int memory = 256,
+          int parallelism = 2,
+          int length = 32,
+          Argon2Type type = Argon2Type.i,
+          Argon2Version version = Argon2Version.V13}) =>
       argon2.hashPasswordBytes(password,
           salt: salt,
           iterations: iterations,
@@ -42,6 +42,6 @@ class DArgon2Desktop extends DArgon2Platform {
 
   @override
   Future<bool> verifyHashBytes(List<int> password, List<int> encodedHash,
-      {Argon2Type type = Argon2Type.i}) =>
+          {Argon2Type type = Argon2Type.i}) =>
       argon2.verifyHashBytes(password, encodedHash, type: type);
 }
