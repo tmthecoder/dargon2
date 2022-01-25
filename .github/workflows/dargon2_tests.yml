@@ -15,10 +15,9 @@ jobs:
       fail-fast: false
       matrix:
         os: [ ubuntu-latest, windows-latest, macos-latest ]
-    container:
-      image:  google/dart:latest
     steps:
     - uses: actions/checkout@v2
+    - uses: dart-lang/setup-dart@v1
     - name: Install dependencies
       run: pub get
     - name: Run tests
