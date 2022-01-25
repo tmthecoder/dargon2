@@ -1,4 +1,5 @@
 # dargon2_flutter
+[![dargon2_flutter](https://github.com/tmthecoder/dargon2/actions/workflows/dargon2_flutter_tests.yml/badge.svg?branch=main)](https://github.com/tmthecoder/dargon2/actions/workflows/dargon2_flutter_tests.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A plugin to handle dart:ffi integrations for iOS and Android for argon2 password hashing in Flutter Applications.

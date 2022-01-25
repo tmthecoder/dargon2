@@ -1,6 +1,7 @@
 # dargon2 plugins
 
 ![dargon2](https://github.com/tmthecoder/dargon2/workflows/dargon2/badge.svg)
+[![dargon2_flutter](https://github.com/tmthecoder/dargon2/actions/workflows/dargon2_flutter_tests.yml/badge.svg?branch=main)](https://github.com/tmthecoder/dargon2/actions/workflows/dargon2_flutter_tests.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ---
