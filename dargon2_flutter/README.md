@@ -1,4 +1,6 @@
 # dargon2_flutter
+[![dargon2_flutter](https://github.com/tmthecoder/dargon2/actions/workflows/dargon2_flutter_tests.yml/badge.svg?branch=main)](https://github.com/tmthecoder/dargon2/actions/workflows/dargon2_flutter_tests.yml)
+[![pub package](https://img.shields.io/pub/v/dargon2_flutter.svg)](https://pub.dev/packages/dargon2_flutter) 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A plugin to handle dart:ffi integrations for iOS and Android for argon2 password hashing in Flutter Applications.
@@ -23,6 +25,12 @@ If you're using Objective-C for the iOS portion of your application (created wit
 - Select `Swift File` in the prompt
 - (**This is the Important Step**) Select `Create Bridging Header` when the prompt comes up
 - You don't have to add anything to that swift file or the bridging header, but it needs to be there along with the bridging header in order for the plugin to compile correctly for iOS
+
+## Desktop (Linux)
+When building on Linux utilizng `dargon2_flutter`, the C standard library must be installed.
+I recommend ensuring it's installed by running `sudo apt install build-essential` or your distro's equivalent
+
+Otherwise, the underlying C implementation will not build successfully, causing a cascading build failure.
 
 ## Usage
 
@@ -85,7 +93,7 @@ Please mark all dargon2_flutter issues with `[dargon2_flutter]` prepended to the
 - The C implementation of [Argon2] is licensed under a dual [Apache and CC0 License]
 - [hash-wasm] is licensed under the [MIT License](https://github.com/Daninet/hash-wasm/blob/master/LICENSE)
 
-[MIT License]: https://github.com/tmthecoder/dargon2/blob/main/dargon2_flutter/LICENSE
+[MIT License]: ../LICENSE
 
 [Argon2]: https://github.com/P-H-C/phc-winner-argon2
 
