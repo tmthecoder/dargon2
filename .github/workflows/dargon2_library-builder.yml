@@ -41,6 +41,7 @@ jobs:
         cd argon2_library
         make
         mv libargon2.1.dylib libargon2.1-x86_64.dylib
+        make clean
         CFLAGS=--target=arm64-apple-macos11 make OPTTARGET=aarch64
         mv libargon2.1.dylib libargon2.1-arm64.dylib
         lipo -create libargon2.1-x86_64.dylib libargon2.1-arm64.dylib -output libargon2.1.dylib
