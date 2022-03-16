@@ -34,7 +34,7 @@ jobs:
         }
         echo "CHANGED=$(check)" >> $GITHUB_ENV
     - name: Push if Changed
-      if: env.CHANGED == 1
+      if: ${{ env.CHANGED == '1' }}
       run: |
         git config user.name  "Github Actions"
         git config user.email "GH-actions-ci@github.com"
@@ -72,7 +72,7 @@ jobs:
         }
         echo "CHANGED=$(check)" >> $GITHUB_ENV
     - name: Push if Changed
-      if: env.CHANGED == 1
+      if: ${{ env.CHANGED == '1' }}
       run: |
         git config user.name  "Github Actions"
         git config user.email "GH-actions-ci@github.com"
@@ -112,7 +112,7 @@ jobs:
           }
           echo "CHANGED=$(check)" >> $GITHUB_ENV
       - name: Push if Changed
-        if: env.CHANGED == 1
+        if: ${{ env.CHANGED == '1' }}
         run: |
           git config user.name  "Github Actions"
           git config user.email "GH-actions-ci@github.com"
