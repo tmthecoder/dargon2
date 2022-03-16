@@ -102,14 +102,16 @@ jobs:
         run: Copy-Item “argon2_library\vs2015\build\Argon2OptDll.dll” -Destination “lib\src\blobs\libargon2-win.dll”
       - name: Check if there are changes
         run: |
-            $status = git status --porcelain
-            $num = 0
-            if ($status -eq "") {
-              Set-Variable -Name "num" -Value "0"
-            } else { 
-              Set-Variable -Name "num" -Value "1"
-            }
-          echo "CHANGED=$num" | Out-File -FilePath $Env:GITHUB_ENV -Encoding utf-8 -Append
+          function check() {
+            if [[ -z "$(git status --porcelain)" ]];
+            then
+              echo "0"
+            else
+              echo "1"
+            fi
+          }
+          echo "CHANGED=$(check)" >> $GITHUB_ENV
+        shell: bash
       - name: Push if Changed
         if: ${{ env.CHANGED == '1' }}
         run: |
@@ -118,3 +120,4 @@ jobs:
           git add -f lib\src\blobs\libargon2-win.dll
           git commit -m "Create Native Library for Windows"
           git push origin main
+        shell: bash
