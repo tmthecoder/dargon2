@@ -25,11 +25,15 @@ jobs:
         git add -f lib/src/blobs/libargon2-linux.so
         git config user.name  "Github Actions"
         git config user.email "GH-actions-ci@github.com"
-        git remote add secure-origin https://${{ secrets.ACCESS_TOKEN }}@github.com/tmthecoder/argon2_dart.git
-        git fetch --unshallow secure-origin main
-        git commit -m "create blobs for linux"
-        git push -f secure-origin main
-
+        if git diff-index --quiet HEAD
+        then
+          echo "No Changes. Done"
+        else
+          git remote add secure-origin https://${{ secrets.ACCESS_TOKEN }}@github.com/tmthecoder/argon2_dart.git
+          git fetch --unshallow secure-origin main
+          git commit -m "create blobs for linux"
+          git push -f secure-origin main
+        fi
   mac-build:
     runs-on: macos-latest
     needs: linux-build
