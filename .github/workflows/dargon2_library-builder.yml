@@ -23,10 +23,18 @@ jobs:
         mkdir -p lib/src/blobs/
         cp argon2_library/libargon2.so.1 lib/src/blobs/libargon2-linux.so
     - name: Check if there are changes
-      id: changes
-      uses: UnicornGlobal/has-changes-action@v1.0.11
+      run: |
+        function check() {
+          if [[ -z "$(git status --porcelain)" ]];
+          then
+            echo "0"
+          else
+            echo "1"
+          fi
+        }
+        echo "CHANGED=$(check)" >> $GITHUB_ENV
     - name: Push if Changed
-      if: steps.changes.outputs.changed == 1
+      if: env.CHANGED == 1
       run: |
         git config user.name  "Github Actions"
         git config user.email "GH-actions-ci@github.com"
@@ -53,10 +61,18 @@ jobs:
         cd ..
         cp argon2_library/libargon2.1.dylib lib/src/blobs/libargon2-darwin.dylib
     - name: Check if there are changes
-      id: changes
-      uses: UnicornGlobal/has-changes-action@v1.0.11
+      run: |
+        function check() {
+          if [[ -z "$(git status --porcelain)" ]];
+          then
+            echo "0"
+          else
+            echo "1"
+          fi
+        }
+        echo "CHANGED=$(check)" >> $GITHUB_ENV
     - name: Push if Changed
-      if: steps.changes.outputs.changed == 1
+      if: env.CHANGED == 1
       run: |
         git config user.name  "Github Actions"
         git config user.email "GH-actions-ci@github.com"
@@ -85,10 +101,18 @@ jobs:
       - name: Copy Library
         run: Copy-Item “argon2_library\vs2015\build\Argon2OptDll.dll” -Destination “lib\src\blobs\libargon2-win.dll”
       - name: Check if there are changes
-        id: changes
-        uses: UnicornGlobal/has-changes-action@v1.0.11
+        run: |
+          function check() {
+            if [[ -z "$(git status --porcelain)" ]];
+            then
+              echo "0"
+            else
+              echo "1"
+            fi
+          }
+          echo "CHANGED=$(check)" >> $GITHUB_ENV
       - name: Push if Changed
-        if: steps.changes.outputs.changed == 1
+        if: env.CHANGED == 1
         run: |
           git config user.name  "Github Actions"
           git config user.email "GH-actions-ci@github.com"
