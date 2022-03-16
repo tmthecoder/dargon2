@@ -39,6 +39,8 @@ jobs:
     needs: linux-build
     steps:
     - uses: actions/checkout@v2
+    - name: Get Updated Changes
+      run:  git pull origin main
     - name: make library
       run: |
         git clone https://github.com/P-H-C/phc-winner-argon2.git argon2_library
@@ -62,7 +64,6 @@ jobs:
           git remote add secure-origin https://${{ secrets.ACCESS_TOKEN }}@github.com/tmthecoder/argon2_dart.git
           git commit -m "create blobs for mac"
           git fetch --unshallow secure-origin main
-          git pull secure-origin main
           git push secure-origin main
         fi
   windows-build:
@@ -70,6 +71,8 @@ jobs:
     needs: [linux-build, mac-build]
     steps:
       - uses: actions/checkout@v2
+      - name: Get Updated Changes
+        run:  git pull origin main
       - name: Add msbuild to PATH
         uses: microsoft/setup-msbuild@v1.0.2
       - name: Install Windows 8.1 SDK
@@ -95,6 +98,5 @@ jobs:
             git remote add secure-origin https://${{ secrets.ACCESS_TOKEN }}@github.com/tmthecoder/argon2_dart.git
             git commit -m "create blobs for mac"
             git fetch --unshallow secure-origin main
-            git pull secure-origin main
             git push secure-origin main
           fi
