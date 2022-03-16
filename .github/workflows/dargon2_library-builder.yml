@@ -55,12 +55,16 @@ jobs:
         git add -f lib/src/blobs/libargon2-darwin.dylib
         git config user.name  "Github Actions"
         git config user.email "GH-actions-ci@github.com"
-        git remote add secure-origin https://${{ secrets.ACCESS_TOKEN }}@github.com/tmthecoder/argon2_dart.git
-        git commit -m "create blobs for mac"
-        git fetch --unshallow secure-origin main
-        git pull secure-origin main
-        git push secure-origin main
-        
+        if git diff-index --quiet HEAD
+        then
+          echo "No Changes. Done"
+        else
+          git remote add secure-origin https://${{ secrets.ACCESS_TOKEN }}@github.com/tmthecoder/argon2_dart.git
+          git commit -m "create blobs for mac"
+          git fetch --unshallow secure-origin main
+          git pull secure-origin main
+          git push secure-origin main
+        fi
   windows-build:
     runs-on: windows-latest
     needs: [linux-build, mac-build]
@@ -84,9 +88,13 @@ jobs:
           git add -f lib\src\blobs\libargon2-win.dll
           git config user.name  "Github Actions"
           git config user.email "GH-actions-ci@github.com"
-          git remote add secure-origin https://${{ secrets.ACCESS_TOKEN }}@github.com/tmthecoder/argon2_dart.git
-          git commit -m "create blobs for mac"
-          git fetch --unshallow secure-origin main
-          git pull secure-origin main
-          git push secure-origin main
-      
+          if git diff-index --quiet HEAD
+          then
+            echo "No Changes. Done"
+          else
+            git remote add secure-origin https://${{ secrets.ACCESS_TOKEN }}@github.com/tmthecoder/argon2_dart.git
+            git commit -m "create blobs for mac"
+            git fetch --unshallow secure-origin main
+            git pull secure-origin main
+            git push secure-origin main
+          fi
