@@ -13,25 +13,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: make library
+    - name: Make library
       run: |
         git clone https://github.com/P-H-C/phc-winner-argon2.git argon2_library
         cd argon2_library
         make
-    - name: push compiled library
+    - name: Copy Compiled Library
       run: |
         mkdir -p lib/src/blobs/
         cp argon2_library/libargon2.so.1 lib/src/blobs/libargon2-linux.so
+    - name: Check if there are changes
+      id: changes
+      uses: UnicornGlobal/has-changes-action@v1.0.11
+    - name: Push if Changed
+      if: steps.changes.outputs.changed == 1
+      run: |
         git config user.name  "Github Actions"
         git config user.email "GH-actions-ci@github.com"
-        if git diff-index --quiet HEAD
-        then
-          echo "No Changes. Done"
-        else
-          git add -f lib/src/blobs/libargon2-linux.so
-          git commit -m "Create Native Library for Linux"
-          git push origin main
-        fi
+        git add -f lib/src/blobs/libargon2-linux.so
+        git commit -m "Create Native Library for Linux"
+        git push origin main
   mac-build:
     runs-on: macos-latest
     needs: linux-build
@@ -39,7 +40,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Get Updated Changes
       run:  git pull origin main
-    - name: make library
+    - name: Make & Copy Library
       run: |
         git clone https://github.com/P-H-C/phc-winner-argon2.git argon2_library
         cd argon2_library
@@ -49,19 +50,19 @@ jobs:
         CFLAGS=--target=arm64-apple-macos11 make OPTTARGET=aarch64
         mv libargon2.1.dylib libargon2.1-arm64.dylib
         lipo -create libargon2.1-x86_64.dylib libargon2.1-arm64.dylib -output libargon2.1.dylib
-    - name: copy and push library
-      run: |
+        cd ..
         cp argon2_library/libargon2.1.dylib lib/src/blobs/libargon2-darwin.dylib
+    - name: Check if there are changes
+      id: changes
+      uses: UnicornGlobal/has-changes-action@v1.0.11
+    - name: Push if Changed
+      if: steps.changes.outputs.changed == 1
+      run: |
         git config user.name  "Github Actions"
         git config user.email "GH-actions-ci@github.com"
-        if git diff-index --quiet HEAD
-        then
-          echo "No Changes. Done"
-        else
-          git add -f lib/src/blobs/libargon2-darwin.dylib
-          git commit -m "Create Native Library for Mac"
-          git push origin main
-        fi
+        git add -f lib/src/blobs/libargon2-darwin.dylib
+        git commit -m "Create Native Library for Mac"
+        git push origin main
   windows-build:
     runs-on: windows-latest
     needs: [linux-build, mac-build]
@@ -81,16 +82,16 @@ jobs:
           git clone https://github.com/P-H-C/phc-winner-argon2.git argon2_library
           CD argon2_library
           msbuild Argon2.sln /p:Configuration=ReleaseStatic
-      - name: copy and push library
+      - name: Copy Library
+        run: Copy-Item “argon2_library\vs2015\build\Argon2OptDll.dll” -Destination “lib\src\blobs\libargon2-win.dll”
+      - name: Check if there are changes
+        id: changes
+        uses: UnicornGlobal/has-changes-action@v1.0.11
+      - name: Push if Changed
+        if: steps.changes.outputs.changed == 1
         run: |
-          Copy-Item “argon2_library\vs2015\build\Argon2OptDll.dll” -Destination “lib\src\blobs\libargon2-win.dll”
           git config user.name  "Github Actions"
           git config user.email "GH-actions-ci@github.com"
-          if git diff-index --quiet HEAD
-          then
-            echo "No Changes. Done"
-          else
-            git add -f lib\src\blobs\libargon2-win.dll
-            git commit -m "Create Native Library for Windows"
-            git push origin main
-          fi
+          git add -f lib\src\blobs\libargon2-win.dll
+          git commit -m "Create Native Library for Windows"
+          git push origin main
