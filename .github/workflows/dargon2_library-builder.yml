@@ -117,7 +117,7 @@ jobs:
         run: |
           git config user.name  "Github Actions"
           git config user.email "GH-actions-ci@github.com"
-          git add -f lib\src\blobs\libargon2-win.dll
+          git add -f lib/src/blobs/libargon2-win.dll
           git commit -m "Create Native Library for Windows"
           git push origin main
         shell: bash
