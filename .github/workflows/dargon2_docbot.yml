@@ -1,8 +1,10 @@
 name: docbot
 
 on:
- push:
-   branches: [ main ]
+  push:
+    tags:
+       - '*'
+  workflow_dispatch:
 
 jobs:
   # Job to update the documentation on docs.tmthecoder.dev for dargon2
