@@ -8,6 +8,7 @@ import 'dart:io';
 import 'dart:isolate';
 
 import 'package:dargon2_core/dargon2_core.dart';
+// ignore: deprecated_member_use
 import 'dart:cli';
 
 /// The Dylib Loader for any Dart native apps, regardless of platform. Loads the dylib
@@ -33,6 +34,7 @@ class DartLibLoader implements LibLoader {
       rootPath = File.fromUri(Platform.script).parent.path;
     } else {
       final rootLibrary = 'package:dargon2/dargon2.dart';
+      // ignore: deprecated_member_use
       rootPath = waitFor(Isolate.resolvePackageUri(Uri.parse(rootLibrary)))!
           .resolve('src/blobs/')
           .toFilePath(windows: Platform.isWindows);

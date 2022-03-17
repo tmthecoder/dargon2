@@ -5,16 +5,16 @@
         <entry key="_fe_analyzer_shared">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/_fe_analyzer_shared-31.0.0/lib" />
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/_fe_analyzer_shared-34.0.0/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/_fe_analyzer_shared-31.0.0/lib" />
             </list>
           </value>
         </entry>
         <entry key="analyzer">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/analyzer-2.8.0/lib" />
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/analyzer-3.2.0/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/analyzer-2.8.0/lib" />
             </list>
           </value>
         </entry>
@@ -70,8 +70,8 @@
         <entry key="coverage">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/coverage-1.0.3/lib" />
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/coverage-1.1.0/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/coverage-1.0.3/lib" />
             </list>
           </value>
         </entry>
@@ -92,8 +92,8 @@
         <entry key="dargon2_interface">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/dargon2_interface-1.0.1/lib" />
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/dargon2_interface-1.1.0/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/dargon2_interface-1.0.1/lib" />
             </list>
           </value>
         </entry>
@@ -205,8 +205,8 @@
         <entry key="path">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/path-1.8.0/lib" />
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/path-1.8.1/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/path-1.8.0/lib" />
             </list>
           </value>
         </entry>
@@ -276,8 +276,8 @@
         <entry key="source_span">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/source_span-1.8.1/lib" />
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/source_span-1.8.2/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/source_span-1.8.1/lib" />
             </list>
           </value>
         </entry>
@@ -312,24 +312,24 @@
         <entry key="test">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/test-1.19.5/lib" />
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/test-1.20.1/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/test-1.19.5/lib" />
             </list>
           </value>
         </entry>
         <entry key="test_api">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/test_api-0.4.8/lib" />
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/test_api-0.4.9/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/test_api-0.4.8/lib" />
             </list>
           </value>
         </entry>
         <entry key="test_core">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/test_core-0.4.9/lib" />
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/test_core-0.4.11/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/test_core-0.4.9/lib" />
             </list>
           </value>
         </entry>
@@ -343,8 +343,8 @@
         <entry key="vm_service">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/vm_service-7.5.0/lib" />
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/vm_service-8.1.0/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/vm_service-7.5.0/lib" />
             </list>
           </value>
         </entry>
