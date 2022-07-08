@@ -18,7 +18,7 @@ jobs:
    steps:
    - uses: actions/checkout@v2
    - name: Install dependencies
-     run: pub get
+     run: dart pub get
    - name: Generate Documentation
      run: dartdoc
    - name: Push Documentation
@@ -47,7 +47,7 @@ jobs:
    steps:
      - uses: actions/checkout@v2
      - name: Install dependencies
-       run: pub get
+       run: dart pub get
      - name: Generate Documentation
        run: dartdoc
      - name: Push Documentation
@@ -76,7 +76,7 @@ jobs:
    steps:
      - uses: actions/checkout@v2
      - name: Install dependencies
-       run: pub get
+       run: dart pub get
      - name: Generate Documentation
        run: dartdoc
      - name: Push Documentation
@@ -117,7 +117,7 @@ jobs:
          cd dargon2_flutter
          flutter packages get
      - name: Activate dartdoc
-       run: pub global activate dartdoc
+       run: dart pub global activate dartdoc
      - name: Generate Documentation
        run: |
          cd dargon2_flutter
