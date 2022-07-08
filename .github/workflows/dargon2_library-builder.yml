@@ -47,7 +47,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Get Updated Changes
-      run:  git pull origin main
+      run:  git pull origin ${GITHUB_REF##*/}
     - name: Make & Copy Library
       run: |
         git clone https://github.com/P-H-C/phc-winner-argon2.git argon2_library
@@ -85,7 +85,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Get Updated Changes
-        run:  git pull origin main
+        run:  git pull origin ${GITHUB_REF##*/}
       - name: Add msbuild to PATH
         uses: microsoft/setup-msbuild@v1.0.2
       - name: Install Windows 8.1 SDK
