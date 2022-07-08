@@ -1,3 +1,6 @@
+## 3.2.1
+- Fix `dart run` not working correctly with dargon2 on future versions of dart without a file path- Fix a crash on Ubuntu 20.04 LTS
+
 ## 3.2.0
 - Support for running dargon2 operations on M1 Macs
 

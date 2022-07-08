@@ -32,8 +32,8 @@ class DartLibLoader implements LibLoader {
     final rootLibrary = 'package:dargon2/dargon2.dart';
     // ignore: deprecated_member_use
     var rootPath = waitFor(Isolate.resolvePackageUri(Uri.parse(rootLibrary)))!
-          .resolve('src/blobs/')
-          .toFilePath(windows: Platform.isWindows);
+        .resolve('src/blobs/')
+        .toFilePath(windows: Platform.isWindows);
     if (Platform.isMacOS) return '${rootPath}libargon2-darwin.dylib';
     if (Platform.isLinux) return '${rootPath}libargon2-linux.so';
     if (Platform.isWindows) return '${rootPath}libargon2-win.dll';
