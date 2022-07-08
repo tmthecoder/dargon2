@@ -40,14 +40,14 @@ jobs:
         git config user.email "GH-actions-ci@github.com"
         git add -f lib/src/blobs/libargon2-linux.so
         git commit -m "Create Native Library for Linux"
-        git push origin main
+        git push origin ${GITHUB_REF##*/}
   mac-build:
     runs-on: macos-latest
     needs: linux-build
     steps:
     - uses: actions/checkout@v2
     - name: Get Updated Changes
-      run:  git pull origin main
+      run:  git pull origin ${GITHUB_REF##*/}
     - name: Make & Copy Library
       run: |
         git clone https://github.com/P-H-C/phc-winner-argon2.git argon2_library
@@ -78,14 +78,14 @@ jobs:
         git config user.email "GH-actions-ci@github.com"
         git add -f lib/src/blobs/libargon2-darwin.dylib
         git commit -m "Create Native Library for Mac"
-        git push origin main
+        git push origin ${GITHUB_REF##*/}
   windows-build:
     runs-on: windows-latest
     needs: [linux-build, mac-build]
     steps:
       - uses: actions/checkout@v2
       - name: Get Updated Changes
-        run:  git pull origin main
+        run:  git pull origin ${GITHUB_REF##*/}
       - name: Add msbuild to PATH
         uses: microsoft/setup-msbuild@v1.0.2
       - name: Install Windows 8.1 SDK
@@ -119,5 +119,5 @@ jobs:
           git config user.email "GH-actions-ci@github.com"
           git add -f lib/src/blobs/libargon2-win.dll
           git commit -m "Create Native Library for Windows"
-          git push origin main
+          git push origin ${GITHUB_REF##*/}
         shell: bash
