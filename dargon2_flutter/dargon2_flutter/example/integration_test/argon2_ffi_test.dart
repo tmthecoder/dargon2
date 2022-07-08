@@ -9,10 +9,10 @@ import 'package:dargon2_flutter_example/main.dart' as app;
 void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
   app.main();
-
   // Argon2i test group
   group('Hash Tests - Argon2i', () {
-    testWidgets('v = ${0x13}, t = 2, m = 16, p = 1,', (_) async {
+    testWidgets('v = ${0x13}, t = 2, m = 16, p = 1,', (tester) async {
+      await tester.pumpAndSettle();
       var code = await hashTest(Argon2Version.V13, 2, 16, 1, 'password', 'somesalt',
           '03df1d13e10203bcc663405e31ab1687939730c9152459bca28fd10c23e38f50',
           '\$argon2i\$v=19\$m=16,t=2,p=1\$c29tZXNhbHQ\$A98dE+ECA7zGY0BeMasWh5OXMMkVJFm8oo/RDCPjj1A', Argon2Type.i);
@@ -130,6 +130,7 @@ Future<DArgon2ErrorCode> hashTest(Argon2Version version, int iterations, int mem
     return DArgon2ErrorCode.ARGON2_OK;
 
   } on DArgon2Exception catch (e) {
+    print("Catch: $e");
     return e.errorCode;
   }
 }
