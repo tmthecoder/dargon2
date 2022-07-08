@@ -40,7 +40,7 @@ jobs:
         git config user.email "GH-actions-ci@github.com"
         git add -f lib/src/blobs/libargon2-linux.so
         git commit -m "Create Native Library for Linux"
-        git push origin main
+        git push origin ${GITHUB_REF##*/}
   mac-build:
     runs-on: macos-latest
     needs: linux-build
@@ -78,7 +78,7 @@ jobs:
         git config user.email "GH-actions-ci@github.com"
         git add -f lib/src/blobs/libargon2-darwin.dylib
         git commit -m "Create Native Library for Mac"
-        git push origin main
+        git push origin ${GITHUB_REF##*/}
   windows-build:
     runs-on: windows-latest
     needs: [linux-build, mac-build]
@@ -119,5 +119,5 @@ jobs:
           git config user.email "GH-actions-ci@github.com"
           git add -f lib/src/blobs/libargon2-win.dll
           git commit -m "Create Native Library for Windows"
-          git push origin main
+          git push origin ${GITHUB_REF##*/}
         shell: bash
