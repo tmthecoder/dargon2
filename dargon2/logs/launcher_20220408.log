@@ -1,0 +1,36 @@
+2022-04-08 04:46:59 INFO SWTOR Launcher [Core:U2021.0.44 Lib:MFeb.11.2022.16:12:34] initialized.
+2022-04-08 04:46:59 INFO File info: C:\Program Files\Electronic Arts\BioWare\Star Wars - The Old Republic\launcher.exe size=8047336, created=2/14/2022 19:0:4, accessed=4/8/2022 4:46:31, written=2/14/2022 19:0:4
+2022-04-08 04:46:59 INFO Initializing download manager
+2022-04-08 04:46:59 INFO Loaded settings from C:\Program Files\Electronic Arts\BioWare\Star Wars - The Old Republic\launcher-app.settings
+2022-04-08 04:46:59 INFO Loaded agreements from C:\Program Files\Electronic Arts\BioWare\Star Wars - The Old Republic\eula.settings
+2022-04-08 04:46:59 INFO Loaded settings from C:\Program Files\Electronic Arts\BioWare\Star Wars - The Old Republic\launcher.settings
+2022-04-08 04:46:59 INFO Sending crash dumps to [https://patcher-crash.swtor.com/crashcatch]
+2022-04-08 04:46:59 INFO completeLauncherInit()
+2022-04-08 04:46:59 INFO -----------------------------(240)-----------------------------
+2022-04-08 04:46:59 INFO Timezone: 240
+2022-04-08 04:47:01 INFO SpecsHash=1035018720.3778011317
+2022-04-08 04:47:04 INFO Checking for launcher update
+2022-04-08 04:47:04 INFO ManifestState=GetManifest: , current=-1/upcoming=0/required=0
+2022-04-08 04:47:04 INFO Download: http://manifest.swtor.com/patch/patcher2021.patchmanifest (159.153.92.50 )
+2022-04-08 04:47:07 ERROR Version file doesn't match any version in patch manifest: patcher2021 (e212)
+2022-04-08 04:47:07 ERROR Deleting C:\Program Files\Electronic Arts\BioWare\Star Wars - The Old Republic\patcher2021.version, and trying again.
+2022-04-08 04:47:07 INFO ManifestComplete. Ready to patch the patcher.
+2022-04-08 04:47:07 INFO Going Offline
+2022-04-08 04:47:07 INFO ManifestState=GetManifest: , current=-1/upcoming=0/required=0
+2022-04-08 04:47:08 INFO Manifest Loaded: patcher2021, current=-1/upcoming=-1/required=16
+2022-04-08 04:47:08 INFO A patcher update is required.
+2022-04-08 04:47:08 INFO Going Offline
+2022-04-08 04:47:08 INFO ManifestState=Download: patcher2021, current=-1/upcoming=-1/required=16
+2022-04-08 04:47:08 INFO Download: http://127.0.0.1:56279/app/download.solidconfig (127.0.0.1 )
+2022-04-08 04:47:09 INFO Download: http://cdn-patch.swtor.com/patch/patcher2021/patcher2021_-1to16.solidpkg (8.248.212.126 8.247.119.126 8.252.62.126 8.252.230.254 8.252.63.126 )
+2022-04-08 04:47:10 INFO Download Creating: http://cdn-patch.swtor.com/patch/patcher2021/patcher2021_-1to16.solidpkg
+2022-04-08 04:47:10 INFO Download Creating: http://cdn-patch.swtor.com/patch/patcher2021/patcher2021_-1to16.solidpkg
+2022-04-08 04:47:11 INFO Download Downloading: http://cdn-patch.swtor.com/patch/patcher2021/patcher2021_-1to16.solidpkg
+2022-04-08 04:47:11 INFO Patching group: patcher2021 -1->16
+2022-04-08 04:47:11 INFO Patching file:  patcher2021 -1->16
+2022-04-08 04:47:11 INFO Recognized patcher2021 version 0
+2022-04-08 04:47:11 INFO Download: http://cdn-patch.swtor.com/patch/patcher2021/patcher2021_-1to16/patcher2021_-1to16.z01 (8.248.212.126 8.247.119.126 8.252.62.126 8.252.230.254 8.252.63.126 )
+2022-04-08 04:47:18 INFO Download: http://cdn-patch.swtor.com/patch/patcher2021/patcher2021_-1to16/patcher2021_-1to16.zip (8.248.212.126 8.247.119.126 8.252.62.126 8.252.230.254 8.252.63.126 )
+2022-04-08 04:47:20 INFO Download Complete: Complete: http://cdn-patch.swtor.com/patch/patcher2021/patcher2021_-1to16.solidpkg
+2022-04-08 04:47:20 INFO ManifestState=Patch: patcher2021, current=-1/upcoming=-1/required=16
+2022-04-08 04:47:21 INFO Closed launcher
