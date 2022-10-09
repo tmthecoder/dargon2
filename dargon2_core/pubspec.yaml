@@ -1,6 +1,6 @@
 name: dargon2_core
 description: The bindings for argon2's C reference library. Does not include the library loading itself.
-version: 2.1.0
+version: 2.1.1
 homepage: https://github.com/tmthecoder/dargon2/blob/main/dargon2_core
 repository: https://github.com/tmthecoder/dargon2/
 

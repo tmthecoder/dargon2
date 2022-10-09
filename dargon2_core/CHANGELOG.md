@@ -1,3 +1,6 @@
+## 2.1.1
+- Bump `ffi` version to `2.0.0`
+
 ## 2.1.0
 - Fix repository & homepage links to point to newly structured repo
 - Match versioning for dargon2_flutter's desktop support addition
