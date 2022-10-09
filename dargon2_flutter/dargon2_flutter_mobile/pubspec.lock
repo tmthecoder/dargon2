@@ -46,23 +46,23 @@ packages:
   dargon2_core:
     dependency: "direct main"
     description:
-      name: dargon2_core
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.1.0"
+      path: "../../dargon2_core"
+      relative: true
+    source: path
+    version: "2.1.1"
   dargon2_flutter_platform_interface:
     dependency: "direct main"
     description:
-      name: dargon2_flutter_platform_interface
-      url: "https://pub.dartlang.org"
-    source: hosted
+      path: "../dargon2_flutter_platform_interface"
+      relative: true
+    source: path
     version: "3.1.0"
   dargon2_interface:
     dependency: "direct main"
     description:
-      name: dargon2_interface
-      url: "https://pub.dartlang.org"
-    source: hosted
+      path: "../../dargon2_interface"
+      relative: true
+    source: path
     version: "1.1.0"
   fake_async:
     dependency: transitive
@@ -77,7 +77,7 @@ packages:
       name: ffi
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.1.2"
+    version: "2.0.1"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -185,5 +185,5 @@ packages:
     source: hosted
     version: "2.1.2"
 sdks:
-  dart: ">=2.17.0-0 <3.0.0"
+  dart: ">=2.17.0 <3.0.0"
   flutter: ">=2.5.0"
