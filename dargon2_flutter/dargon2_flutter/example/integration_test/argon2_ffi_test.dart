@@ -12,6 +12,7 @@ void main() {
   // Argon2i test group
   group('Hash Tests - Argon2i', () {
     testWidgets('v = ${0x13}, t = 2, m = 16, p = 1,', (tester) async {
+      await Future.delayed(Duration(seconds: 1));
       await tester.pumpAndSettle();
       var code = await hashTest(Argon2Version.V13, 2, 16, 1, 'password', 'somesalt',
           '03df1d13e10203bcc663405e31ab1687939730c9152459bca28fd10c23e38f50',
