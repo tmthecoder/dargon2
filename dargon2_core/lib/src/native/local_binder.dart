@@ -13,9 +13,9 @@ import 'package:ffi/ffi.dart';
 /// This method is used in the [getHash] method and maps to the Dart method [_Argon2Hash].
 ///
 /// This method returns an [Int32] which maps to a Dart [int] for the error/result code.
-typedef _argon2_hash = Int32 Function(
-  Uint32 t_cost,
-  Uint32 m_cost,
+typedef _CArgon2Hash = Int32 Function(
+  Uint32 tCost,
+  Uint32 mCost,
   Uint32 parallelism,
   Pointer<Uint8> pwd,
   IntPtr pwdlen,
@@ -29,7 +29,7 @@ typedef _argon2_hash = Int32 Function(
   Uint32 version,
 );
 
-/// The Dart function definition for [_argon2_hash], and is used to bind the C types
+/// The Dart function definition for [_CArgon2Hash], and is used to bind the C types
 /// to given Dart inputs.
 ///
 /// All parameters are named in symmetry with the C library's name. [t_cost] refers to the
@@ -44,8 +44,8 @@ typedef _argon2_hash = Int32 Function(
 /// Returns an [int] with the result code for the hash, while the real raw hash & encoded hashes
 /// are written to the [hash] and [encoded] pointers respectively.
 typedef _Argon2Hash = int Function(
-  int t_cost,
-  int m_cost,
+  int tCost,
+  int mCost,
   int parallelism,
   Pointer<Uint8> pwd,
   int pwdlen,
@@ -64,14 +64,14 @@ typedef _Argon2Hash = int Function(
 /// This method is used in the [verifyHash] method and maps to the Dart method [_Argon2Verify].
 ///
 /// This method returns an [Int32] which maps to a Dart [int] for the true/false output.
-typedef _argon2_verify = Int32 Function(
+typedef _CArgon2Verify = Int32 Function(
   Pointer<Utf8> encoded,
   Pointer<Uint8> pwd,
   IntPtr pwdlen,
   Uint32 type,
 );
 
-/// The Dart function definition for [_argon2_verify], and is used to bind the C types
+/// The Dart function definition for [_CArgon2Verify], and is used to bind the C types
 /// to given Dart inputs.
 ///
 /// All parameters are named in symmetry with the C library's name. [pwd] is a [Uint8] pointer for the password byte. [pwdlen] refers to the length
@@ -88,10 +88,10 @@ typedef _Argon2Verify = int Function(
 /// This method is used in the [getEncodedHashLength] method and maps to the Dart method [_Argon2Encodedlen].
 ///
 /// This method returns an [IntPtr] which maps to a Dart [int] for the length of the encoded hash
-typedef _argon2_encodedlen = IntPtr Function(Uint32 t_cost, Uint32 m_cost,
+typedef _CArgon2Encodedlen = IntPtr Function(Uint32 tCost, Uint32 mCost,
     Uint32 parallelism, Uint32 saltlen, Uint32 hashlen, Uint32 type);
 
-/// The Dart function definition for [_argon2_encodedlen], and is used to bind the C types
+/// The Dart function definition for [_CArgon2Encodedlen], and is used to bind the C types
 /// to given Dart inputs.
 ///
 /// All parameters are named in symmetry with the C library's name. [t_cost] refers to the iteration
@@ -100,24 +100,24 @@ typedef _argon2_encodedlen = IntPtr Function(Uint32 t_cost, Uint32 m_cost,
 /// refers to the Argon2 Hash Type (i, d, or id).
 ///
 /// Returns an [int], signifying the length of the encoded hash.
-typedef _Argon2Encodedlen = int Function(int t_cost, int m_cost,
-    int parallelism, int saltlen, int hashlen, int type);
+typedef _Argon2Encodedlen = int Function(
+    int tCost, int mCost, int parallelism, int saltlen, int hashlen, int type);
 
 /// A function definition for the Argon2 error message getter. This method will map to the
 /// one in the C library, passing the necessary values to the C library via dart:ffi.
 /// This method is used in the [getErrorMessage] method and maps to the Dart method [_Argon2ErrorMessage].
 ///
 /// This method returns an [Int32] which maps to a Dart [int] for the length of the encoded hash
-typedef _argon2_error_message = Pointer<Utf8> Function(Int32 error_code);
+typedef _CArgon2ErrorMessage = Pointer<Utf8> Function(Int32 errorCode);
 
-/// The Dart function definition for [_argon2_error_message], and is used to bind the C types
+/// The Dart function definition for [_CArgon2ErrorMessage], and is used to bind the C types
 /// to given Dart inputs.
 ///
 /// All parameters are named in symmetry with the C library's name. [error_code] refers to the
 /// error code that we are getting the message for.
 ///
 /// Returns an [Pointer] of type [Utf8], signifying the error message string.
-typedef _Argon2ErrorMessage = Pointer<Utf8> Function(int error_code);
+typedef _Argon2ErrorMessage = Pointer<Utf8> Function(int errorCode);
 
 /// The main class to handle communication between the C methods and their Dart bindings.
 /// Unless users are working on a low level and need to directly change the bindings or paths,
@@ -129,16 +129,16 @@ class LocalBinder {
   static void initialize(LibLoader libLoader) =>
       _privateInstance = LocalBinder._(libLoader);
 
-  /// Callable method of type [_Argon2Hash] that binds to [_argon2_hash].
+  /// Callable method of type [_Argon2Hash] that binds to [_CArgon2Hash].
   late _Argon2Hash getHash;
 
-  /// Callable method of type [_Argon2Verify] that binds to [_argon2_verify].
+  /// Callable method of type [_Argon2Verify] that binds to [_CArgon2Verify].
   late _Argon2Verify verifyHash;
 
-  /// Callable method of type [_Argon2Encodedlen] that binds to [_argon2_encodedlen].
+  /// Callable method of type [_Argon2Encodedlen] that binds to [_CArgon2Encodedlen].
   late _Argon2Encodedlen getEncodedHashLength;
 
-  /// Callable method of type [_Argon2ErrorMessage] that binds to [_argon2_error_message].
+  /// Callable method of type [_Argon2ErrorMessage] that binds to [_CArgon2ErrorMessage].
   late _Argon2ErrorMessage getErrorMessage;
 
   /// The getter for the main instance, which returns the private instance if set correctly.
@@ -154,16 +154,16 @@ class LocalBinder {
   LocalBinder._(LibLoader libLoader) {
     var argon2lib = libLoader.loadLib();
     getHash = argon2lib
-        .lookup<NativeFunction<_argon2_hash>>('argon2_hash')
+        .lookup<NativeFunction<_CArgon2Hash>>('argon2_hash')
         .asFunction<_Argon2Hash>();
     verifyHash = argon2lib
-        .lookup<NativeFunction<_argon2_verify>>('argon2_verify')
+        .lookup<NativeFunction<_CArgon2Verify>>('argon2_verify')
         .asFunction<_Argon2Verify>();
     getEncodedHashLength = argon2lib
-        .lookup<NativeFunction<_argon2_encodedlen>>('argon2_encodedlen')
+        .lookup<NativeFunction<_CArgon2Encodedlen>>('argon2_encodedlen')
         .asFunction<_Argon2Encodedlen>();
     getErrorMessage = argon2lib
-        .lookup<NativeFunction<_argon2_error_message>>('argon2_error_message')
+        .lookup<NativeFunction<_CArgon2ErrorMessage>>('argon2_error_message')
         .asFunction<_Argon2ErrorMessage>();
   }
 }

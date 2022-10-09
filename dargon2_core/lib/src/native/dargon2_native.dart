@@ -13,8 +13,6 @@ import 'loaders/lib_loader.dart';
 import 'local_binder.dart';
 
 class DArgon2Native extends DArgon2 {
-  factory DArgon2Native._(LibLoader loader) => DArgon2Native(loader);
-
   DArgon2Native(LibLoader loader) {
     LocalBinder.initialize(loader);
   }
