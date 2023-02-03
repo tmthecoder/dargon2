@@ -27,16 +27,12 @@ class DArgon2FlutterWeb extends DArgon2Platform {
 
   /// The static hashwasm URL to use when getting the script.
   static const hashwasm =
-      "https://cdn.jsdelivr.net/npm/hash-wasm@4.8.0/dist/argon2.umd.min";
+      "https://cdn.jsdelivr.net/npm/hash-wasm@4.9.0/+esm";
 
   /// The [DArgon2FlutterWeb] constructor. Needed to set the global hashwasm
   /// variable to the right script.
   DArgon2FlutterWeb() {
-    if (context['require'] != null) {
-      _registerRequire();
-    } else {
-      _registerNormal();
-    }
+    _registerDependency();
   }
 
   @override
@@ -110,52 +106,46 @@ class DArgon2FlutterWeb extends DArgon2Platform {
     return current;
   }
 
-  /// Registers the hashwasm argon2 implementation in release or script-loaded
-  /// environments by adding a script tag with the dependency.
-  void _registerNormal() async {
-    print("NORMAL");
-    // Create the script element
-    ScriptElement script = ScriptElement();
-    script.type = "text/javascript";
-    script.charset = "utf-8";
-    script.async = true;
-    script.src = "$hashwasm.js";
-    // Add it to the document head
-    assert(document.head != null);
-    document.head!.append(script);
-    // await its load
-    await script.onLoad.first;
-  }
-
   /// Registers the hashwasm argon2 implementation in debug or requirejs loaded
   /// environments as adding the script tag would not suffice then.
   ///
   /// Adds it as a require.js dependency and sets the global hashwasm variable
   /// to the require app.
-  void _registerRequire() async {
+  void _registerDependency() async {
     // Make sure it's not already there
     if (context['hashwasm'] != null) return;
-    // Get the require object
-    JsObject require = JsObject.fromBrowserObject(context['require']);
-    // Add the script to the config
-    require.callMethod('config', [
-      JsObject.jsify({
-        'paths': {"hashwasm": hashwasm}
-      })
-    ]);
+
+    String windowVar = "hashwasm";
+
+    ScriptElement script = ScriptElement();
+    script.type = 'text/javascript';
+    script.crossOrigin = 'anonymous';
+    script.text = '''
+      window.trigger_$windowVar = async (callback) => {
+        let {argon2i, argon2d, argon2id} = await import($hashwasm);
+        callback([argon2i, argon2d, argon2id]);
+      };
+    ''';
+
+    assert(document.head != null);
+    document.head!.append(script);
     Completer completer = Completer();
-    List<String> services = ['hashwasm'];
-    // Load the script
-    context.callMethod('require', [
-      JsObject.jsify(services),
-      (app) {
-        // Set it to the global variable
-        context['hashwasm'] = app;
+
+    context.callMethod('trigger_$windowVar', [
+          (module) {
+        context[windowVar] = JsObject.jsify({
+          "argon2i": module[0],
+          "argon2d": module[1],
+          "argon2id": module[2],
+        });
+        context.deleteProperty('trigger_$windowVar');
         completer.complete();
       }
     ]);
+
     await completer.future;
   }
+
 }
 
 /// JS interop binding to call the hashwasm argon2i hash function.

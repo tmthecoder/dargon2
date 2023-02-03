@@ -32,7 +32,8 @@ dependencies:
   dargon2_flutter_platform_interface: '^3.1.0'
   dargon2_flutter_mobile: '^3.1.0'
   dargon2_flutter_desktop: '^3.1.0'
-  dargon2_flutter_web: '^3.1.0'
+  dargon2_flutter_web:
+    path: ../dargon2_flutter_web
   dargon2_interface: '^1.1.0'
 
 
