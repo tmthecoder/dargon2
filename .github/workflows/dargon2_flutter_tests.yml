@@ -129,7 +129,7 @@ jobs:
       matrix:
         os: [ windows-latest, macos-latest ]
         include:
-          - os: macos-latest
+          - os: macos-11
             FLUTTER_DEVICE: macos
             FLUTTER_CHANNEL: stable
 #          - os: ubuntu-latest
