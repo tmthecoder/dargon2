@@ -22,7 +22,6 @@ jobs:
       run: |
         mv pubspec.test.yaml pubspec.yaml
         mv ../dargon2_core/pubspec.test.yaml ../dargon2_core/pubspec.yaml
-        mv ../dargon2_interface/pubspec.test.yaml ../dargon2_interface/pubspec.yaml
     - name: Install dependencies
       run: dart pub get
     - name: Run tests
