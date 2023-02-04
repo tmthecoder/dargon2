@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0026b61f-f5bf-4e7d-b604-216f369bb775" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_web/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_web/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_mobile/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_mobile/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_platform_interface/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_platform_interface/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_web/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_web/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,14 +159,7 @@
       <workItem from="1643013408404" duration="8368000" />
       <workItem from="1647537196896" duration="400000" />
       <workItem from="1665272480121" duration="2481000" />
-      <workItem from="1675465218191" duration="4299000" />
-    </task>
-    <task id="LOCAL-00008" summary="add in the new readme">
-      <created>1642745790289</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1642745790289</updated>
+      <workItem from="1675465218191" duration="4631000" />
     </task>
     <task id="LOCAL-00009" summary="update the last readme">
       <created>1642745915079</created>
@@ -501,14 +497,20 @@
       <option name="project" value="LOCAL" />
       <updated>1675475989849</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="update all changelogs">
+      <created>1675477568731</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1675477568731</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix matrix ubuntu" />
     <MESSAGE value="change the ubuntu-specific install" />
     <MESSAGE value="update the android runner &amp; matrix" />
     <MESSAGE value="change ndk version &amp; add desktop initializers" />
@@ -533,7 +535,8 @@
     <MESSAGE value="overall chores" />
     <MESSAGE value="update web import &amp; add test pubspec files" />
     <MESSAGE value="Add test yaml file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add test yaml file" />
+    <MESSAGE value="update all changelogs" />
+    <option name="LAST_COMMIT_MESSAGE" value="update all changelogs" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
