@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0026b61f-f5bf-4e7d-b604-216f369bb775" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_mobile/lib/main.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_mobile/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_mobile/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_mobile/test/widget_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +82,7 @@
       <recent name="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/lib/src/native" />
     </key>
   </component>
-  <component name="RunManager" selected="Flutter Test.tests in argon2_ffi_test.dart">
+  <component name="RunManager" selected="Flutter.dargon2_flutter example">
     <configuration name="argon2_ffi_test.dart" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application" temporary="true" nameIsGenerated="true">
       <option name="filePath" value="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/example/integration_test/argon2_ffi_test.dart" />
       <option name="workingDirectory" value="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/example" />
@@ -127,8 +125,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Flutter Test.tests in argon2_ffi_test.dart" />
         <item itemvalue="Flutter.dargon2_flutter example" />
+        <item itemvalue="Flutter Test.tests in argon2_ffi_test.dart" />
         <item itemvalue="Flutter Test.Hash Tests - Argon2id" />
         <item itemvalue="Flutter Test.Hash Tests - Argon2i" />
         <item itemvalue="Dart Command Line App.argon2_ffi_test.dart" />
@@ -157,21 +155,7 @@
       <workItem from="1643013408404" duration="8368000" />
       <workItem from="1647537196896" duration="400000" />
       <workItem from="1665272480121" duration="2481000" />
-      <workItem from="1675465218191" duration="5472000" />
-    </task>
-    <task id="LOCAL-00011" summary="change the docbot titles">
-      <created>1642747127514</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1642747127514</updated>
-    </task>
-    <task id="LOCAL-00012" summary="add theoretical support for the desktop platforms">
-      <created>1642792168646</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1642792168646</updated>
+      <workItem from="1675465218191" duration="7455000" />
     </task>
     <task id="LOCAL-00013" summary="macos works! remove some example code">
       <created>1642792552027</created>
@@ -502,15 +486,27 @@
       <option name="project" value="LOCAL" />
       <updated>1675478418184</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="delete unneeded mobile widget tests">
+      <created>1675478634828</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1675478634828</updated>
+    </task>
+    <task id="LOCAL-00061" summary="formatting">
+      <created>1675478902345</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1675478902345</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change ndk version &amp; add desktop initializers" />
-    <MESSAGE value="try a linux fix?" />
     <MESSAGE value="fix the windows/linux break by reverting the `dartPluginClass` assignment to `pluginClass`" />
     <MESSAGE value="fix the ndk issue" />
     <MESSAGE value="fix the ndk issue and jump to sdk 30" />
@@ -534,7 +530,9 @@
     <MESSAGE value="update all changelogs" />
     <MESSAGE value="update all pubspec files" />
     <MESSAGE value="update desktop tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="update desktop tests" />
+    <MESSAGE value="delete unneeded mobile widget tests" />
+    <MESSAGE value="formatting" />
+    <option name="LAST_COMMIT_MESSAGE" value="formatting" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

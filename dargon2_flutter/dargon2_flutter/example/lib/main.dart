@@ -8,6 +8,7 @@ import 'dart:convert';
 import 'package:dargon2_flutter/dargon2_flutter.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+
 void main() {
   // This line is necessary if you're using a Flutter version under 2.8
   DArgon2Flutter.init();
@@ -59,7 +60,7 @@ class _MyAppState extends State<MyApp> {
                     key: Key("saltEntry"),
                     controller: _saltController,
                     decoration:
-                    InputDecoration(hintText: "Enter a salt (optional)"),
+                        InputDecoration(hintText: "Enter a salt (optional)"),
                   ),
                 ),
                 Padding(
@@ -109,7 +110,8 @@ class _MyAppState extends State<MyApp> {
   /// It takes the text from the controller and passes it through to the dargon2 plugin,
   /// returning the hashed result.
   void _hash() async {
-    Salt salt = _saltController.text.isEmpty ? Salt.newSalt()
+    Salt salt = _saltController.text.isEmpty
+        ? Salt.newSalt()
         : Salt(utf8.encode(_saltController.text));
     //Hash the given text and show the results
     DArgon2Result result =
@@ -120,9 +122,7 @@ class _MyAppState extends State<MyApp> {
     setState(() {});
 
     // Call the compute hash
-    compute(hashWithArgon2Isolate, {
-      "hashString": "Test hash string"
-    });
+    compute(hashWithArgon2Isolate, {"hashString": "Test hash string"});
   }
 }
 
