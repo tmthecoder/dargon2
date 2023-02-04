@@ -85,7 +85,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/native" />
+      <recent name="$PROJECT_DIR$/dargon2_core" />
+      <recent name="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop" />
+      <recent name="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_web" />
+      <recent name="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_mobile" />
+      <recent name="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_platform_interface" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/lib/src/native" />
