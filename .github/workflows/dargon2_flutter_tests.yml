@@ -46,6 +46,7 @@ jobs:
           rm ../../dargon2_flutter_desktop/pubspec.yaml
           rm ../../dargon2_flutter_platform_interface/pubspec.yaml          
           rm ../../../dargon2_core/pubspec.yaml
+          mv ../pubspec.test.yaml ../pubspec.yaml          
           mv ../../dargon2_flutter_web/pubspec.test.yaml ../../dargon2_flutter_web/pubspec.yaml
           mv ../../dargon2_flutter_mobile/pubspec.test.yaml ../../dargon2_flutter_mobile/pubspec.yaml
           mv ../../dargon2_flutter_desktop/pubspec.test.yaml ../../dargon2_flutter_desktop/pubspec.yaml
@@ -89,11 +90,12 @@ jobs:
           rm ../../dargon2_flutter_desktop/pubspec.yaml
           rm ../../dargon2_flutter_platform_interface/pubspec.yaml          
           rm ../../../dargon2_core/pubspec.yaml
+          mv ../pubspec.test.yaml ../pubspec.yaml          
           mv ../../dargon2_flutter_web/pubspec.test.yaml ../../dargon2_flutter_web/pubspec.yaml
           mv ../../dargon2_flutter_mobile/pubspec.test.yaml ../../dargon2_flutter_mobile/pubspec.yaml
           mv ../../dargon2_flutter_desktop/pubspec.test.yaml ../../dargon2_flutter_desktop/pubspec.yaml
           mv ../../dargon2_flutter_platform_interface/pubspec.test.yaml ../../dargon2_flutter_platform_interface/pubspec.yaml          
-          mv ../../../dargon2_core/pubspec.test.yaml ../../../dargon2_core/pubspec.yaml                    
+          mv ../../../dargon2_core/pubspec.test.yaml ../../../dargon2_core/pubspec.yaml          
       - name: Run Integration Tests
         run: flutter test integration_test/
 
@@ -110,11 +112,12 @@ jobs:
           rm ../../dargon2_flutter_desktop/pubspec.yaml
           rm ../../dargon2_flutter_platform_interface/pubspec.yaml          
           rm ../../../dargon2_core/pubspec.yaml
+          mv ../pubspec.test.yaml ../pubspec.yaml          
           mv ../../dargon2_flutter_web/pubspec.test.yaml ../../dargon2_flutter_web/pubspec.yaml
           mv ../../dargon2_flutter_mobile/pubspec.test.yaml ../../dargon2_flutter_mobile/pubspec.yaml
           mv ../../dargon2_flutter_desktop/pubspec.test.yaml ../../dargon2_flutter_desktop/pubspec.yaml
           mv ../../dargon2_flutter_platform_interface/pubspec.test.yaml ../../dargon2_flutter_platform_interface/pubspec.yaml          
-          mv ../../../dargon2_core/pubspec.test.yaml ../../../dargon2_core/pubspec.yaml                
+          mv ../../../dargon2_core/pubspec.test.yaml ../../../dargon2_core/pubspec.yaml          
       - run: flutter pub get
       - run: chromedriver --port=4444 &
       - run: flutter drive --driver=test_driver/integration_test.dart --target=integration_test/argon2_ffi_test.dart -d web-server
@@ -162,11 +165,12 @@ jobs:
           rm ../../dargon2_flutter_desktop/pubspec.yaml
           rm ../../dargon2_flutter_platform_interface/pubspec.yaml          
           rm ../../../dargon2_core/pubspec.yaml
+          mv ../pubspec.test.yaml ../pubspec.yaml          
           mv ../../dargon2_flutter_web/pubspec.test.yaml ../../dargon2_flutter_web/pubspec.yaml
           mv ../../dargon2_flutter_mobile/pubspec.test.yaml ../../dargon2_flutter_mobile/pubspec.yaml
           mv ../../dargon2_flutter_desktop/pubspec.test.yaml ../../dargon2_flutter_desktop/pubspec.yaml
           mv ../../dargon2_flutter_platform_interface/pubspec.test.yaml ../../dargon2_flutter_platform_interface/pubspec.yaml          
-          mv ../../../dargon2_core/pubspec.test.yaml ../../../dargon2_core/pubspec.yaml                  
+          mv ../../../dargon2_core/pubspec.test.yaml ../../../dargon2_core/pubspec.yaml          
       - name: Run Integration Tests
         run: flutter test -d ${{ matrix.FLUTTER_DEVICE }} integration_test/
 
