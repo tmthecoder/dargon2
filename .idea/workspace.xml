@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0026b61f-f5bf-4e7d-b604-216f369bb775" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_platform_interface/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_platform_interface/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_mobile/lib/main.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_mobile/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_mobile/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_mobile/test/widget_test.dart" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,14 +157,7 @@
       <workItem from="1643013408404" duration="8368000" />
       <workItem from="1647537196896" duration="400000" />
       <workItem from="1665272480121" duration="2481000" />
-      <workItem from="1675465218191" duration="5006000" />
-    </task>
-    <task id="LOCAL-00010" summary=" add the top-level readme">
-      <created>1642746814281</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1642746814281</updated>
+      <workItem from="1675465218191" duration="5472000" />
     </task>
     <task id="LOCAL-00011" summary="change the docbot titles">
       <created>1642747127514</created>
@@ -502,14 +495,20 @@
       <option name="project" value="LOCAL" />
       <updated>1675477864634</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="update desktop tests">
+      <created>1675478418184</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1675478418184</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update the android runner &amp; matrix" />
     <MESSAGE value="change ndk version &amp; add desktop initializers" />
     <MESSAGE value="try a linux fix?" />
     <MESSAGE value="fix the windows/linux break by reverting the `dartPluginClass` assignment to `pluginClass`" />
@@ -534,7 +533,8 @@
     <MESSAGE value="Add test yaml file" />
     <MESSAGE value="update all changelogs" />
     <MESSAGE value="update all pubspec files" />
-    <option name="LAST_COMMIT_MESSAGE" value="update all pubspec files" />
+    <MESSAGE value="update desktop tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="update desktop tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

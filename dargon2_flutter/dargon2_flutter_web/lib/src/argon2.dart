@@ -26,8 +26,7 @@ class DArgon2FlutterWeb extends DArgon2Platform {
   }
 
   /// The static hashwasm URL to use when getting the script.
-  static const hashwasm =
-      "https://cdn.jsdelivr.net/npm/hash-wasm@4.9.0/+esm";
+  static const hashwasm = "https://cdn.jsdelivr.net/npm/hash-wasm@4.9.0/+esm";
 
   /// The [DArgon2FlutterWeb] constructor. Needed to set the global hashwasm
   /// variable to the right script.
@@ -132,7 +131,7 @@ class DArgon2FlutterWeb extends DArgon2Platform {
     Completer completer = Completer();
 
     context.callMethod('trigger_$windowVar', [
-          (module) {
+      (module) {
         context[windowVar] = JsObject.jsify({
           "argon2i": module[0],
           "argon2d": module[1],
@@ -146,7 +145,6 @@ class DArgon2FlutterWeb extends DArgon2Platform {
 
     await completer.future;
   }
-
 }
 
 /// JS interop binding to call the hashwasm argon2i hash function.
