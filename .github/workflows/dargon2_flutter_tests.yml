@@ -38,6 +38,19 @@ jobs:
           cache: true
       - name: Upgrade flutter
         run: flutter upgrade
+      - name: Use Test Pubspec Files
+        run: |
+          rm ../pubspec.yaml
+          rm ../../dargon2_flutter_web/pubspec.yaml
+          rm ../../dargon2_flutter_mobile/pubspec.yaml
+          rm ../../dargon2_flutter_desktop/pubspec.yaml
+          rm ../../dargon2_flutter_platform_interface/pubspec.yaml          
+          rm ../../../dargon2_core/pubspec.yaml
+          mv ../../dargon2_flutter_web/pubspec.test.yaml ../../dargon2_flutter_web/pubspec.yaml
+          mv ../../dargon2_flutter_mobile/pubspec.test.yaml ../../dargon2_flutter_mobile/pubspec.yaml
+          mv ../../dargon2_flutter_desktop/pubspec.test.yaml ../../dargon2_flutter_desktop/pubspec.yaml
+          mv ../../dargon2_flutter_platform_interface/pubspec.test.yaml ../../dargon2_flutter_platform_interface/pubspec.yaml          
+          mv ../../../dargon2_core/pubspec.test.yaml ../../../dargon2_core/pubspec.yaml          
       - name: Run Integration Tests
         uses: reactivecircus/android-emulator-runner@v2.22.0
         with:
@@ -68,6 +81,19 @@ jobs:
           xcrun simctl list devices | grep "iPhone 13 (" | awk -F"[()]" '{print $2}' | awk 'NR==1{print $1}'
           )
           xcrun simctl boot "${UDID:?No Simulator with this name found}"
+      - name: Use Test Pubspec Files
+        run: |
+          rm ../pubspec.yaml
+          rm ../../dargon2_flutter_web/pubspec.yaml
+          rm ../../dargon2_flutter_mobile/pubspec.yaml
+          rm ../../dargon2_flutter_desktop/pubspec.yaml
+          rm ../../dargon2_flutter_platform_interface/pubspec.yaml          
+          rm ../../../dargon2_core/pubspec.yaml
+          mv ../../dargon2_flutter_web/pubspec.test.yaml ../../dargon2_flutter_web/pubspec.yaml
+          mv ../../dargon2_flutter_mobile/pubspec.test.yaml ../../dargon2_flutter_mobile/pubspec.yaml
+          mv ../../dargon2_flutter_desktop/pubspec.test.yaml ../../dargon2_flutter_desktop/pubspec.yaml
+          mv ../../dargon2_flutter_platform_interface/pubspec.test.yaml ../../dargon2_flutter_platform_interface/pubspec.yaml          
+          mv ../../../dargon2_core/pubspec.test.yaml ../../../dargon2_core/pubspec.yaml                    
       - name: Run Integration Tests
         run: flutter test integration_test/
 
@@ -76,6 +102,19 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: subosito/flutter-action@v2
+      - name: Use Test Pubspec Files
+        run: |
+          rm ../pubspec.yaml
+          rm ../../dargon2_flutter_web/pubspec.yaml
+          rm ../../dargon2_flutter_mobile/pubspec.yaml
+          rm ../../dargon2_flutter_desktop/pubspec.yaml
+          rm ../../dargon2_flutter_platform_interface/pubspec.yaml          
+          rm ../../../dargon2_core/pubspec.yaml
+          mv ../../dargon2_flutter_web/pubspec.test.yaml ../../dargon2_flutter_web/pubspec.yaml
+          mv ../../dargon2_flutter_mobile/pubspec.test.yaml ../../dargon2_flutter_mobile/pubspec.yaml
+          mv ../../dargon2_flutter_desktop/pubspec.test.yaml ../../dargon2_flutter_desktop/pubspec.yaml
+          mv ../../dargon2_flutter_platform_interface/pubspec.test.yaml ../../dargon2_flutter_platform_interface/pubspec.yaml          
+          mv ../../../dargon2_core/pubspec.test.yaml ../../../dargon2_core/pubspec.yaml                
       - run: flutter pub get
       - run: chromedriver --port=4444 &
       - run: flutter drive --driver=test_driver/integration_test.dart --target=integration_test/argon2_ffi_test.dart -d web-server
@@ -115,6 +154,19 @@ jobs:
       - if: matrix.os == 'ubuntu-latest'
         name: Install Ninja (Ubuntu Only)
         run: sudo apt install -y ninja-build libgtk-3-dev clang
+      - name: Use Test Pubspec Files
+        run: |
+          rm ../pubspec.yaml
+          rm ../../dargon2_flutter_web/pubspec.yaml
+          rm ../../dargon2_flutter_mobile/pubspec.yaml
+          rm ../../dargon2_flutter_desktop/pubspec.yaml
+          rm ../../dargon2_flutter_platform_interface/pubspec.yaml          
+          rm ../../../dargon2_core/pubspec.yaml
+          mv ../../dargon2_flutter_web/pubspec.test.yaml ../../dargon2_flutter_web/pubspec.yaml
+          mv ../../dargon2_flutter_mobile/pubspec.test.yaml ../../dargon2_flutter_mobile/pubspec.yaml
+          mv ../../dargon2_flutter_desktop/pubspec.test.yaml ../../dargon2_flutter_desktop/pubspec.yaml
+          mv ../../dargon2_flutter_platform_interface/pubspec.test.yaml ../../dargon2_flutter_platform_interface/pubspec.yaml          
+          mv ../../../dargon2_core/pubspec.test.yaml ../../../dargon2_core/pubspec.yaml                  
       - name: Run Integration Tests
         run: flutter test -d ${{ matrix.FLUTTER_DEVICE }} integration_test/
 
