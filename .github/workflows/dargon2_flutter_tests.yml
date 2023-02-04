@@ -127,11 +127,11 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ windows-latest, macos-11 ]
+        os: [ windows-latest ]
         include:
-          - os: macos-11
-            FLUTTER_DEVICE: macos
-            FLUTTER_CHANNEL: stable
+#          - os: macos-latest
+#            FLUTTER_DEVICE: macos
+#            FLUTTER_CHANNEL: stable
 #          - os: ubuntu-latest
 #            FLUTTER_DEVICE: linux
 #            FLUTTER_CHANNEL: beta
