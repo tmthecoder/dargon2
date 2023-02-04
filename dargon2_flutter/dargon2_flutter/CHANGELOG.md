@@ -1,3 +1,6 @@
+## 3.2.0
+- Fixed broken web features in debug mode
+
 ## 3.1.0
 - Desktop Support! All flutter platforms are now officially supported by `dargon2_flutter`
 - Updated links in documentation & readme to use new repo structure

@@ -5,20 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0026b61f-f5bf-4e7d-b604-216f369bb775" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/dargon2_core/pubspec.test.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/pubspec.test.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_mobile/pubspec.test.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_platform_interface/pubspec.test.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_web/pubspec.test.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dargon2_core/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_core/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/example/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/example/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_web/lib/src/argon2.dart" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_web/lib/src/argon2.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dargon2_interface/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_interface/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dargon2_interface/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_interface/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_web/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_web/CHANGELOG.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +61,7 @@
     "WebServerToolWindowFactoryState": "false",
     "dart.analysis.tool.window.visible": "false",
     "io.flutter.reload.alreadyRun": "true",
-    "last_opened_file_path": "/Users/tejasmehta/Desktop/Development/Dart Pub/dargon2/dargon2_core",
+    "last_opened_file_path": "/Users/tejasmehta/Desktop/Development/Dart Pub/dargon2/dargon2_interface",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -85,11 +73,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/dargon2_interface" />
+      <recent name="$PROJECT_DIR$/dargon2" />
       <recent name="$PROJECT_DIR$/dargon2_core" />
       <recent name="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop" />
       <recent name="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_web" />
-      <recent name="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_mobile" />
-      <recent name="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_platform_interface" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/lib/src/native" />
@@ -168,21 +156,7 @@
       <workItem from="1643013408404" duration="8368000" />
       <workItem from="1647537196896" duration="400000" />
       <workItem from="1665272480121" duration="2481000" />
-      <workItem from="1675465218191" duration="3317000" />
-    </task>
-    <task id="LOCAL-00006" summary="rename all workflow files">
-      <created>1642744717451</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1642744717451</updated>
-    </task>
-    <task id="LOCAL-00007" summary="set working dir for dargon2_flutter and dargon2_core docbots">
-      <created>1642745095086</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1642745095086</updated>
+      <workItem from="1675465218191" duration="4299000" />
     </task>
     <task id="LOCAL-00008" summary="add in the new readme">
       <created>1642745790289</created>
@@ -513,15 +487,27 @@
       <option name="project" value="LOCAL" />
       <updated>1665274957122</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="update web import &amp; add test pubspec files">
+      <created>1675475747246</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1675475747246</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Add test yaml file">
+      <created>1675475989848</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1675475989849</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add ndk and fix the overflow on smaller devices for the example" />
-    <MESSAGE value="fix ndk and cmake" />
     <MESSAGE value="fix matrix ubuntu" />
     <MESSAGE value="change the ubuntu-specific install" />
     <MESSAGE value="update the android runner &amp; matrix" />
@@ -545,7 +531,9 @@
     <MESSAGE value="[core] bump version" />
     <MESSAGE value="[core] refactor slightly for pub guidelines" />
     <MESSAGE value="overall chores" />
-    <option name="LAST_COMMIT_MESSAGE" value="overall chores" />
+    <MESSAGE value="update web import &amp; add test pubspec files" />
+    <MESSAGE value="Add test yaml file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add test yaml file" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

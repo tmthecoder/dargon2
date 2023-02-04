@@ -1,3 +1,6 @@
+## 3.2.0
+- Match versioning for dargon2_flutter_web's fixes 
+
 ## 3.1.0
 - Fix repository & homepage links to point to newly structured repo
 - Match versioning for dargon2_flutter's desktop support addition
