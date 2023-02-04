@@ -122,8 +122,8 @@ class DArgon2FlutterWeb extends DArgon2Platform {
     script.crossOrigin = 'anonymous';
     script.text = '''
       window.trigger_$windowVar = async (callback) => {
-        let {argon2i, argon2d, argon2id} = await import($hashwasm);
-        callback([argon2i, argon2d, argon2id]);
+        let {argon2i, argon2d, argon2id, argon2Verify} = await import("$hashwasm");
+        callback([argon2i, argon2d, argon2id, argon2Verify]);
       };
     ''';
 
@@ -137,6 +137,7 @@ class DArgon2FlutterWeb extends DArgon2Platform {
           "argon2i": module[0],
           "argon2d": module[1],
           "argon2id": module[2],
+          "argon2Verify": module[3]
         });
         context.deleteProperty('trigger_$windowVar');
         completer.complete();

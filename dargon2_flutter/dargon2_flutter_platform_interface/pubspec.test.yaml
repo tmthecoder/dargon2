@@ -1,0 +1,20 @@
+name: dargon2_flutter_platform_interface
+description: The common platform interface for the dargon2_flutter plugin.
+repository: https://github.com/tmthecoder/dargon2
+homepage: https://github.com/tmthecoder/dargon2/blob/main/dargon2_flutter/dargon2_flutter_platform_interface
+version: 3.1.0
+
+environment:
+  sdk: ">=2.14.0 <3.0.0"
+  flutter: ">=2.5.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  plugin_platform_interface: '^2.0.0'
+  dargon2_interface:
+    path: ../../dargon2_interface
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter

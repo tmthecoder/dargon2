@@ -1,6 +1,13 @@
 <component name="libraryTable">
   <library name="Flutter Plugins" type="FlutterPluginsLibraryType">
-    <CLASSES />
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop" />
+      <root url="file://$PROJECT_DIR$/dargon2_flutter/dargon2_flutter" />
+      <root url="file://$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_web" />
+      <root url="file://$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_mobile" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/dargon2_flutter_desktop-3.1.0" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/dargon2_flutter_mobile-3.1.0" />
+    </CLASSES>
     <JAVADOC />
     <SOURCES />
   </library>

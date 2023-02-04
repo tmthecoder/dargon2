@@ -4,21 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0026b61f-f5bf-4e7d-b604-216f369bb775" name="Changes" comment="[core] update pub dependencies">
+    <list default="true" id="0026b61f-f5bf-4e7d-b604-216f369bb775" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/dargon2_core/pubspec.test.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/pubspec.test.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_mobile/pubspec.test.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_platform_interface/pubspec.test.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_web/pubspec.test.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/example/ios/Flutter/AppFrameworkInfo.plist" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/example/ios/Flutter/AppFrameworkInfo.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/example/ios/Podfile" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/example/ios/Podfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/example/ios/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/example/ios/Podfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/example/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/example/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/example/ios/Runner/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/example/ios/Runner/Info.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/example/linux/flutter/generated_plugins.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/example/linux/flutter/generated_plugins.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/example/windows/flutter/generated_plugins.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/example/windows/flutter/generated_plugins.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_core/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_core/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/example/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/example/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_mobile/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_mobile/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_mobile/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_mobile/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_web/lib/src/argon2.dart" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_web/lib/src/argon2.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_interface/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_interface/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_interface/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_interface/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,12 +72,15 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "dart.analysis.tool.window.visible": "false",
+    "io.flutter.reload.alreadyRun": "true",
+    "last_opened_file_path": "/Users/tejasmehta/Desktop/Development/Dart Pub/dargon2/dargon2_core",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "show.migrate.to.gradle.popup": "false"
+    "show.migrate.to.gradle.popup": "false",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -88,14 +91,10 @@
       <recent name="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/lib/src/native" />
     </key>
   </component>
-  <component name="RunManager" selected="Flutter Test.tests in argon2_ffi_test.dart">
+  <component name="RunManager" selected="Flutter Test.Hash Tests - Argon2id">
     <configuration name="argon2_ffi_test.dart" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application" temporary="true" nameIsGenerated="true">
       <option name="filePath" value="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/example/integration_test/argon2_ffi_test.dart" />
       <option name="workingDirectory" value="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/example" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Tests in dargon2_test.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/dargon2/test/dargon2_test.dart" />
       <method v="2" />
     </configuration>
     <configuration name="dargon2_flutter example" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true">
@@ -104,6 +103,12 @@
     </configuration>
     <configuration name="Hash Tests - Argon2i" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
       <option name="testName" value="Hash Tests - Argon2i" />
+      <option name="testFile" value="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/example/integration_test/argon2_ffi_test.dart" />
+      <option name="useRegexp" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Hash Tests - Argon2id" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="Hash Tests - Argon2id" />
       <option name="testFile" value="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/example/integration_test/argon2_ffi_test.dart" />
       <option name="useRegexp" value="false" />
       <method v="2" />
@@ -121,19 +126,19 @@
     </configuration>
     <list>
       <item itemvalue="Dart Command Line App.argon2_ffi_test.dart" />
-      <item itemvalue="Dart Test.Tests in dargon2_test.dart" />
       <item itemvalue="Flutter.dargon2_flutter example" />
       <item itemvalue="Flutter Test.dargon2_flutter_tests" />
+      <item itemvalue="Flutter Test.Hash Tests - Argon2id" />
       <item itemvalue="Flutter Test.Hash Tests - Argon2i" />
       <item itemvalue="Flutter Test.tests in argon2_ffi_test.dart" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Flutter.dargon2_flutter example" />
+        <item itemvalue="Flutter Test.Hash Tests - Argon2id" />
         <item itemvalue="Flutter Test.tests in argon2_ffi_test.dart" />
         <item itemvalue="Flutter Test.Hash Tests - Argon2i" />
         <item itemvalue="Dart Command Line App.argon2_ffi_test.dart" />
-        <item itemvalue="Dart Test.Tests in dargon2_test.dart" />
-        <item itemvalue="Flutter.dargon2_flutter example" />
       </list>
     </recent_temporary>
   </component>
@@ -158,14 +163,8 @@
       <workItem from="1642995419166" duration="11819000" />
       <workItem from="1643013408404" duration="8368000" />
       <workItem from="1647537196896" duration="400000" />
-      <workItem from="1665272480121" duration="2390000" />
-    </task>
-    <task id="LOCAL-00005" summary="use working dir instead of manual cd">
-      <created>1642744662338</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1642744662338</updated>
+      <workItem from="1665272480121" duration="2481000" />
+      <workItem from="1675465218191" duration="3317000" />
     </task>
     <task id="LOCAL-00006" summary="rename all workflow files">
       <created>1642744717451</created>
@@ -503,14 +502,20 @@
       <option name="project" value="LOCAL" />
       <updated>1665274445124</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="overall chores">
+      <created>1665274957122</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1665274957122</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix up integration tests" />
     <MESSAGE value="add ndk and fix the overflow on smaller devices for the example" />
     <MESSAGE value="fix ndk and cmake" />
     <MESSAGE value="fix matrix ubuntu" />
@@ -535,7 +540,8 @@
     <MESSAGE value="[core] update pub dependencies" />
     <MESSAGE value="[core] bump version" />
     <MESSAGE value="[core] refactor slightly for pub guidelines" />
-    <option name="LAST_COMMIT_MESSAGE" value="[core] refactor slightly for pub guidelines" />
+    <MESSAGE value="overall chores" />
+    <option name="LAST_COMMIT_MESSAGE" value="overall chores" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
