@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0026b61f-f5bf-4e7d-b604-216f369bb775" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_mobile/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_mobile/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_platform_interface/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_platform_interface/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_web/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_web/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_platform_interface/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_platform_interface/pubspec.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +84,7 @@
       <recent name="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter_desktop/lib/src/native" />
     </key>
   </component>
-  <component name="RunManager" selected="Flutter Test.Hash Tests - Argon2id">
+  <component name="RunManager" selected="Flutter Test.tests in argon2_ffi_test.dart">
     <configuration name="argon2_ffi_test.dart" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application" temporary="true" nameIsGenerated="true">
       <option name="filePath" value="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/example/integration_test/argon2_ffi_test.dart" />
       <option name="workingDirectory" value="$PROJECT_DIR$/dargon2_flutter/dargon2_flutter/example" />
@@ -129,9 +127,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Flutter Test.tests in argon2_ffi_test.dart" />
         <item itemvalue="Flutter.dargon2_flutter example" />
         <item itemvalue="Flutter Test.Hash Tests - Argon2id" />
-        <item itemvalue="Flutter Test.tests in argon2_ffi_test.dart" />
         <item itemvalue="Flutter Test.Hash Tests - Argon2i" />
         <item itemvalue="Dart Command Line App.argon2_ffi_test.dart" />
       </list>
@@ -159,14 +157,7 @@
       <workItem from="1643013408404" duration="8368000" />
       <workItem from="1647537196896" duration="400000" />
       <workItem from="1665272480121" duration="2481000" />
-      <workItem from="1675465218191" duration="4631000" />
-    </task>
-    <task id="LOCAL-00009" summary="update the last readme">
-      <created>1642745915079</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1642745915079</updated>
+      <workItem from="1675465218191" duration="5006000" />
     </task>
     <task id="LOCAL-00010" summary=" add the top-level readme">
       <created>1642746814281</created>
@@ -504,14 +495,20 @@
       <option name="project" value="LOCAL" />
       <updated>1675477568731</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="update all pubspec files">
+      <created>1675477864634</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1675477864634</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change the ubuntu-specific install" />
     <MESSAGE value="update the android runner &amp; matrix" />
     <MESSAGE value="change ndk version &amp; add desktop initializers" />
     <MESSAGE value="try a linux fix?" />
@@ -536,7 +533,8 @@
     <MESSAGE value="update web import &amp; add test pubspec files" />
     <MESSAGE value="Add test yaml file" />
     <MESSAGE value="update all changelogs" />
-    <option name="LAST_COMMIT_MESSAGE" value="update all changelogs" />
+    <MESSAGE value="update all pubspec files" />
+    <option name="LAST_COMMIT_MESSAGE" value="update all pubspec files" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
