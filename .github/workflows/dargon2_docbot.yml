@@ -16,6 +16,8 @@ jobs:
    steps:
    - uses: dart-lang/setup-dart@v1
    - uses: actions/checkout@v2
+   - name: Activate Dartdoc
+     run: dart pub global activate dartdoc
    - name: Install dependencies
      run: dart pub get
    - name: Generate Documentation
@@ -44,6 +46,8 @@ jobs:
    steps:
      - uses: dart-lang/setup-dart@v1
      - uses: actions/checkout@v2
+     - name: Activate Dartdoc
+       run: dart pub global activate dartdoc     
      - name: Install dependencies
        run: dart pub get
      - name: Generate Documentation
@@ -72,6 +76,8 @@ jobs:
    steps:
      - uses: dart-lang/setup-dart@v1   
      - uses: actions/checkout@v2
+     - name: Activate Dartdoc
+       run: dart pub global activate dartdoc     
      - name: Install dependencies
        run: dart pub get
      - name: Generate Documentation
