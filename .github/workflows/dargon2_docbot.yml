@@ -13,9 +13,8 @@ jobs:
      run:
        working-directory: dargon2
    runs-on: ubuntu-latest
-   container:
-     image:  google/dart:latest
    steps:
+   - uses: dart-lang/setup-dart@v1
    - uses: actions/checkout@v2
    - name: Install dependencies
      run: dart pub get
@@ -42,9 +41,8 @@ jobs:
      run:
        working-directory: dargon2_core
    runs-on: ubuntu-latest
-   container:
-     image: google/dart:latest
    steps:
+     - uses: dart-lang/setup-dart@v1
      - uses: actions/checkout@v2
      - name: Install dependencies
        run: dart pub get
@@ -71,9 +69,8 @@ jobs:
      run:
        working-directory: dargon2_interface
    runs-on: ubuntu-latest
-   container:
-     image: google/dart:latest
    steps:
+     - uses: dart-lang/setup-dart@v1   
      - uses: actions/checkout@v2
      - name: Install dependencies
        run: dart pub get
