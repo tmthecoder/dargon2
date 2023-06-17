@@ -1,3 +1,7 @@
+## 3.3.0
+- **Breaking** AGP version for your project must be > 4.2
+- Supports higher AGP versions
+
 ## 3.2.0
 - Fixed broken web features in debug mode
 
