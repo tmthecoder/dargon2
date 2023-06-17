@@ -1,3 +1,7 @@
+## 3.3.0
+- ** Breaking ** Android AGP Version must be > 4.2
+- Compatibility with higher AGP versions
+
 ## 3.2.0
 - Match versioning for dargon2_flutter_web's fixes
 

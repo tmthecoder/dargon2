@@ -1,11 +1,11 @@
 name: dargon2_flutter_mobile
 description: The mobile (iOS & Android) platform implementation of dargon2_flutter
-version: 3.2.0
+version: 3.3.0
 homepage: https://github.com/tmthecoder/dargon2/
 repository: https://github.com/tmthecoder/dargon2/blob/main/dargon2_flutter/dargon2_flutter_mobile
 
 environment:
-  sdk: ">=2.14.0 <3.0.0"
+  sdk: ">=2.14.0 <4.0.0"
   flutter: ">=2.5.0"
 
 dependencies:
@@ -13,7 +13,7 @@ dependencies:
     sdk: flutter
   dargon2_core: '^2.1.0'
   dargon2_flutter_platform_interface: '^3.2.0'
-  dargon2_interface: '^1.1.0'
+  dargon2_interface: '^1.1.1'
 
 dev_dependencies:
   flutter_test:
