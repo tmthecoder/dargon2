@@ -1,3 +1,6 @@
+## 1.1.1
+- Fix Salts not being able to be generated with lengths different than 16 bytes
+
 ## 1.1.0
 - Fix repository & homepage links to point to newly structured repo
 - Match versioning for dargon2_flutter's desktop support addition

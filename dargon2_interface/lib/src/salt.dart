@@ -20,7 +20,7 @@ class Salt {
   /// Optionally accepts a [length] of type int to create salts
   /// of a length that the user inputs.
   factory Salt.newSalt({int length = 16}) {
-    return Salt(_getRandomBytes(16));
+    return Salt(_getRandomBytes(length));
   }
 
   /// The method to get a List of random secure bytes with given length.
@@ -30,8 +30,8 @@ class Salt {
   ///
   /// Returns a [List] of type int with random bytes.
   static List<int> _getRandomBytes([int length = 16]) {
-    final _random = Random.secure();
-    return List<int>.generate(length, (i) => _random.nextInt(256));
+    final random = Random.secure();
+    return List<int>.generate(length, (i) => random.nextInt(256));
   }
 
   /// A getter to get the bytes stored in the object.
