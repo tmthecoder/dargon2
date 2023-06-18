@@ -35,7 +35,7 @@ jobs:
           path: |
             ~/.android/avd/*
             ~/.android/adb*
-          key: avd-30
+          key: avd-33
       - name: Download Flutter
         uses: subosito/flutter-action@v2
         with:
@@ -60,7 +60,7 @@ jobs:
       - name: Run Integration Tests
         uses: reactivecircus/android-emulator-runner@v2.22.0
         with:
-          api-level: 30
+          api-level: 33
           target: google_apis
           working-directory: dargon2_flutter/dargon2_flutter/example
           script: flutter test integration_test/
