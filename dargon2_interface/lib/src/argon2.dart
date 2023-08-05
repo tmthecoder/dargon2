@@ -39,7 +39,7 @@ abstract class DArgon2 {
   /// The Future method to hash a [String] password with Argon2
   ///
   /// Needs a UTF-8 String [password] and a [salt] to be given with
-  /// an optional parameters to control the amount of [iterations], [memory],
+  /// an optional parameters to control the amount of [iterations], [memory] (in kibibytes),
   /// [parallelism] used during the operation. Also optionally takes a [length]
   /// parameter for the hash's return length, as well as a [type] and [version].
   ///
@@ -65,7 +65,7 @@ abstract class DArgon2 {
   /// The Future method to hash a List<int> password with Argon2
   ///
   /// Needs a [List] of type int [password] and a [salt] to be given with
-  /// an optional parameters to control the amount of [iterations], [memory],
+  /// an optional parameters to control the amount of [iterations], [memory] (in kibibytes),
   /// [parallelism] used during the operation. Also optionally takes a [length]
   /// parameter for the hash's return length, as well as a [type] and [version].
   ///
