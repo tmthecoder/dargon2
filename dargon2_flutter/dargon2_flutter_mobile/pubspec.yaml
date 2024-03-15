@@ -37,4 +37,3 @@ flutter:
       ios:
         dartPluginClass: DArgon2Mobile
         ffiPlugin: true
-
