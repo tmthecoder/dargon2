@@ -2,7 +2,9 @@ name: dargon2_flutter
 
 on:
   push:
+    branches: [main]
   pull_request:
+    branches: [main]
 
 defaults:
   run:
@@ -13,23 +15,23 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           submodules: recursive
       - name: Setup Java
-        uses: actions/setup-java@v2
+        uses: actions/setup-java@v4
         with:
          java-version: '17'
          distribution: 'zulu'
       - name: Gradle cache
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: |
             ~/.gradle/caches
             ~/.gradle/wrapper
           key: gradle-${{ runner.os }}-${{ hashFiles('**/*.gradle*') }}-${{ hashFiles('**/gradle/wrapper/gradle-wrapper.properties') }}-${{ hashFiles('**/buildSrc/**/*.kt') }}
       - name: AVD cache
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         id: avd-cache
         with:
           path: |
@@ -56,9 +58,9 @@ jobs:
           mv ../../dargon2_flutter_mobile/pubspec.test.yaml ../../dargon2_flutter_mobile/pubspec.yaml
           mv ../../dargon2_flutter_desktop/pubspec.test.yaml ../../dargon2_flutter_desktop/pubspec.yaml
           mv ../../dargon2_flutter_platform_interface/pubspec.test.yaml ../../dargon2_flutter_platform_interface/pubspec.yaml          
-          mv ../../../dargon2_core/pubspec.test.yaml ../../../dargon2_core/pubspec.yaml          
+          mv ../../../dargon2_core/pubspec.test.yaml ../../../dargon2_core/pubspec.yaml
       - name: Run Integration Tests
-        uses: reactivecircus/android-emulator-runner@v2.22.0
+        uses: reactivecircus/android-emulator-runner@v2.30.1
         with:
           api-level: 33
           target: google_apis
@@ -67,10 +69,10 @@ jobs:
           script: flutter test integration_test/
 
   test_ios:
-    runs-on: macos-latest
+    runs-on: macos-14
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           submodules: recursive
       - name: Download Flutter
@@ -85,7 +87,7 @@ jobs:
       - name: Start Simulator
         run: |
           UDID=$(
-          xcrun simctl list devices | grep "iPhone 13 (" | awk -F"[()]" '{print $2}' | awk 'NR==1{print $1}'
+          xcrun simctl list devices | grep "iPhone 15 (" | awk -F"[()]" '{print $2}' | awk 'NR==1{print $1}'
           )
           xcrun simctl boot "${UDID:?No Simulator with this name found}"
       - name: Use Test Pubspec Files
@@ -108,7 +110,7 @@ jobs:
   test_web:
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - uses: subosito/flutter-action@v2
       - name: Use Test Pubspec Files
         run: |
@@ -146,7 +148,7 @@ jobs:
             FLUTTER_CHANNEL: stable
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           submodules: recursive
       - name: Download Flutter
