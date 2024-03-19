@@ -34,10 +34,13 @@ flutter:
     platforms:
       linux:
         pluginClass: Dargon2FlutterDesktopPlugin
+        ffiPlugin: true
       macos:
         pluginClass: Dargon2FlutterDesktopPlugin
+        ffiPlugin: true
       windows:
         pluginClass: Dargon2FlutterDesktopPlugin
+        ffiPlugin: true
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:

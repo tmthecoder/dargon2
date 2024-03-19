@@ -2,7 +2,9 @@ name: dargon2
 
 on:
   push:
+    branches: [main]
   pull_request:
+    branches: [main]
 
 defaults:
   run:
@@ -27,4 +29,4 @@ jobs:
     - name: Install dependencies
       run: dart pub get
     - name: Run tests
-      run: dart pub run test
+      run: dart --enable_deprecated_wait_for test

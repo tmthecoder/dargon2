@@ -33,5 +33,7 @@ flutter:
     platforms:
       android:
         dartPluginClass: DArgon2Mobile
+        ffiPlugin: true
       ios:
         dartPluginClass: DArgon2Mobile
+        ffiPlugin: true
